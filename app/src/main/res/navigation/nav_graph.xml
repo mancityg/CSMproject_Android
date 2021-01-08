@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginMain">
+
+    <fragment
+        android:id="@+id/loginMain"
+        android:name="com.suwonccc.csmproject.firstpage_fragment.LoginMain"
+        android:label="fragment_login_main"
+        tools:layout="@layout/fragment_login_main" >
+        <action
+            android:id="@+id/action_loginMain_to_loginProfile"
+            app:destination="@id/loginProfile"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_close_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginProfile"
+        android:name="com.suwonccc.csmproject.firstpage_fragment.LoginProfile"
+        android:label="fragment_login_profile"
+        tools:layout="@layout/fragment_login_profile" >
+        <action
+            android:id="@+id/action_loginProfile_to_loginMentor"
+            app:destination="@id/loginMentor"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_close_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
+        <action
+            android:id="@+id/action_loginProfile_to_loginMentee"
+            app:destination="@id/loginMentee"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_close_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginMentor"
+        android:name="com.suwonccc.csmproject.firstpage_fragment.LoginMentor"
+        android:label="fragment_login_mentor"
+        tools:layout="@layout/fragment_login_mentor" >
+        <action
+            android:id="@+id/action_loginMentor_to_loginComplete"
+            app:destination="@id/loginComplete"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_close_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginMentee"
+        android:name="com.suwonccc.csmproject.firstpage_fragment.LoginMentee"
+        android:label="fragment_login_mentee"
+        tools:layout="@layout/fragment_login_mentee" >
+        <action
+            android:id="@+id/action_loginMentee_to_loginComplete"
+            app:destination="@id/loginComplete"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_close_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginComplete"
+        android:name="com.suwonccc.csmproject.firstpage_fragment.LoginComplete"
+        android:label="fragment_login_complete"
+        tools:layout="@layout/fragment_login_complete" />
+</navigation>
