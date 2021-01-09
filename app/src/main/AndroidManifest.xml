@@ -14,13 +14,15 @@
         <activity android:name=".Etcpage" />
         <activity android:name=".Userstorypage" />
         <activity android:name=".Chattingpage" />
-        <activity android:name=".Firstpage" />
-        <activity android:name=".Mainpage">
+        <activity android:name=".Firstpage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".Mainpage">
+
         </activity>
     </application>
 

@@ -12,10 +12,6 @@ import kotlinx.android.synthetic.main.fragment_login_main.*
 
 class LoginMain : Fragment() {
 
-    companion object {
-        private const val TAG = "LoginMain"
-    }
-
     lateinit var navController : NavController
 
     override fun onCreateView(
@@ -31,8 +27,9 @@ class LoginMain : Fragment() {
 
         navController = Navigation.findNavController(view)
 
-        kakao_btn.setOnClickListener {
 
+        kakao_btn.setOnClickListener {
+            navController.navigate(R.id.action_loginMain_to_loginProfile)
         }
 
         facebook_btn.setOnClickListener {
