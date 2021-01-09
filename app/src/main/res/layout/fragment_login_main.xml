@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/firstpage"
     tools:context=".firstpage_fragment.LoginMain">
 
-    //이미지 크기가 너무 커서 그런지 background가 들어가있지 않아서
-    //전체적으로 아직 디자인 안 되어 있는 상태
-    //추후에 수정
-
+    //안드로이드 스튜디오에서는 배경과 아이콘이 안 보이는데
+    //실제로 공기계로 돌려보면 볼 수 있습니다.
     <ImageButton
         android:id="@+id/kakao_btn"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:background="#00ffffff"
         android:scaleType="centerInside"
         android:src="@drawable/firstpage_btn12"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
@@ -24,6 +24,7 @@
         android:id="@+id/facebook_btn"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:background="#00ffffff"
         android:scaleType="centerInside"
         android:src="@drawable/firstpage_btn13"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
@@ -34,6 +35,7 @@
         android:id="@+id/insta_btn"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:background="#00ffffff"
         android:scaleType="centerInside"
         android:src="@drawable/firstpage_btn14"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
@@ -44,6 +46,7 @@
         android:id="@+id/google_btn"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:background="#00ffffff"
         android:scaleType="centerInside"
         android:src="@drawable/firstpage_btn15"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
@@ -55,7 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.83" />
+        app:layout_constraintGuide_percent="0.77" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"

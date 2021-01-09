@@ -29,19 +29,25 @@ class LoginMain : Fragment() {
 
 
         kakao_btn.setOnClickListener {
+            //카카오톡 로그인 구현
+
+            /*
+            *프로필 생성 화면 확인하기 위해
+            *우선 카카오톡 로그인 버튼 누르면 프로필 생성 화면으로 이동하게 해놓음
+             */
             navController.navigate(R.id.action_loginMain_to_loginProfile)
         }
 
         facebook_btn.setOnClickListener {
-
+            //페이스북 로그인 구현
         }
 
         insta_btn.setOnClickListener {
-
+            //인스타그램 로그인 구현
         }
 
         google_btn.setOnClickListener {
-
+            //구글 로그인 구현
         }
 
     }
