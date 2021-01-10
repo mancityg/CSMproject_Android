@@ -1,34 +1,24 @@
 package com.suwonccc.csmproject.firstpage_fragment
 
 import android.os.Bundle
+import android.text.TextUtils
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import com.suwonccc.csmproject.R
+import kotlinx.android.synthetic.main.fragment_login_profile.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [LoginProfile.newInstance] factory method to
- * create an instance of this fragment.
- */
 class LoginProfile : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    lateinit var navController : NavController
+    private lateinit var addressEditText: EditText
+    private lateinit var emailEditText: EditText
+    private lateinit var birthdayEditText: EditText
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,23 +28,22 @@ class LoginProfile : Fragment() {
         return inflater.inflate(R.layout.fragment_login_profile, container, false)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment LoginProfile.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            LoginProfile().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        navController = Navigation.findNavController(view)
+        addressEditText = view.findViewById(R.id.address_text)
+        emailEditText = view.findViewById(R.id.email_text)
+        birthdayEditText = view.findViewById(R.id.birthday_text)
+
+        next_btn.setOnClickListener {
+            if (TextUtils.isEmpty(addressEditText.getText()) ||
+                TextUtils.isEmpty(emailEditText.getText()) ||
+                TextUtils.isEmpty(birthdayEditText.getText())) {
+
             }
+
+            navController.navigate(R.id.action_loginProfile_to_loginMentor)
+        }
     }
 }

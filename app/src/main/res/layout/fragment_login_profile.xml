@@ -1,39 +1,217 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/firstpage_2"
-    tools:context=".firstpage_fragment.LoginProfile"
-    app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toTopOf="parent">
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:context=".firstpage_fragment.LoginProfile">
 
-    //구현 중
+    //아직 작업중
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        >
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/address_input_layout"
+        //배경화면
+
+
+        //프로필 사진
+
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="3350px"
+            android:background="@drawable/firstpage_background_2"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="거주지" />
+        <ImageButton
+            android:id="@+id/photo_btn"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="#00ffffff"
+            android:scaleType="fitCenter"
+            android:src="@drawable/firstpage_btn10"
+            app:layout_constraintStart_toStartOf="@id/photo_guideline1"
+            app:layout_constraintEnd_toEndOf="@id/photo_guideline2"
+            app:layout_constraintTop_toTopOf="@id/photo_guideline3"/>
 
 
-        </com.google.android.material.textfield.TextInputLayout>
+
+        //입력창
+        <EditText
+            android:id="@+id/address_text"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="@id/guideline6"
+            app:layout_constraintStart_toStartOf="@id/guideline5"
+            app:layout_constraintTop_toTopOf="@id/guideline4" />
+
+        <EditText
+            android:id="@+id/email_text"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="@id/guideline6"
+            app:layout_constraintStart_toStartOf="@id/guideline5"
+            app:layout_constraintTop_toTopOf="@id/guideline7" />
+
+        <EditText
+            android:id="@+id/birthday_text"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="@id/guideline6"
+            app:layout_constraintStart_toStartOf="@id/guideline5"
+            app:layout_constraintTop_toTopOf="@id/guideline8" />
+
+
+
+        //버튼
+        <Button
+            android:id="@+id/male_btn"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/selector_male_btn"
+            app:layout_constraintEnd_toStartOf="@id/female_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline9" />
+
+        <ImageButton
+            android:id="@+id/female_btn"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:background="#00ffffff"
+            android:scaleType="fitCenter"
+            android:src="@drawable/firstpage_btn6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/male_btn"
+            app:layout_constraintTop_toBottomOf="@id/guideline9" />
+
+        <ImageButton
+            android:id="@+id/mentor_btn"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:background="#00ffffff"
+            android:scaleType="fitCenter"
+            android:src="@drawable/firstpage_btn8"
+            app:layout_constraintEnd_toStartOf="@id/mentee_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/male_btn" />
+
+        <ImageButton
+            android:id="@+id/mentee_btn"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:background="#00ffffff"
+            android:scaleType="fitCenter"
+            android:src="@drawable/firstpage_btn7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/mentor_btn"
+            app:layout_constraintTop_toBottomOf="@id/female_btn" />
+
+        <ImageButton
+            android:id="@+id/next_btn"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:background="#00ffffff"
+            android:scaleType="fitEnd"
+            android:src="@drawable/firstpage_btn9"
+            app:layout_constraintBottom_toBottomOf="@id/guideline10"
+            app:layout_constraintEnd_toEndOf="@id/guideline11" />
+
+
+
+
+        //디자인용 가이드라인
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.36" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.85" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.41" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.465" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.74" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.98" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.97" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/photo_guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.35" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/photo_guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.649" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/photo_guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.1675" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.core.widget.NestedScrollView>
+</ScrollView>

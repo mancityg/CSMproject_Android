@@ -4,11 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/firstpage"
+    android:background="@drawable/firstpage_background_1"
     tools:context=".firstpage_fragment.LoginMain">
 
-    //안드로이드 스튜디오에서는 배경과 아이콘이 안 보이는데
-    //실제로 공기계로 돌려보면 볼 수 있습니다.
     <ImageButton
         android:id="@+id/kakao_btn"
         android:layout_width="50dp"
@@ -73,5 +71,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_end="81dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
