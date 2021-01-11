@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mainpage"
+        android:icon="@drawable/nav_main"
+        android:title=""
+        />
+    <item
+        android:id="@+id/chattingpage"
+        android:icon="@drawable/nav_chat"
+        android:title=""
+        />
+    <item
+        android:id="@+id/alarmpage"
+        android:icon="@drawable/nav_alarm"
+        android:title=""
+        />
+    <item
+        android:id="@+id/userstorypage"
+        android:icon="@drawable/nav_userstory"
+        android:title=""
+        />
+    <item
+        android:id="@+id/etcpage"
+        android:icon="@drawable/nav_etc"
+        android:title=""
+        />
+</menu>
