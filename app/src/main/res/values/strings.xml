@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">CSMproject</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="Schools">
+        <item>경기대학교</item>
+        <item>성균관대학교</item>
+        <item>아주대학교</item>
+    </string-array>
+
 </resources>

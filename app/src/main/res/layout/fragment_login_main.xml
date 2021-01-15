@@ -14,9 +14,12 @@
         android:background="#00ffffff"
         android:scaleType="centerInside"
         android:src="@drawable/firstpage_btn12"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintEnd_toStartOf="@+id/facebook_btn"
-        app:layout_constraintStart_toStartOf="@id/guideline2" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.745" />
 
     <ImageButton
         android:id="@+id/facebook_btn"
@@ -25,9 +28,12 @@
         android:background="#00ffffff"
         android:scaleType="centerInside"
         android:src="@drawable/firstpage_btn13"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintEnd_toStartOf="@id/insta_btn"
-        app:layout_constraintStart_toEndOf="@id/kakao_btn" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.745"/>
 
     <ImageButton
         android:id="@+id/insta_btn"
@@ -36,9 +42,12 @@
         android:background="#00ffffff"
         android:scaleType="centerInside"
         android:src="@drawable/firstpage_btn14"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintEnd_toStartOf="@id/google_btn"
-        app:layout_constraintStart_toEndOf="@id/facebook_btn" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.578"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.745"/>
 
     <ImageButton
         android:id="@+id/google_btn"
@@ -47,30 +56,12 @@
         android:background="#00ffffff"
         android:scaleType="centerInside"
         android:src="@drawable/firstpage_btn15"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintEnd_toStartOf="@id/guideline3"
-        app:layout_constraintStart_toEndOf="@id/insta_btn" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.77" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="81dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="81dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.736"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.745"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

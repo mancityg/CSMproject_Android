@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,209 +9,192 @@
     app:layout_constraintTop_toTopOf="parent"
     tools:context=".firstpage_fragment.LoginProfile">
 
-    //아직 작업중
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/firstpage_background_2_1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toStartOf="parent">
 
-
-        //배경화면
-
-
-        //프로필 사진
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="3350px"
-            android:background="@drawable/firstpage_background_2"
+        <RelativeLayout
+            android:layout_width="131dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="209dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="131dp"
+                android:layout_height="131dp"
+                android:background="#00FFFFFF"
+                app:civ_border_width="3dp"
+                app:civ_border_color="@color/theme3"
+                android:src="@drawable/firstpage_btn10" />
+
+<!--            <ImageView-->
+<!--                android:id="@+id/profile_border_image"-->
+<!--                android:layout_width="131dp"-->
+<!--                android:layout_height="131dp"-->
+<!--                android:background="#00FFFFFF"-->
+<!--                android:scaleType="centerInside"-->
+<!--                android:src="@drawable/firstpage_btn22" />-->
+
+            <ImageView
+                android:id="@+id/profile_camera_image"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="#00FFFFFF"
+                android:layout_alignBottom="@id/profile_image"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/firstpage_btn24"
+                android:clickable="true"/>
+
+        </RelativeLayout>
+
+
+        <EditText
+            android:id="@+id/address_text"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="450dp"
+            android:layout_marginStart="58dp"
+            android:layout_marginEnd="58dp"
+            android:background="#00FFFFFF"
+            android:hint="거주지"
+            android:fontFamily="@font/applesdgothicneom"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageButton
-            android:id="@+id/photo_btn"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:background="#00ffffff"
-            android:scaleType="fitCenter"
-            android:src="@drawable/firstpage_btn10"
-            app:layout_constraintStart_toStartOf="@id/photo_guideline1"
-            app:layout_constraintEnd_toEndOf="@id/photo_guideline2"
-            app:layout_constraintTop_toTopOf="@id/photo_guideline3"/>
-
-
-
-        //입력창
-        <EditText
-            android:id="@+id/address_text"
-            android:layout_width="230dp"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            app:layout_constraintEnd_toEndOf="@id/guideline6"
-            app:layout_constraintStart_toStartOf="@id/guideline5"
-            app:layout_constraintTop_toTopOf="@id/guideline4" />
-
         <EditText
             android:id="@+id/email_text"
-            android:layout_width="230dp"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            app:layout_constraintEnd_toEndOf="@id/guideline6"
-            app:layout_constraintStart_toStartOf="@id/guideline5"
-            app:layout_constraintTop_toTopOf="@id/guideline7" />
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="520dp"
+            android:layout_marginStart="58dp"
+            android:layout_marginEnd="58dp"
+            android:background="#00FFFFFF"
+            android:hint="이메일"
+            android:fontFamily="@font/applesdgothicneom"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/birthday_text"
-            android:layout_width="230dp"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            app:layout_constraintEnd_toEndOf="@id/guideline6"
-            app:layout_constraintStart_toStartOf="@id/guideline5"
-            app:layout_constraintTop_toTopOf="@id/guideline8" />
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="587dp"
+            android:layout_marginStart="58dp"
+            android:layout_marginEnd="58dp"
+            android:background="#00FFFFFF"
+            android:hint="생년월일"
+            android:fontFamily="@font/applesdgothicneom"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <EditText
+            android:id="@+id/greetings_text"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_marginTop="656dp"
+            android:layout_marginStart="58dp"
+            android:layout_marginEnd="58dp"
+            android:background="#00FFFFFF"
+            android:hint="인사말"
+            android:fontFamily="@font/applesdgothicneom"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-
-        //버튼
         <Button
             android:id="@+id/male_btn"
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="120dp"
-            android:layout_height="80dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="58dp"
+            android:layout_marginEnd="230dp"
+            android:layout_marginTop="960dp"
+            android:background="@drawable/selector_male_btn"
             android:scaleType="fitCenter"
-            android:src="@drawable/selector_male_btn"
-            app:layout_constraintEnd_toStartOf="@id/female_btn"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/guideline9" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-        <ImageButton
+        <Button
             android:id="@+id/female_btn"
             android:layout_width="120dp"
-            android:layout_height="80dp"
-            android:background="#00ffffff"
+            android:layout_height="52dp"
+            android:layout_marginStart="230dp"
+            android:layout_marginEnd="58dp"
+            android:layout_marginTop="960dp"
+            android:background="@drawable/selector_female_btn"
             android:scaleType="fitCenter"
-            android:src="@drawable/firstpage_btn6"
+            style="?android:attr/borderlessButtonStyle"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/male_btn"
-            app:layout_constraintTop_toBottomOf="@id/guideline9" />
+            app:layout_constraintStart_toStartOf="parent" />
 
-        <ImageButton
+        <Button
             android:id="@+id/mentor_btn"
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="120dp"
-            android:layout_height="80dp"
-            android:background="#00ffffff"
+            android:layout_height="52dp"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="1045dp"
+            android:layout_marginEnd="230dp"
+            android:background="@drawable/selector_mentor_btn"
             android:scaleType="fitCenter"
-            android:src="@drawable/firstpage_btn8"
-            app:layout_constraintEnd_toStartOf="@id/mentee_btn"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/male_btn" />
+            app:layout_constraintEnd_toEndOf="parent"/>
 
-        <ImageButton
+        <Button
             android:id="@+id/mentee_btn"
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="120dp"
-            android:layout_height="80dp"
-            android:background="#00ffffff"
+            android:layout_height="52dp"
+            android:layout_marginStart="230dp"
+            android:layout_marginEnd="58dp"
+            android:layout_marginTop="1045dp"
+            android:background="@drawable/selector_mentee_btn"
             android:scaleType="fitCenter"
-            android:src="@drawable/firstpage_btn7"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/mentor_btn"
-            app:layout_constraintTop_toBottomOf="@id/female_btn" />
+            app:layout_constraintStart_toStartOf="parent" />
 
-        <ImageButton
+        <Button
             android:id="@+id/next_btn"
             android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="1200dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginStart="300dp"
+            android:background="@drawable/selector_next_btn"
+            android:scaleType="fitCenter"
+            style="?android:attr/borderlessButtonStyle"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        //스크롤뷰 길이 늘리기용
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#00ffffff"
-            android:scaleType="fitEnd"
-            android:src="@drawable/firstpage_btn9"
-            app:layout_constraintBottom_toBottomOf="@id/guideline10"
-            app:layout_constraintEnd_toEndOf="@id/guideline11" />
-
-
-
-
-        //디자인용 가이드라인
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.36" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.25" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.85" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.41" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.465" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.74" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.98" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.97" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/photo_guideline1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.35" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/photo_guideline2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.649" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/photo_guideline3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.1675" />
+            android:layout_marginTop="1255dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</ScrollView>
+</androidx.core.widget.NestedScrollView>
