@@ -3,26 +3,26 @@
     <item
         android:id="@+id/mainpage"
         android:icon="@drawable/nav_main"
-        android:title=""
+        android:title="●"
         />
     <item
         android:id="@+id/chattingpage"
         android:icon="@drawable/nav_chat"
-        android:title=""
+        android:title="●"
         />
     <item
         android:id="@+id/alarmpage"
         android:icon="@drawable/nav_alarm"
-        android:title=""
+        android:title="●"
         />
     <item
         android:id="@+id/userstorypage"
         android:icon="@drawable/nav_userstory"
-        android:title=""
+        android:title="●"
         />
     <item
         android:id="@+id/etcpage"
         android:icon="@drawable/nav_etc"
-        android:title=""
+        android:title="●"
         />
 </menu>

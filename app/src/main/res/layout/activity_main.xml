@@ -6,22 +6,21 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/box_inset_layout_padding"
     tools:context=".MainActivity">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/main_nav_view"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:background="?android:attr/windowBackground"
-        app:barrierAllowsGoneWidgets="true"
-        app:itemIconSize="31dp"
+        app:itemBackground="@color/windowBackground"
+        app:itemIconSize="29dp"
+        app:itemIconTint="@drawable/menu_selector_color"
+        app:labelVisibilityMode="unlabeled"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:labelVisibilityMode="unlabeled"
         app:menu="@menu/top_nav_menu" />
 
     <fragment
@@ -37,5 +36,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:navGraph="@navigation/home_nav_graph" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="11dp"
+        android:orientation="vertical"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="8dp"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

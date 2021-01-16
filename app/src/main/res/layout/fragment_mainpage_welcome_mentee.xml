@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mainpage_fragment.MainpageWelcomeMenteeFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="차지영"
+        android:fontFamily="@font/applesdgothicneob"
+        android:textSize="19sp"
+        android:textColor="@color/blackTitle"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/nameMent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.275" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/nameMent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" 멘티님 안녕하세요!"
+        android:fontFamily="@font/applesdgothicneob"
+        android:textSize="19sp"
+        android:textColor="@color/blackTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.275" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:foregroundGravity="center"
+        android:src="@drawable/prof_sample"
+        app:civ_border_color="@color/CSMYellow"
+        app:civ_border_overlay="true"
+        app:civ_border_width="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.476" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/applesdgothicneob"
+        android:text="크선멘에 오신 걸"
+        android:textColor="@color/blackTitle"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.691" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/applesdgothicneoeb"
+        android:text="환영합니다!"
+        android:textColor="@color/blackTitle"
+        android:textSize="39sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.769" />
+
+        <SlidingDrawer
+        android:id="@+id/slidingDrawer"
+        android:layout_width="match_parent"
+        android:layout_height="235dp"
+        android:allowSingleTap="true"
+        android:animateOnClick="true"
+        android:bottomOffset="0dp"
+        android:content="@id/dragContent"
+        android:handle="@id/drawer_handle"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/drawer_handle"
+            android:layout_width="134dp"
+            android:layout_height="37dp"
+            android:src="@drawable/main_drawer_handle_long"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/dragContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@color/CSMGreen"
+                >
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/myname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/applesdgothicneob"
+                    android:text="차지영"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/main_item_text1"
+                    app:layout_constraintHorizontal_bias="0.13"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/main_item_text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/applesdgothicneob"
+                    android:text=" 님의 멘토입니다."
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/myname"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mentor_RecvView"
+                android:layout_width="match_parent"
+                android:background="@color/windowBackground"
+                android:layout_height="wrap_content"
+                android:scrollbarSize="5dp"
+                android:scrollbars="vertical"
+                android:scrollbarFadeDuration="0"
+                android:visibility="gone"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/emptyView"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:visibility="visible"
+                android:text="아직 등록된 멘토가 없습니다."
+                android:fontFamily="@font/applesdgothicneob"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:background="@color/CSMGreen"
+                android:textAlignment="center"
+                android:gravity="center"
+                >
+            </androidx.appcompat.widget.AppCompatTextView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </SlidingDrawer>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
