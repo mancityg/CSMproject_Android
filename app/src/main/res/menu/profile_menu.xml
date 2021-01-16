@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/gallery_option"
+        android:title="앨범에서 사진 선택">
+
+    </item>
+
+    <item
+        android:id="@+id/basic_option"
+        android:title="기본 이미지로 변경">
+
+    </item>
+
+    <item
+        android:id="@+id/camera_option"
+        android:title="카메라 촬영하기">
+
+    </item>
+</menu>
