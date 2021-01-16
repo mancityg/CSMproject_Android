@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainpage">
+
+
+    <fragment
+        android:id="@+id/mainpage"
+        android:name="com.suwonccc.csmproject.mainpage_fragment.MainpageFragment"
+        android:label="fragment_mainpage"
+        tools:layout="@layout/fragment_mainpage" >
+        <action
+            android:id="@+id/action_mainpage_to_mainpageWelcomeMentorFragment"
+            app:destination="@id/mainpageWelcomeMentorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chattingpage"
+        android:name="com.suwonccc.csmproject.ChattingpageFragment"
+        android:label="fragment_chattingpage"
+        tools:layout="@layout/fragment_chattingpage" />
+    <fragment
+        android:id="@+id/alarmpage"
+        android:name="com.suwonccc.csmproject.AlarmpageFragment"
+        android:label="fragment_alarmpage"
+        tools:layout="@layout/fragment_alarmpage" />
+    <fragment
+        android:id="@+id/userstorypage"
+        android:name="com.suwonccc.csmproject.UserstorypageFragment"
+        android:label="fragment_userstorypage"
+        tools:layout="@layout/fragment_userstorypage" />
+    <fragment
+        android:id="@+id/etcpage"
+        android:name="com.suwonccc.csmproject.EtcpageFragment"
+        android:label="fragment_etcpage"
+        tools:layout="@layout/fragment_etcpage" />
+    <fragment
+        android:id="@+id/mainpageWelcomeMentorFragment"
+        android:name="com.suwonccc.csmproject.mainpage_fragment.MainpageWelcomeMenteeFragment"
+        android:label="fragment_mainpage_welcome"
+        tools:layout="@layout/fragment_mainpage_welcome_mentee" />
+</navigation>

@@ -13,6 +13,6 @@ class Firstpage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_firstpage)
-        navController = nav_host_fragment.findNavController()
     }
+
 }
