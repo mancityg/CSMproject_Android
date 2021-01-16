@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import com.suwonccc.csmproject.Mainpage
+import com.suwonccc.csmproject.MainActivity
 import com.suwonccc.csmproject.R
 import kotlinx.android.synthetic.main.fragment_login_complete.*
 
@@ -36,7 +36,7 @@ class LoginComplete : Fragment() {
 
             // Mainpage activity로 이동
             activity?.let{
-                val intent = Intent (it, Mainpage::class.java)
+                val intent = Intent (it, MainActivity::class.java)
                 it.startActivity(intent)
             }
         }
