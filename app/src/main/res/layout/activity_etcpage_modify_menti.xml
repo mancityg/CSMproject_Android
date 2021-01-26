@@ -83,7 +83,7 @@
                         app:srcCompat="@drawable/firstpage_btn10" />
 
                     <ImageView
-                        android:id="@+id/imageView6"
+                        android:id="@+id/profile_camera_image"
                         android:layout_width="55dp"
                         android:layout_height="55dp"
                         android:layout_gravity="center"
@@ -108,15 +108,15 @@
 
             <EditText
                 android:id="@+id/edit_text1"
-                android:layout_width="320dp"
+                android:layout_width="304dp"
                 android:layout_height="49dp"
 
                 android:background="@drawable/round_rect"
                 android:cursorVisible="false"
-                android:inputType="text"
                 android:gravity="center_vertical"
+                android:inputType="text"
                 android:paddingLeft="15dp"
-                android:textSize="20sp"/>
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView2"

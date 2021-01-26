@@ -37,6 +37,7 @@
         app:layout_constraintVertical_bias="1.0"
         app:navGraph="@navigation/home_nav_graph" />
 
+
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="11dp"

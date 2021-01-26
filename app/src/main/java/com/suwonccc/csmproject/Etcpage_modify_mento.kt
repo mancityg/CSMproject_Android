@@ -22,7 +22,18 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import com.suwonccc.csmproject.R
+import kotlinx.android.synthetic.main.activity_etcpage_modify_menti.*
 import kotlinx.android.synthetic.main.activity_etcpage_modify_mento.*
+import kotlinx.android.synthetic.main.activity_etcpage_modify_mento.edit_text1
+import kotlinx.android.synthetic.main.activity_etcpage_modify_mento.edit_text2
+import kotlinx.android.synthetic.main.activity_etcpage_modify_mento.edit_text3
+import kotlinx.android.synthetic.main.activity_etcpage_modify_mento.edit_text4
+import kotlinx.android.synthetic.main.activity_etcpage_modify_mento.edit_text5
+import kotlinx.android.synthetic.main.activity_etcpage_modify_mento.edit_text6
+import kotlinx.android.synthetic.main.activity_etcpage_modify_mento.edit_text7
+import kotlinx.android.synthetic.main.activity_etcpage_modify_mento.edit_text8
+import kotlinx.android.synthetic.main.activity_etcpage_modify_mento.profile_camera_image
+import kotlinx.android.synthetic.main.activity_etcpage_modify_mento.profile_image
 import java.io.File
 import java.io.IOException
 import java.text.SimpleDateFormat
@@ -37,13 +48,13 @@ class Etcpage_modify_mento : AppCompatActivity()  {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_etcpage_modify_mento)
-        var ori_img = findViewById(R.id.profile_image) as ImageView
+        //var ori_img = findViewById(R.id.profile_camera_image) as ImageView
 
-        ori_img.setOnClickListener {
+        profile_camera_image.setOnClickListener {
             Toast.makeText(this@Etcpage_modify_mento, "프로필 사진 변경 버튼 클릭", Toast.LENGTH_SHORT).show()
 
             /* 팝업 메뉴 생성 */
-            var popUpMenu = PopupMenu(this@Etcpage_modify_mento, ori_img)
+            var popUpMenu = PopupMenu(this@Etcpage_modify_mento, profile_camera_image)
 
             popUpMenu.menu.add(Menu.NONE, 0, 0, "앨범에서 사진 선택")
             popUpMenu.menu.add(Menu.NONE, 1, 1, "기본 이미지로 변경")
@@ -84,6 +95,7 @@ class Etcpage_modify_mento : AppCompatActivity()  {
         edit_text7.setText(birth)
         edit_text8.setText(msg)
         disabled()
+        profile_camera_image.setClickable(false)
 
         val return_btn= findViewById(R.id.return_btn) as LinearLayout
         val modify_btn = findViewById(R.id.modify_btn) as ImageView
@@ -100,6 +112,7 @@ class Etcpage_modify_mento : AppCompatActivity()  {
             enabled()
             save_btn.setVisibility(View.VISIBLE)
             modify_btn.setVisibility(View.INVISIBLE)
+            profile_camera_image.setClickable(true)
         }
 
         save_btn.setOnClickListener{
@@ -107,6 +120,7 @@ class Etcpage_modify_mento : AppCompatActivity()  {
             disabled()
             save_btn.setVisibility(View.INVISIBLE)
             modify_btn.setVisibility(View.VISIBLE)
+            profile_camera_image.setClickable(false)
         }
     }
     fun enabled(){

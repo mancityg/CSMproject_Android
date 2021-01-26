@@ -27,6 +27,11 @@
         <activity
             android:name=".MainActivity"
             android:label="CSMProj">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
 
@@ -52,6 +57,7 @@
         <activity android:name=".Etcpage_disconnect" />
         <activity android:name=".Etcpage_nomenti" />
         <activity android:name=".Etcpage_nomento" />
+        <activity android:name=".Etcpage_disconnect_popup" />
 
 
         <provider

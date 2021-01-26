@@ -1,6 +1,7 @@
 package com.suwonccc.csmproject
 
 import android.Manifest
+import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
@@ -10,29 +11,28 @@ import android.graphics.Matrix
 import android.media.ExifInterface
 import android.net.Uri
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Environment
 import android.provider.MediaStore
 import android.view.Menu
 import android.view.View
-import android.widget.*
+import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.PopupMenu
+import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
-import com.suwonccc.csmproject.R
+import androidx.fragment.app.FragmentManager
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.setupWithNavController
 import kotlinx.android.synthetic.main.activity_etcpage_modify_menti.*
-import kotlinx.android.synthetic.main.activity_etcpage_modify_menti.edit_text1
-import kotlinx.android.synthetic.main.activity_etcpage_modify_menti.edit_text2
-import kotlinx.android.synthetic.main.activity_etcpage_modify_menti.edit_text3
-import kotlinx.android.synthetic.main.activity_etcpage_modify_menti.edit_text4
-import kotlinx.android.synthetic.main.activity_etcpage_modify_menti.edit_text5
-import kotlinx.android.synthetic.main.activity_etcpage_modify_menti.edit_text6
-import kotlinx.android.synthetic.main.activity_etcpage_modify_menti.edit_text7
-import kotlinx.android.synthetic.main.activity_etcpage_modify_menti.edit_text8
+import kotlinx.android.synthetic.main.activity_etcpage_modify_menti.profile_camera_image
 import kotlinx.android.synthetic.main.activity_etcpage_modify_menti.profile_image
-import kotlinx.android.synthetic.main.activity_etcpage_modify_mento.*
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_login_profile.*
 import java.io.File
 import java.io.IOException
 import java.text.SimpleDateFormat
@@ -47,13 +47,13 @@ class Etcpage_modify_menti : AppCompatActivity()  {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_etcpage_modify_menti)
-        var ori_img = findViewById(R.id.profile_image) as ImageView
+        //var ori_img = findViewById(R.id.profile_camera_image) as ImageView
 
-        ori_img.setOnClickListener {
+        profile_camera_image.setOnClickListener {
             Toast.makeText(this@Etcpage_modify_menti, "프로필 사진 변경 버튼 클릭", Toast.LENGTH_SHORT).show()
 
             /* 팝업 메뉴 생성 */
-            var popUpMenu = PopupMenu(this@Etcpage_modify_menti, ori_img)
+            var popUpMenu = PopupMenu(this@Etcpage_modify_menti, profile_camera_image)
 
             popUpMenu.menu.add(Menu.NONE, 0, 0, "앨범에서 사진 선택")
             popUpMenu.menu.add(Menu.NONE, 1, 1, "기본 이미지로 변경")
@@ -94,6 +94,7 @@ class Etcpage_modify_menti : AppCompatActivity()  {
         edit_text7.setText(birth)
         edit_text8.setText(msg)
         disabled()
+        profile_camera_image.setClickable(false)
 
         val return_btn= findViewById(R.id.return_btn) as LinearLayout
         val modify_btn = findViewById(R.id.modify_btn) as ImageView
@@ -102,14 +103,20 @@ class Etcpage_modify_menti : AppCompatActivity()  {
         save_btn.setVisibility(View.INVISIBLE)
 
         return_btn.setOnClickListener{
+            setContentView(R.layout.activity_main)
+            val navController = supportFragmentManager.findFragmentById(R.id.etcpage)?.findNavController()
+            navController?.let {
+                main_nav_view.setupWithNavController(navController)
+            }
             //Toast.makeText(this@Etcpage, "You clicked on TextView 'Click Me'.", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            //val intent = Intent(this, MainActivity::class.java)
+            //startActivity(intent)
         }
         modify_btn.setOnClickListener{
             enabled()
             save_btn.setVisibility(View.VISIBLE)
             modify_btn.setVisibility(View.INVISIBLE)
+            profile_camera_image.setClickable(true)
         }
 
         save_btn.setOnClickListener{
@@ -117,6 +124,7 @@ class Etcpage_modify_menti : AppCompatActivity()  {
             disabled()
             save_btn.setVisibility(View.INVISIBLE)
             modify_btn.setVisibility(View.VISIBLE)
+            profile_camera_image.setClickable(false)
         }
     }
     fun enabled(){
