@@ -23,7 +23,11 @@ class MainpageWelcomeMenteeFragment : Fragment() {
     private var param2: String? = null
 
     var mentorList = arrayListOf<Mentee>(
-        Mentee("한지명", "main_face_default", "성균관대학교 자과캠", "3학년", "소프트웨어학과", "23살", "남자")
+        Mentee("한지명", "main_face_default", 23, true, "소프트웨어학과", "23살", "남자", "#하이하이"),
+        Mentee("채세이", "main_face_default", 24, false, "소프트웨어학과", "24살", "여자", "#하이하이"),
+        Mentee("한지은", "main_face_default", 24, false, "소프트웨어학과", "24살", "여자", "#하이하이"),
+        Mentee("고은서", "main_face_default", 23, false, "소프트웨어학과", "23살", "여자", "#하이하이"),
+        Mentee("이상호", "main_face_default", 24, true, "소프트웨어학과", "24살", "남자", "#하이하이")
     )
 
 
