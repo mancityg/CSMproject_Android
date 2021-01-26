@@ -11,6 +11,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.appcompat.app.AlertDialog
 import com.suwonccc.csmproject.R
+import kotlinx.android.synthetic.main.popup_etcpage_disconnect.*
 
 class Etcpage_disconnect : AppCompatActivity()  {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -69,6 +70,7 @@ class Etcpage_disconnect : AppCompatActivity()  {
         val disconnect_btn= findViewById(R.id.disconnect_btn) as ImageView
 
         disconnect_btn.setOnClickListener{
+
             val builder = AlertDialog.Builder(this)
             val dialogView = layoutInflater.inflate(R.layout.popup_etcpage_disconnect, null)
             //builder.setView(dialogView).show()
@@ -77,7 +79,26 @@ class Etcpage_disconnect : AppCompatActivity()  {
             infoDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
             infoDialog.setContentView(dialogView)
             infoDialog.show()
+
+            infoDialog.disconnect_yes_btn.setOnClickListener {
+                //infoDialog.dismiss()
+                //onBackPressed()
+                val intent = Intent(this, EtcpageFragment::class.java)
+                startActivity(intent)
+            }
+            infoDialog.disconnect_no_btn.setOnClickListener {
+                //onBackPressed()
+                //infoDialog.dismiss()
+                val intent = Intent(this, EtcpageFragment::class.java)
+                startActivity(intent)
+            }
+
+            /*
+            val intent = Intent(this, Etcpage_disconnect_popup::class.java)
+            startActivity(intent)
+              */
         }
+
     }
 }
 //dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT))

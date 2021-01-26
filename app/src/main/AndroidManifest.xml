@@ -27,6 +27,7 @@
         <activity
             android:name=".MainActivity"
             android:label="CSMProj">
+
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
 

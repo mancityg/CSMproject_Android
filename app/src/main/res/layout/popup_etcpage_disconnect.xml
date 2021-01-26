@@ -37,7 +37,6 @@
             >
 
             <ImageView
-                android:id="@+id/imageView8"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -46,7 +45,7 @@
                 app:srcCompat="@drawable/etcpage_disconnect_img1" />
 
             <ImageView
-                android:id="@+id/imageView9"
+                android:id="@+id/disconnect_yes_btn"
                 android:layout_width="0dp"
                 android:layout_height="127dp"
                 android:layout_weight="1"
@@ -54,7 +53,7 @@
                 app:srcCompat="@drawable/etcpage_disconnect_btn1" />
 
             <ImageView
-                android:id="@+id/imageView10"
+                android:id="@+id/disconnect_no_btn"
                 android:layout_width="0dp"
                 android:layout_height="127dp"
                 android:layout_weight="1"
@@ -62,7 +61,6 @@
                 app:srcCompat="@drawable/etcpage_disconnect_btn2" />
 
             <ImageView
-                android:id="@+id/imageView11"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

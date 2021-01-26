@@ -83,12 +83,13 @@
                         app:srcCompat="@drawable/firstpage_btn10" />
 
                     <ImageView
-                        android:id="@+id/imageView6"
+                        android:id="@+id/profile_camera_image"
                         android:layout_width="55dp"
                         android:layout_height="55dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="60dp"
                         android:layout_marginTop="60dp"
+                        android:clickable="false"
                         app:srcCompat="@drawable/firstpage_btn24" />
 
                 </FrameLayout>

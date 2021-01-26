@@ -6,7 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import kotlinx.android.synthetic.main.fragment_etcpage.*
+import kotlinx.android.synthetic.main.fragment_mainpage.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,7 +24,7 @@ private const val ARG_PARAM2 = "param2"
 class EtcpageFragment : Fragment() {
 
     // TODO: Rename and change types of parameters
-    private var type: String? = "mento"
+    private var type: String? = "menti"
     private var is_men: Boolean? = true
 
     /*
@@ -40,6 +43,8 @@ class EtcpageFragment : Fragment() {
 
         return inflater.inflate(R.layout.fragment_etcpage, container, false)
     }
+
+    lateinit var navController : NavController
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
