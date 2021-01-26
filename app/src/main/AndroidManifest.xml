@@ -53,7 +53,6 @@
         <activity android:name=".Etcpage_disconnect" />
         <activity android:name=".Etcpage_nomenti" />
         <activity android:name=".Etcpage_nomento" />
-        <activity android:name=".Etcpage_disconnect_popup" />
 
 
         <provider
