@@ -18,7 +18,8 @@
         app:civ_border_width="2.5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginStart="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
@@ -31,20 +32,21 @@
         android:textColor="@color/white"
         android:textSize="13sp"
         app:layout_constraintBottom_toTopOf="@id/item_tag1"
-        app:layout_constraintEnd_toStartOf="@id/main_item_text2"
+        app:layout_constraintEnd_toStartOf="@id/item_basic"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintHorizontal_bias="0.55"
+        android:layout_marginStart="180dp"
+        app:layout_constraintHorizontal_bias="0"
         app:layout_constraintVertical_chainStyle="packed"
         />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/main_item_text2"
+        android:id="@+id/item_basic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/applesdgothicneob"
-        android:text=" 님"
+        android:text=" 님 (20세) "
         android:textColor="@color/white"
         android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,6 +54,15 @@
         app:layout_constraintStart_toEndOf="@id/item_name"
         app:layout_constraintVertical_bias="0.18"
         />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/item_gender"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:src="@drawable/female_icon"
+        app:layout_constraintStart_toEndOf="@id/item_basic"
+        app:layout_constraintTop_toTopOf="@id/item_name"/>
+
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/item_tag1"
@@ -80,7 +91,6 @@
         android:background="@drawable/main_mentee_tag_bg"
         app:layout_constraintStart_toEndOf="@id/item_tag1"
         app:layout_constraintTop_toTopOf="@id/item_tag1"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
         android:padding="8dp"
         android:layout_marginStart="8dp"
@@ -107,31 +117,13 @@
         android:id="@+id/item_tag4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="23살"
+        android:text="#내나이가어때서"
         android:fontFamily="@font/applesdgothicneob"
         android:textColor="@color/white"
         android:textSize="11sp"
         android:background="@drawable/main_mentee_tag_bg"
         app:layout_constraintStart_toEndOf="@id/item_tag3"
         app:layout_constraintTop_toTopOf="@id/item_tag3"
-        app:layout_constraintHorizontal_bias="0"
-        android:padding="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        />
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/item_tag5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="남자"
-        android:fontFamily="@font/applesdgothicneob"
-        android:textColor="@color/white"
-        android:textSize="11sp"
-        android:background="@drawable/main_mentee_tag_bg"
-        app:layout_constraintStart_toEndOf="@id/item_tag4"
-        app:layout_constraintTop_toTopOf="@id/item_tag3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0"
         android:padding="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
