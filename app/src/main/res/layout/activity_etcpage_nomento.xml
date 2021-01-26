@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="19dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/return_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            >
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="69dp"
+                android:layout_height="28dp"
+                android:paddingLeft="30dp"
+                app:srcCompat="@drawable/firstpage_btn21" />
+
+            <TextView
+                android:id="@+id/go_back"
+                android:layout_width="360dp"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:fontFamily="@font/font"
+                android:gravity="center_vertical"
+                android:paddingLeft="1dp"
+                android:text="멘토 정보"
+                android:textColor="#666666"
+                android:textSize="19sp"  />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/no_connect_text"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="120dp"
+            android:background="@null"
+            android:fontFamily="@font/font"
+            android:gravity="center_vertical"
+            android:paddingLeft="43dp"
+            android:text="연결된 멘토가\n없습니다."
+            android:textColor="#80000000"
+            android:textSize="27sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="322dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/apply_mento_btn"
+                android:layout_width="258dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/etcpage_apply_btn" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

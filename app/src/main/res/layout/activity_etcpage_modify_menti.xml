@@ -76,7 +76,7 @@
                         app:srcCompat="@drawable/firstpage_btn22" />
 
                     <ImageView
-                        android:id="@+id/imageView5"
+                        android:id="@+id/profile_image"
                         android:layout_width="167dp"
                         android:layout_height="181dp"
                         android:layout_gravity="center"
