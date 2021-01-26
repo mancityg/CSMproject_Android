@@ -96,21 +96,14 @@ class Etcpage_modify_menti : AppCompatActivity()  {
         disabled()
         profile_camera_image.setClickable(false)
 
-        val return_btn= findViewById(R.id.return_btn) as LinearLayout
+        val return_btn= findViewById(R.id.imageView3) as ImageView
         val modify_btn = findViewById(R.id.modify_btn) as ImageView
         val save_btn = findViewById(R.id.save_btn) as ImageView
 
         save_btn.setVisibility(View.INVISIBLE)
 
         return_btn.setOnClickListener{
-            setContentView(R.layout.activity_main)
-            val navController = supportFragmentManager.findFragmentById(R.id.etcpage)?.findNavController()
-            navController?.let {
-                main_nav_view.setupWithNavController(navController)
-            }
-            //Toast.makeText(this@Etcpage, "You clicked on TextView 'Click Me'.", Toast.LENGTH_SHORT).show()
-            //val intent = Intent(this, MainActivity::class.java)
-            //startActivity(intent)
+            this.finish()
         }
         modify_btn.setOnClickListener{
             enabled()

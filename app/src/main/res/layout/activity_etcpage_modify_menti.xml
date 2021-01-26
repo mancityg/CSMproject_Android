@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:background="@color/white">
 
     <ScrollView
         android:id="@+id/ScrollView1"
@@ -26,14 +26,15 @@
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
                 android:layout_marginTop="19dp"
-                android:clickable="true">
+                >
 
                 <ImageView
                     android:id="@+id/imageView3"
                     android:layout_width="69dp"
                     android:layout_height="28dp"
                     android:paddingLeft="30dp"
-                    app:srcCompat="@drawable/firstpage_btn21" />
+                    app:srcCompat="@drawable/firstpage_btn21"
+                    />
 
                 <TextView
                     android:id="@+id/go_back"
@@ -44,7 +45,7 @@
                     android:gravity="center_vertical"
                     android:paddingLeft="3dp"
                     android:text="내 정보 수정"
-                    android:textColor="#666666"
+                    android:textColor="@color/blackTitle"
                     android:textSize="19sp" />
             </LinearLayout>
             <LinearLayout
@@ -103,16 +104,14 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="44dp"
                 android:text="이름"
-                android:textColor="#666666"
+                android:textColor="@color/blackTitle"
                 android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/edit_text1"
                 android:layout_width="320dp"
                 android:layout_height="49dp"
-
                 android:background="@drawable/round_rect"
-                android:cursorVisible="false"
                 android:gravity="center_vertical"
                 android:inputType="text"
                 android:paddingLeft="15dp"
@@ -127,17 +126,15 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="44dp"
                 android:text="나이"
-                android:textColor="#666666"
+                android:textColor="@color/blackTitle"
                 android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/edit_text2"
                 android:layout_width="320dp"
                 android:layout_height="49dp"
-
                 android:background="@drawable/round_rect"
-                android:cursorVisible="false"
-                android:inputType="text"
+                android:inputType="number"
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
                 android:textSize="20sp" />
@@ -151,7 +148,7 @@
                 android:text="관심있는 학교"
                 android:paddingLeft="44dp"
                 android:fontFamily="@font/font"
-                android:textColor="#666666"
+                android:textColor="@color/blackTitle"
                 android:textSize="16sp"/>
 
             <EditText
@@ -160,7 +157,6 @@
                 android:layout_height="49dp"
 
                 android:background="@drawable/round_rect"
-                android:cursorVisible="false"
                 android:inputType="text"
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
@@ -175,7 +171,7 @@
                 android:text="관심있는 전공 및 학과"
                 android:paddingLeft="44dp"
                 android:fontFamily="@font/font"
-                android:textColor="#666666"
+                android:textColor="@color/blackTitle"
                 android:textSize="16sp" />
 
             <EditText
@@ -184,7 +180,6 @@
                 android:layout_height="49dp"
 
                 android:background="@drawable/round_rect"
-                android:cursorVisible="false"
                 android:inputType="text"
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
@@ -199,7 +194,7 @@
                 android:text="거주지"
                 android:paddingLeft="44dp"
                 android:fontFamily="@font/font"
-                android:textColor="#666666"
+                android:textColor="@color/blackTitle"
                 android:textSize="16sp" />
 
             <EditText
@@ -208,7 +203,6 @@
                 android:layout_height="49dp"
 
                 android:background="@drawable/round_rect"
-                android:cursorVisible="false"
                 android:inputType="text"
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
@@ -223,7 +217,7 @@
                 android:text="이메일"
                 android:paddingLeft="44dp"
                 android:fontFamily="@font/font"
-                android:textColor="#666666"
+                android:textColor="@color/blackTitle"
                 android:textSize="17sp" />
 
             <EditText
@@ -232,7 +226,6 @@
                 android:layout_height="49dp"
 
                 android:background="@drawable/round_rect"
-                android:cursorVisible="false"
                 android:inputType="text"
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
@@ -247,7 +240,7 @@
                 android:text="생년월일"
                 android:paddingLeft="44dp"
                 android:fontFamily="@font/font"
-                android:textColor="#666666"
+                android:textColor="@color/blackTitle"
                 android:textSize="16sp" />
 
             <EditText
@@ -256,7 +249,6 @@
                 android:layout_height="50dp"
 
                 android:background="@drawable/round_rect"
-                android:cursorVisible="false"
                 android:inputType="text"
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
@@ -271,7 +263,7 @@
                 android:text="인사말"
                 android:paddingLeft="44dp"
                 android:fontFamily="@font/font"
-                android:textColor="#666666"
+                android:textColor="@color/blackTitle"
                 android:textSize="16sp" />
 
             <EditText
@@ -280,7 +272,6 @@
                 android:layout_height="200dp"
 
                 android:background="@drawable/round_rect"
-                android:cursorVisible="false"
                 android:gravity="top|left"
                 android:inputType="textMultiLine"
                 android:paddingLeft="15dp"
