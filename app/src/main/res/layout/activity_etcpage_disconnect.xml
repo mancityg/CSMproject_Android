@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/windowBackground"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Etcpage_disconnect">
     <!--android:background="@drawable/etcpage_background7"-->
@@ -11,13 +12,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="#F7F7F7">
+        android:background="@color/windowBackground">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="#FFFFFF">
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/caution_text"
@@ -29,7 +29,7 @@
                 android:gravity="center"
                 android:fontFamily="@font/font"
                 android:text="주의"
-                android:textColor="#51AC90"
+                android:textColor="@color/CSMGreen"
                 android:textSize="25sp"
                 android:textStyle="bold"/>
         </LinearLayout>
@@ -44,7 +44,7 @@
             android:gravity="center"
             android:fontFamily="@font/font"
             android:text="정말로 연결을 끊겠습니까?"
-            android:textColor="#666666"
+            android:textColor="@color/blackTitle"
             android:textSize="16sp" />
 
         <TextView
@@ -56,7 +56,7 @@
             android:paddingLeft="42dp"
             android:fontFamily="@font/font"
             android:text="사유"
-            android:textColor="#666666"
+            android:textColor="@color/blackTitle"
             android:textSize="16sp" />
 
 
@@ -76,7 +76,7 @@
 
             <CheckBox
                 android:id="@+id/check1_on"
-                android:layout_width="33dp"
+                android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="40dp"
                 android:layout_gravity="center_vertical"
@@ -86,7 +86,7 @@
 
             <CheckBox
                 android:id="@+id/check1_off"
-                android:layout_width="33dp"
+                android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="40dp"
                 android:layout_gravity="center_vertical"
@@ -124,7 +124,7 @@
 
             <CheckBox
                 android:id="@+id/check2_on"
-                android:layout_width="33dp"
+                android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="40dp"
                 android:layout_gravity="center_vertical"
@@ -134,7 +134,7 @@
 
             <CheckBox
                 android:id="@+id/check2_off"
-                android:layout_width="33dp"
+                android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="40dp"
                 android:layout_gravity="center_vertical"
@@ -172,7 +172,7 @@
 
             <CheckBox
                 android:id="@+id/check3_on"
-                android:layout_width="33dp"
+                android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="40dp"
                 android:layout_gravity="center_vertical"
@@ -182,7 +182,7 @@
 
             <CheckBox
                 android:id="@+id/check3_off"
-                android:layout_width="33dp"
+                android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="40dp"
                 android:layout_gravity="center_vertical"
@@ -219,7 +219,7 @@
 
             <CheckBox
                 android:id="@+id/check4_on"
-                android:layout_width="33dp"
+                android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="40dp"
                 android:layout_gravity="center_vertical"
@@ -229,7 +229,7 @@
 
             <CheckBox
                 android:id="@+id/check4_off"
-                android:layout_width="33dp"
+                android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="40dp"
                 android:layout_gravity="center_vertical"
