@@ -44,6 +44,10 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".Etcpage_modify_menti" />
+        <activity android:name=".Etcpage_modify_mento" />
+
+
         <provider
             android:authorities="com.suwonccc.csmproject"
             android:name="androidx.core.content.FileProvider"
