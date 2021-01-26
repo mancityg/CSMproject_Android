@@ -108,7 +108,7 @@
 
             <EditText
                 android:id="@+id/edit_text1"
-                android:layout_width="304dp"
+                android:layout_width="320dp"
                 android:layout_height="49dp"
 
                 android:background="@drawable/round_rect"
