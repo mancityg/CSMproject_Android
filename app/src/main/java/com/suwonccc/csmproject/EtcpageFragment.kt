@@ -63,22 +63,22 @@ class EtcpageFragment : Fragment() {
         go_meninfo_btn.setOnClickListener{
             if(type == "mento") {
                 if(is_men == true) {
-                    //val intent = Intent(getActivity(), Etcpage9::class.java)
-                    //startActivity(intent)
+                    val intent = Intent(getActivity(), Etcpage_mymentilist::class.java)
+                    startActivity(intent)
                 }
                 else{
-                    //val intent = Intent(getActivity(), Etcpage7::class.java)
-                    //startActivity(intent)
+                    val intent = Intent(getActivity(), Etcpage_nomenti::class.java)
+                    startActivity(intent)
                 }
             }
             else if(type == "menti") {
                 if (is_men == true) {
-                    //val intent = Intent(getActivity(), Etcpage3::class.java)
-                    //startActivity(intent)
+                    val intent = Intent(getActivity(), Etcpage_mymento::class.java)
+                    startActivity(intent)
                 }
                 else {
-                    //val intent = Intent(getActivity(), Etcpage8::class.java)
-                    //startActivity(intent)
+                    val intent = Intent(getActivity(), Etcpage_nomento::class.java)
+                    startActivity(intent)
                 }
             }
         }

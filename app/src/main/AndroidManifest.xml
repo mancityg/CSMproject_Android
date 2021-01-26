@@ -46,6 +46,12 @@
 
         <activity android:name=".Etcpage_modify_menti" />
         <activity android:name=".Etcpage_modify_mento" />
+        <activity android:name=".Etcpage_mymentilist" />
+        <activity android:name=".Etcpage_mymenti" />
+        <activity android:name=".Etcpage_mymento" />
+        <activity android:name=".Etcpage_disconnect" />
+        <activity android:name=".Etcpage_nomenti" />
+        <activity android:name=".Etcpage_nomento" />
 
 
         <provider

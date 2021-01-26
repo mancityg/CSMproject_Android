@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dip"
+    android:layout_marginRight="20dip"
+    android:orientation="vertical"
+    android:background="@drawable/popup_background">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/popup_background1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:fontFamily="@font/font"
+                android:text="연결을 끊으시겠어요?"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                app:srcCompat="@drawable/etcpage_disconnect_img1" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="0dp"
+                android:layout_height="127dp"
+                android:layout_weight="1"
+                android:paddingRight="5dp"
+                app:srcCompat="@drawable/etcpage_disconnect_btn1" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="0dp"
+                android:layout_height="127dp"
+                android:layout_weight="1"
+                android:paddingLeft="5dp"
+                app:srcCompat="@drawable/etcpage_disconnect_btn2" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="15dp"
+                app:srcCompat="@drawable/etcpage_disconnect_img2" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
+
+    <!--
+    <FrameLayout
+        android:id="@+id/FrameLayout01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="177dp"
+            app:srcCompat="@drawable/etcpage_popup" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="85dp"
+            android:background="@android:color/transparent" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginLeft="207dp"
+            android:layout_marginTop="85dp"
+            android:background="@android:color/transparent" />
+    </FrameLayout>
+    -->

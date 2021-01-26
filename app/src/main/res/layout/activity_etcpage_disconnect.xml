@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Etcpage_disconnect">
+    <!--android:background="@drawable/etcpage_background7"-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#F7F7F7">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF">
+
+            <TextView
+                android:id="@+id/caution_text"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:fontFamily="@font/font"
+                android:text="주의"
+                android:textColor="#51AC90"
+                android:textSize="25sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="23dp"
+            android:gravity="center"
+            android:fontFamily="@font/font"
+            android:text="정말로 연결을 끊겠습니까?"
+            android:textColor="#666666"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:paddingLeft="42dp"
+            android:fontFamily="@font/font"
+            android:text="사유"
+            android:textColor="#666666"
+            android:textSize="16sp" />
+
+
+        <FrameLayout
+            android:layout_marginTop="23dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <!--
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="19dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/etc_btn16" />
+            -->
+
+            <CheckBox
+                android:id="@+id/check1_on"
+                android:layout_width="33dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="40dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/etcpage_on_checkbox"
+                android:button="@android:color/transparent"
+                android:checked="true" />
+
+            <CheckBox
+                android:id="@+id/check1_off"
+                android:layout_width="33dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="40dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/etcpage_off_checkbox"
+                android:button="@android:color/transparent"
+                android:checked="true" />
+
+            <TextView
+                android:id="@+id/textview1"
+                android:layout_width="301dp"
+                android:layout_height="44dp"
+                android:layout_marginLeft="70dp"
+
+                android:background="@drawable/round_rect1"
+                android:fontFamily="@font/font"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:text="멘토랑 연락이 잘 안되요 :("
+                android:textSize="16sp" />
+
+        </FrameLayout>
+        <FrameLayout
+            android:layout_marginTop="45dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <!--
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="19dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/etc_btn16" />
+            -->
+
+            <CheckBox
+                android:id="@+id/check2_on"
+                android:layout_width="33dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="40dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/etcpage_on_checkbox"
+                android:button="@android:color/transparent"
+                android:checked="true" />
+
+            <CheckBox
+                android:id="@+id/check2_off"
+                android:layout_width="33dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="40dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/etcpage_off_checkbox"
+                android:button="@android:color/transparent"
+                android:checked="true" />
+
+            <TextView
+                android:id="@+id/textview2"
+                android:layout_width="301dp"
+                android:layout_height="44dp"
+                android:layout_marginLeft="70dp"
+
+                android:background="@drawable/round_rect1"
+                android:gravity="center"
+                android:fontFamily="@font/font"
+                android:paddingLeft="15dp"
+                android:text="연락이 너무 자주 와요 :("
+                android:textSize="16sp"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_marginTop="45dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <!--
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="19dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/etc_btn16" />
+            -->
+
+            <CheckBox
+                android:id="@+id/check3_on"
+                android:layout_width="33dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="40dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/etcpage_on_checkbox"
+                android:button="@android:color/transparent"
+                android:checked="true" />
+
+            <CheckBox
+                android:id="@+id/check3_off"
+                android:layout_width="33dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="40dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/etcpage_off_checkbox"
+                android:button="@android:color/transparent"
+                android:checked="true" />
+
+            <TextView
+                android:id="@+id/textview3"
+                android:layout_width="301dp"
+                android:layout_height="44dp"
+                android:layout_marginLeft="70dp"
+
+                android:background="@drawable/round_rect1"
+                android:gravity="center"
+                android:fontFamily="@font/font"
+                android:paddingLeft="15dp"
+                android:text="연락이 너무 자주 와요 :("
+                android:textSize="16sp"/>
+        </FrameLayout>
+        <FrameLayout
+            android:layout_marginTop="45dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <!--
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="19dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/etc_btn16" />
+            -->
+
+            <CheckBox
+                android:id="@+id/check4_on"
+                android:layout_width="33dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="40dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/etcpage_on_checkbox"
+                android:button="@android:color/transparent"
+                android:checked="true" />
+
+            <CheckBox
+                android:id="@+id/check4_off"
+                android:layout_width="33dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="40dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/etcpage_off_checkbox"
+                android:button="@android:color/transparent"
+                android:checked="true" />
+
+            <TextView
+                android:id="@+id/textview4"
+                android:layout_width="301dp"
+                android:layout_height="44dp"
+                android:layout_marginLeft="70dp"
+
+                android:background="@drawable/round_rect1"
+                android:gravity="center"
+                android:fontFamily="@font/font"
+                android:paddingLeft="15dp"
+                android:text="연락이 너무 자주 와요 :("
+                android:textSize="16sp"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="72dp">
+
+            <ImageView
+                android:id="@+id/disconnect_btn"
+                android:layout_width="212dp"
+                android:layout_height="60dp"
+                android:paddingLeft="5dp"
+                app:srcCompat="@drawable/etcpage_disconnect_btn" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
