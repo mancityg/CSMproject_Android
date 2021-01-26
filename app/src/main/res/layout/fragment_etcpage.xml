@@ -6,15 +6,154 @@
     android:layout_height="match_parent"
     tools:context=".EtcpageFragment">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="324dp"
-        android:text="This is ETC Page"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="106dp"
+            android:layout_weight="4"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/go_modify_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:clickable="true">
+
+                <ImageView
+                    android:layout_width="69dp"
+                    android:layout_height="22dp"
+                    android:paddingLeft="37dp"
+                    app:srcCompat="@drawable/etcpage_icon1" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="339dp"
+                    android:layout_height="54dp"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:fontFamily="@font/font"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="14dp"
+                    android:text="내 정보 수정"
+                    android:textColor="#666666"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/go_meninfo_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:clickable="true">
+
+                <ImageView
+                    android:layout_width="69dp"
+                    android:layout_height="22dp"
+                    android:paddingLeft="37dp"
+                    app:srcCompat="@drawable/etcpage_icon2" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:fontFamily="@font/font"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="14dp"
+                    android:text="멘토/멘티 정보"
+                    android:textColor="#666666"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/go_universitylife_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:clickable="true">
+
+                <ImageView
+                    android:layout_width="69dp"
+                    android:layout_height="22dp"
+                    android:paddingLeft="37dp"
+                    app:srcCompat="@drawable/etcpage_icon3" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:fontFamily="@font/font"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="14dp"
+                    android:text="대학생활 둘러보기"
+                    android:textColor="#666666"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/go_bibleessence_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:clickable="true">
+
+                <ImageView
+                    android:layout_width="69dp"
+                    android:layout_height="22dp"
+                    android:paddingLeft="37dp"
+                    app:srcCompat="@drawable/etcpage_icon4" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:fontFamily="@font/font"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="14dp"
+                    android:text="성경 에센스"
+                    android:textColor="#666666"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/logout_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:clickable="true">
+
+                <ImageView
+                    android:layout_width="69dp"
+                    android:layout_height="22dp"
+                    android:paddingLeft="37dp"
+                    app:srcCompat="@drawable/etcpage_icon4" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:fontFamily="@font/font"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="14dp"
+                    android:text="로그아웃"
+                    android:textColor="#666666"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
