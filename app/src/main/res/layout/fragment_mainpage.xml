@@ -108,12 +108,11 @@
         android:text="1843"
         android:textColor="@color/CSMGreen"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/appCompatTextView2"
 
         app:layout_constraintStart_toEndOf="@+id/appCompatTextView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.808" />
+        app:layout_constraintTop_toTopOf="@id/appCompatTextView"
+        app:layout_constraintVertical_bias="0" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/appCompatTextView"
@@ -129,21 +128,20 @@
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.807" />
+        app:layout_constraintVertical_bias="0.81" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/appCompatTextView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/applesdgothicneom"
-        android:text=" 명의 멘토가 이 곳에 함께하고 있어요!"
+        android:text=" 명의 멘토와 멘티가 이 곳에 함께하고 있어요!"
         android:textColor="@color/blackTitle"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/N_of_mentor_2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.807" />
+        app:layout_constraintTop_toTopOf="@id/appCompatTextView"
+        app:layout_constraintVertical_bias="0" />
 
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/find_mentor_btn"

@@ -18,6 +18,7 @@ class Etcpage_disconnect : AppCompatActivity()  {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_etcpage_disconnect)
 
+        //checkbox 구현
         val on_btn1 = findViewById(R.id.check1_on) as CheckBox
         val off_btn1 = findViewById(R.id.check1_off) as CheckBox
         val on_btn2 = findViewById(R.id.check2_on) as CheckBox
@@ -67,10 +68,9 @@ class Etcpage_disconnect : AppCompatActivity()  {
             on_btn4.setVisibility(View.INVISIBLE)
         }
 
+        //popup창 띄우기
         val disconnect_btn= findViewById(R.id.disconnect_btn) as ImageView
-
         disconnect_btn.setOnClickListener{
-
             val builder = AlertDialog.Builder(this)
             val dialogView = layoutInflater.inflate(R.layout.popup_etcpage_disconnect, null)
             //builder.setView(dialogView).show()
@@ -81,24 +81,40 @@ class Etcpage_disconnect : AppCompatActivity()  {
             infoDialog.show()
 
             infoDialog.disconnect_yes_btn.setOnClickListener {
-                //infoDialog.dismiss()
-                //onBackPressed()
-                val intent = Intent(this, EtcpageFragment::class.java)
-                startActivity(intent)
+                infoDialog.dismiss()
+                this.finish()
+                return_to_meninfo()
             }
             infoDialog.disconnect_no_btn.setOnClickListener {
-                //onBackPressed()
-                //infoDialog.dismiss()
-                val intent = Intent(this, EtcpageFragment::class.java)
+                infoDialog.dismiss()
+                this.finish()
+                return_to_meninfo()
+            }
+        }
+    }
+
+    fun return_to_meninfo(){
+        //DB로 받아야 할 데이터
+        val type = "menti"
+        val is_men = true
+        if(is_men) {
+            if (type == "menti") {
+                val intent = Intent(this, Etcpage_mymento::class.java)
+                startActivity(intent)
+            } else if (type == "mento") {
+                val intent = Intent(this, Etcpage_mymentilist::class.java)
                 startActivity(intent)
             }
-
-            /*
-            val intent = Intent(this, Etcpage_disconnect_popup::class.java)
-            startActivity(intent)
-              */
         }
-
+        else {
+            if (type == "menti") {
+                val intent = Intent(this, Etcpage_nomento::class.java)
+                startActivity(intent)
+            } else if (type == "mento") {
+                val intent = Intent(this, Etcpage_nomenti::class.java)
+                startActivity(intent)
+            }
+        }
     }
 }
 //dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT))

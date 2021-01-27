@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".mainpage_fragment.MainpageWaitMenteeFragment">
 
+
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/name"
         android:layout_width="wrap_content"
@@ -14,7 +15,10 @@
         android:fontFamily="@font/applesdgothicneob"
         android:textSize="19sp"
         android:textColor="@color/blackTitle"
+
         app:layout_constraintHorizontal_chainStyle="packed"
+
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/nameMent"
         app:layout_constraintStart_toStartOf="parent"

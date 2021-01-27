@@ -31,7 +31,6 @@ import androidx.navigation.ui.setupWithNavController
 import kotlinx.android.synthetic.main.activity_etcpage_modify_menti.*
 import kotlinx.android.synthetic.main.activity_etcpage_modify_menti.profile_camera_image
 import kotlinx.android.synthetic.main.activity_etcpage_modify_menti.profile_image
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_login_profile.*
 import java.io.File
 import java.io.IOException
@@ -47,8 +46,49 @@ class Etcpage_modify_menti : AppCompatActivity()  {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_etcpage_modify_menti)
-        //var ori_img = findViewById(R.id.profile_camera_image) as ImageView
 
+        //modify btn 눌렀을 때, 수정 가능하게 구현하기
+        val name = "홍길동"
+        val age = "20"
+        val school = "성균관대학교"
+        val major = "소프트웨어학과"
+        val addr = "수원시"
+        val email = "0000@gmail.com"
+        val birth = "2000.01.01"
+        val msg = "안녕하세요:)"
+
+        edit_text1.setText(name)
+        edit_text2.setText(age)
+        edit_text3.setText(school)
+        edit_text4.setText(major)
+        edit_text5.setText(addr)
+        edit_text6.setText(email)
+        edit_text7.setText(birth)
+        edit_text8.setText(msg)
+        disabled()
+        profile_camera_image.setClickable(false)
+
+        save_btn.setVisibility(View.INVISIBLE)
+
+        return_btn.setOnClickListener{
+            this.finish()
+        }
+        modify_btn.setOnClickListener{
+            enabled()
+            save_btn.setVisibility(View.VISIBLE)
+            modify_btn.setVisibility(View.INVISIBLE)
+            profile_camera_image.setClickable(true)
+        }
+
+        save_btn.setOnClickListener{
+            val name = edit_text1.getText().toString()
+            disabled()
+            save_btn.setVisibility(View.INVISIBLE)
+            modify_btn.setVisibility(View.VISIBLE)
+            profile_camera_image.setClickable(false)
+        }
+
+        //profile camera 구현하기
         profile_camera_image.setOnClickListener {
             Toast.makeText(this@Etcpage_modify_menti, "프로필 사진 변경 버튼 클릭", Toast.LENGTH_SHORT).show()
 
@@ -76,56 +116,6 @@ class Etcpage_modify_menti : AppCompatActivity()  {
             popUpMenu.show()
         }
 
-        val name = "홍길동"
-        val age = "20"
-        val school = "성균관대학교"
-        val major = "소프트웨어학과"
-        val addr = "수원시"
-        val email = "0000@gmail.com"
-        val birth = "2000.01.01"
-        val msg = "안녕하세요:)"
-
-        edit_text1.setText(name)
-        edit_text2.setText(age)
-        edit_text3.setText(school)
-        edit_text4.setText(major)
-        edit_text5.setText(addr)
-        edit_text6.setText(email)
-        edit_text7.setText(birth)
-        edit_text8.setText(msg)
-        disabled()
-        profile_camera_image.setClickable(false)
-
-        val return_btn= findViewById(R.id.return_btn) as LinearLayout
-        val modify_btn = findViewById(R.id.modify_btn) as ImageView
-        val save_btn = findViewById(R.id.save_btn) as ImageView
-
-        save_btn.setVisibility(View.INVISIBLE)
-
-        return_btn.setOnClickListener{
-            setContentView(R.layout.activity_main)
-            val navController = supportFragmentManager.findFragmentById(R.id.etcpage)?.findNavController()
-            navController?.let {
-                main_nav_view.setupWithNavController(navController)
-            }
-            //Toast.makeText(this@Etcpage, "You clicked on TextView 'Click Me'.", Toast.LENGTH_SHORT).show()
-            //val intent = Intent(this, MainActivity::class.java)
-            //startActivity(intent)
-        }
-        modify_btn.setOnClickListener{
-            enabled()
-            save_btn.setVisibility(View.VISIBLE)
-            modify_btn.setVisibility(View.INVISIBLE)
-            profile_camera_image.setClickable(true)
-        }
-
-        save_btn.setOnClickListener{
-            val name = edit_text1.getText().toString()
-            disabled()
-            save_btn.setVisibility(View.INVISIBLE)
-            modify_btn.setVisibility(View.VISIBLE)
-            profile_camera_image.setClickable(false)
-        }
     }
     fun enabled(){
         edit_text1.isEnabled = true

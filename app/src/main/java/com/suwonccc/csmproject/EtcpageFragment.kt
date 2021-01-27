@@ -24,6 +24,7 @@ private const val ARG_PARAM2 = "param2"
 class EtcpageFragment : Fragment() {
 
     // TODO: Rename and change types of parameters
+    //DB로 받아야할 데이터
     private var type: String? = "menti"
     private var is_men: Boolean? = true
 
