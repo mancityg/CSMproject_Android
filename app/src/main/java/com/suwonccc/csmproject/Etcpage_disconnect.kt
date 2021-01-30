@@ -67,8 +67,8 @@ class Etcpage_disconnect : AppCompatActivity()  {
             on_btn4.setVisibility(View.INVISIBLE)
         }
 
+        //popup창 띄우기
         val disconnect_btn= findViewById(R.id.disconnect_btn) as ImageView
-
         disconnect_btn.setOnClickListener{
 
             val builder = AlertDialog.Builder(this)
@@ -81,16 +81,14 @@ class Etcpage_disconnect : AppCompatActivity()  {
             infoDialog.show()
 
             infoDialog.disconnect_yes_btn.setOnClickListener {
-                //infoDialog.dismiss()
-                //onBackPressed()
-                val intent = Intent(this, EtcpageFragment::class.java)
-                startActivity(intent)
+                infoDialog.dismiss()
+                this.finish()
+                return_to_meninfo()
             }
             infoDialog.disconnect_no_btn.setOnClickListener {
-                //onBackPressed()
-                //infoDialog.dismiss()
-                val intent = Intent(this, EtcpageFragment::class.java)
-                startActivity(intent)
+                infoDialog.dismiss()
+                this.finish()
+                return_to_meninfo()
             }
 
             /*
@@ -99,6 +97,29 @@ class Etcpage_disconnect : AppCompatActivity()  {
               */
         }
 
+    }
+    fun return_to_meninfo(){
+        //DB로 받아야 할 데이터
+        val type = "menti"
+        val is_men = true
+        if(is_men) {
+            if (type == "menti") {
+                val intent = Intent(this, Etcpage_mymento::class.java)
+                startActivity(intent)
+            } else if (type == "mento") {
+                val intent = Intent(this, Etcpage_mymentilist::class.java)
+                startActivity(intent)
+            }
+        }
+        else {
+            if (type == "menti") {
+                val intent = Intent(this, Etcpage_nomento::class.java)
+                startActivity(intent)
+            } else if (type == "mento") {
+                val intent = Intent(this, Etcpage_nomenti::class.java)
+                startActivity(intent)
+            }
+        }
     }
 }
 //dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT))
