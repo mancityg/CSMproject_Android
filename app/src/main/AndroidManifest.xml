@@ -29,7 +29,6 @@
             android:label="CSMProj"
             android:launchMode="singleTask">
 
-
         </activity>
 
         <activity
@@ -42,8 +41,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Etcpage_modify_menti" />
-        <activity android:name=".Etcpage_modify_mento" />
+        <activity android:name=".Etcpage_modify_menti"/>
+        <activity android:name=".Etcpage_modify_mento"/>
         <activity android:name=".Etcpage_mymentilist" />
         <activity android:name=".Etcpage_mymenti" />
         <activity android:name=".Etcpage_mymento" />

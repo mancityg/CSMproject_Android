@@ -21,7 +21,6 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/return_btn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
@@ -29,7 +28,7 @@
                 android:clickable="true">
 
                 <ImageView
-                    android:id="@+id/imageView3"
+                    android:id="@+id/return_btn"
                     android:layout_width="69dp"
                     android:layout_height="28dp"
                     android:paddingLeft="30dp"
@@ -75,12 +74,12 @@
                         android:layout_height="201dp"
                         app:srcCompat="@drawable/firstpage_btn22" />
 
-                    <ImageView
+                    <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/profile_image"
                         android:layout_width="167dp"
                         android:layout_height="181dp"
                         android:layout_gravity="center"
-                        app:srcCompat="@drawable/firstpage_btn10" />
+                        android:src="@drawable/firstpage_btn10" />
 
                     <ImageView
                         android:id="@+id/profile_camera_image"
@@ -219,13 +218,13 @@
 
             <TextView
                 android:id="@+id/textView6"
-                android:layout_width="match_parent"
+                android:layout_width="345dp"
                 android:layout_height="40dp"
                 android:background="@null"
-                android:gravity="center_vertical"
-                android:text="이메일"
-                android:paddingLeft="44dp"
                 android:fontFamily="@font/font"
+                android:gravity="center_vertical"
+                android:paddingLeft="44dp"
+                android:text="이메일"
                 android:textColor="@color/blackTitle"
                 android:textSize="17sp" />
 

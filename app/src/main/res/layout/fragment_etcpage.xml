@@ -137,7 +137,7 @@
                     android:layout_width="69dp"
                     android:layout_height="22dp"
                     android:paddingLeft="37dp"
-                    app:srcCompat="@drawable/etcpage_icon4" />
+                    app:srcCompat="@drawable/etcpage_icon5" />
 
                 <TextView
                     android:id="@+id/textView5"
