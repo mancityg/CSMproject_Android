@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="310dp"
+    android:layout_height="75dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/search_mentor_item_bg"
+    android:layout_marginStart="1dp"
+    android:layout_marginEnd="1dp"
+    android:layout_marginTop="1dp"
+    android:layout_marginBottom="5dp"
+    android:elevation="10dp"
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_photo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/prof_sample"
+        app:civ_border_color="@color/CSMYellow"
+        app:civ_border_overlay="false"
+        app:civ_border_width="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginStart="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/applesdgothicneob"
+        android:text="이상호"
+        android:textColor="@color/blackTitle"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/item_tag1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:layout_marginStart="80dp"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintVertical_chainStyle="packed"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/item_tag1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="성균관대학교   /    소프트웨어학과"
+        android:fontFamily="@font/applesdgothicneom"
+        android:textColor="@color/blackTitle"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/item_name"
+        app:layout_constraintTop_toBottomOf="@id/item_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="8dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

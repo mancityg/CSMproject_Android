@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="380dp"
+    android:layout_height="550dp"
+    android:background="@drawable/popup_agree_mentee_bg"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/agreement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/applesdgothicneom"
+        android:text="크선멘 멘티를 신청하는 차지영 님은 멘티로\n신분을 위장하거나 공동체를 기망할 목적으로\n크선멘에 참여하였을 시 어떠한 법적 책임이든\n달게 받을 것에 대해서 동의합니다."
+        android:textColor="@color/blackTitle"
+        android:lineSpacingExtra="16sp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/popup_agree_back_btn"
+        android:layout_width="136dp"
+        android:layout_height="55dp"
+        android:src="@drawable/search_popup_back_btn"
+        android:layout_marginTop="450dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.155"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/popup_agree_req_btn"
+        android:layout_width="136dp"
+        android:layout_height="55dp"
+        android:src="@drawable/search_popup_req_btn"
+        android:layout_marginTop="450dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.845"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

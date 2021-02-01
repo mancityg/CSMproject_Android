@@ -37,14 +37,14 @@ class MenteelistAdapter(val context: Context, val menteelist: ArrayList<Mentee>)
 
         fun bind (mentee: Mentee, context: Context){
             val resourceId = context.resources.getIdentifier(mentee.thumb, "drawable", context.packageName)
-            var basic : String = " 님 ("
+            var basic : String = " 님 ( "
             basic += mentee.age.toString()
-            basic += "세) "
+            basic += " /"
 
             val genderImg : String = if(mentee.man){
-                "male_icon"
+                "main_male_icon"
             }else{
-                "female_icon"
+                "main_female_icon"
             }
             val genderImgId = context.resources.getIdentifier(genderImg, "drawable", context.packageName)
             menteename?.text = mentee.name

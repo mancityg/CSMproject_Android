@@ -1,5 +1,6 @@
 package com.suwonccc.csmproject.mainpage_fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import com.suwonccc.csmproject.MainSearchMentorActivity
 import com.suwonccc.csmproject.R
 import kotlinx.android.synthetic.main.fragment_mainpage.*
 
@@ -48,8 +50,14 @@ class MainpageFragment : Fragment() {
         navController = Navigation.findNavController(view)
 
         find_mentor_btn.setOnClickListener{
-            navController.navigate(R.id.action_mainpage_to_mainpageWelcomeMentorFragment)
+            activity?.let{
+                val intent = Intent(it, MainSearchMentorActivity::class.java)
+                it.startActivity(intent)
+            }
+
+            //navController.navigate(R.id.action_mainpage_to_mainpageWelcomeMentorFragment)
         }
+
 
     }
 
