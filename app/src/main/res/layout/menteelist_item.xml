@@ -30,7 +30,7 @@
         android:fontFamily="@font/applesdgothicneob"
         android:text="차지영"
         android:textColor="@color/white"
-        android:textSize="13sp"
+        android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@id/item_tag1"
         app:layout_constraintEnd_toStartOf="@id/item_basic"
         app:layout_constraintTop_toTopOf="parent"
@@ -46,22 +46,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/applesdgothicneob"
-        android:text=" 님 (20세) "
+        android:text=" 님 ( 20 /"
         android:textColor="@color/white"
-        android:textSize="13sp"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/item_name"
         app:layout_constraintStart_toEndOf="@id/item_name"
-        app:layout_constraintVertical_bias="0.18"
         />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/item_gender"
-        android:layout_width="17dp"
-        android:layout_height="17dp"
-        android:src="@drawable/female_icon"
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:src="@drawable/main_female_icon"
         app:layout_constraintStart_toEndOf="@id/item_basic"
-        app:layout_constraintTop_toTopOf="@id/item_name"/>
+        app:layout_constraintTop_toTopOf="@id/item_name"
+        android:padding="3dp"
+        android:layout_marginEnd="5dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/applesdgothicneob"
+        android:text=")"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintTop_toTopOf="@id/item_name"
+        app:layout_constraintStart_toEndOf="@id/item_gender"
+        />
+
 
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -71,7 +85,7 @@
         android:text="성균관대학교 자과캠"
         android:fontFamily="@font/applesdgothicneob"
         android:textColor="@color/white"
-        android:textSize="11sp"
+        android:textSize="12sp"
         android:background="@drawable/main_mentee_tag_bg"
         app:layout_constraintStart_toStartOf="@id/item_name"
         app:layout_constraintTop_toBottomOf="@id/item_name"
@@ -87,7 +101,7 @@
         android:text="3학년"
         android:fontFamily="@font/applesdgothicneob"
         android:textColor="@color/white"
-        android:textSize="11sp"
+        android:textSize="12sp"
         android:background="@drawable/main_mentee_tag_bg"
         app:layout_constraintStart_toEndOf="@id/item_tag1"
         app:layout_constraintTop_toTopOf="@id/item_tag1"
@@ -104,7 +118,7 @@
         android:text="소프트웨어학과"
         android:fontFamily="@font/applesdgothicneob"
         android:textColor="@color/white"
-        android:textSize="11sp"
+        android:textSize="12sp"
         android:background="@drawable/main_mentee_tag_bg"
         app:layout_constraintStart_toStartOf="@id/item_name"
         app:layout_constraintTop_toBottomOf="@id/item_tag1"
@@ -120,7 +134,7 @@
         android:text="#내나이가어때서"
         android:fontFamily="@font/applesdgothicneob"
         android:textColor="@color/white"
-        android:textSize="11sp"
+        android:textSize="12sp"
         android:background="@drawable/main_mentee_tag_bg"
         app:layout_constraintStart_toEndOf="@id/item_tag3"
         app:layout_constraintTop_toTopOf="@id/item_tag3"

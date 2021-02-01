@@ -37,7 +37,7 @@
         tools:layout="@layout/fragment_etcpage" />
     <fragment
         android:id="@+id/mainpageWelcomeMentorFragment"
-        android:name="com.suwonccc.csmproject.mainpage_fragment.MainpageWelcomeMenteeFragment"
+        android:name="com.suwonccc.csmproject.mainpage_fragment.MainpageWelcomeMentorFragment"
         android:label="fragment_mainpage_welcome"
-        tools:layout="@layout/fragment_mainpage_welcome_mentee" />
+        tools:layout="@layout/fragment_mainpage_welcome_mentor" />
 </navigation>

@@ -84,7 +84,7 @@
         <SlidingDrawer
         android:id="@+id/slidingDrawer"
         android:layout_width="match_parent"
-        android:layout_height="460dp"
+        android:layout_height="235dp"
         android:allowSingleTap="true"
         android:animateOnClick="true"
         android:bottomOffset="0dp"
