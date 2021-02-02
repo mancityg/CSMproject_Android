@@ -13,5 +13,10 @@
     <dimen name="design_bottom_navigation_margin" tools:override="true">16dp</dimen>
     <dimen name="design_bottom_navigation_elevation" tools:override="true">20dp</dimen>
     <dimen name="main_emptyview_height">232dp</dimen>
+    <!--
+    Because the window insets on round devices are larger than 15dp, this padding only applies
+    to square screens.
+    -->
+    <dimen name="box_inset_layout_padding">0dp</dimen>
 
 </resources>

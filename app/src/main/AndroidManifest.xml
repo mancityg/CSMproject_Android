@@ -38,6 +38,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".Etcpage_modify_menti"
             android:screenOrientation="portrait"/>
         <activity android:name=".Etcpage_modify_mento"
@@ -55,8 +56,7 @@
         <activity android:name=".Etcpage_nomento"
             android:screenOrientation="portrait" />
         <activity android:name=".MainSearchMentorActivity"
-            android:screenOrientation="portrait"
-            />
+            android:screenOrientation="portrait" />
 
 
         <provider

@@ -47,7 +47,7 @@ class LoginMentee : Fragment() {
         }
 
         back_btn.setOnClickListener {
-            navController.navigate(R.id.action_loginMentee_to_loginProfile)
+            navController.navigate(R.id.action_loginMentee_to_loginProfile_back)
         }
     }
 }

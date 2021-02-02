@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="email">
+        <item>naver.com</item>
+        <item>gmail.com</item>
+        <item>hanmail.net</item>
+    </string-array>
+
+    <string-array name="birthyear">
+        <item>1990</item><item>1991</item><item>1992</item><item>1993</item>
+        <item>1994</item><item>1995</item><item>1996</item><item>1997</item>
+        <item>1998</item><item>1999</item><item>2000</item><item>2001</item>
+        <item>2002</item><item>2003</item><item>2004</item><item>2005</item>
+        <item>2006</item>
+    </string-array>
+
+    <string-array name="birthmonth">
+        <item>1</item><item>2</item><item>3</item><item>4</item>
+        <item>5</item><item>6</item><item>7</item><item>8</item>
+        <item>9</item><item>10</item><item>11</item><item>12</item>
+    </string-array>
+
+    <string-array name="birthdate">
+        <item>1</item><item>2</item><item>3</item><item>4</item><item>5</item>
+        <item>6</item><item>7</item><item>8</item><item>9</item><item>10</item>
+        <item>11</item><item>12</item><item>13</item><item>14</item><item>15</item>
+        <item>16</item><item>17</item><item>18</item><item>19</item><item>20</item>
+        <item>21</item><item>22</item><item>23</item><item>24</item><item>25</item>
+        <item>26</item><item>27</item><item>28</item><item>29</item><item>30</item>
+        <item>31</item>
+    </string-array>
+
+    <string-array name="studentNum">
+        <item>14</item><item>15</item><item>16</item><item>17</item>
+        <item>18</item><item>19</item><item>20</item><item>21</item>
+    </string-array>
+
+</resources>

@@ -42,7 +42,7 @@ class LoginMain : Fragment() {
             //페이스북 로그인 구현
         }
 
-        insta_btn.setOnClickListener {
+        naver_btn.setOnClickListener {
             //인스타그램 로그인 구현
         }
 

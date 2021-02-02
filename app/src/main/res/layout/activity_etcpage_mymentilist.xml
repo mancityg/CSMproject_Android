@@ -24,7 +24,7 @@
                 android:layout_width="69dp"
                 android:layout_height="28dp"
                 android:paddingLeft="30dp"
-                app:srcCompat="@drawable/firstpage_btn21" />
+                app:srcCompat="@drawable/firstpage_btn_back" />
 
             <TextView
                 android:id="@+id/go_back"

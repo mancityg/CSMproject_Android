@@ -32,7 +32,7 @@
                     android:layout_width="69dp"
                     android:layout_height="28dp"
                     android:paddingLeft="30dp"
-                    app:srcCompat="@drawable/firstpage_btn21" />
+                    app:srcCompat="@drawable/firstpage_btn_back" />
 
                 <TextView
                     android:id="@+id/go_back"
@@ -72,14 +72,14 @@
                         android:layout_gravity="center"
                         android:layout_width="186dp"
                         android:layout_height="201dp"
-                        app:srcCompat="@drawable/firstpage_btn22" />
+                        app:srcCompat="@drawable/profile_border" />
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/profile_image"
                         android:layout_width="167dp"
                         android:layout_height="181dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/firstpage_btn10" />
+                        android:src="@drawable/profile_basic" />
 
                     <ImageView
                         android:id="@+id/profile_camera_image"
@@ -89,7 +89,7 @@
                         android:layout_marginLeft="60dp"
                         android:layout_marginTop="60dp"
                         android:clickable="false"
-                        app:srcCompat="@drawable/firstpage_btn24" />
+                        app:srcCompat="@drawable/profile_camera" />
 
                 </FrameLayout>
             </LinearLayout>

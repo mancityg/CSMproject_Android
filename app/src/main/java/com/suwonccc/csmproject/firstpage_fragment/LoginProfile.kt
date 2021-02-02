@@ -3,7 +3,6 @@ package com.suwonccc.csmproject.firstpage_fragment
 import android.Manifest
 import android.app.Activity.RESULT_OK
 import android.content.Intent
-import android.content.Intent.ACTION_PICK
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
@@ -15,37 +14,28 @@ import android.os.Bundle
 import android.os.Environment
 import android.provider.MediaStore
 import android.text.TextUtils
-import android.util.Half.toFloat
-import android.util.Log
 import android.view.*
 import androidx.fragment.app.Fragment
-import android.widget.EditText
-import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
-import androidx.core.app.ActivityCompat.requestPermissions
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
-import androidx.fragment.app.FragmentActivity
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.suwonccc.csmproject.R
 import kotlinx.android.synthetic.main.fragment_login_profile.*
+import kotlinx.android.synthetic.main.fragment_login_profile_change.view.*
 import java.io.File
 import java.io.IOException
-import java.lang.Float.intBitsToFloat
 import java.text.SimpleDateFormat
 import java.util.*
-import java.util.Collections.rotate
 
 class LoginProfile : Fragment() {
 
     lateinit var navController: NavController
     lateinit var currentPhotoPath: String
-    private lateinit var addressEditText: EditText
-    private lateinit var emailEditText: EditText
-    private lateinit var birthdayEditText: EditText
     private val REQUEST_CAMERA = 0
     private val REQUEST_READ_EXTERMAL_STORAGE = 1
     private var imageUri: Uri? = null
@@ -63,37 +53,26 @@ class LoginProfile : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         navController = Navigation.findNavController(view)
-        addressEditText = view.findViewById(R.id.address_text)
-        emailEditText = view.findViewById(R.id.email_text)
-        birthdayEditText = view.findViewById(R.id.birthday_text)
 
         /* 프로필 사진 변경 버튼 클릭했을 때 */
         profile_camera_image.setOnClickListener {
-            Toast.makeText(getActivity(), "프로필 사진 변경 버튼 클릭", Toast.LENGTH_SHORT).show()
+            val btnsheet = layoutInflater.inflate(R.layout.fragment_login_profile_change, null)
+            val dialog = BottomSheetDialog(this.requireContext())
+            dialog.setContentView(btnsheet)
 
-            /* 팝업 메뉴 생성 */
-            var popUpMenu = PopupMenu(getContext(), profile_camera_image)
-
-            popUpMenu.menu.add(Menu.NONE, 0, 0, "앨범에서 사진 선택")
-            popUpMenu.menu.add(Menu.NONE, 1, 1, "기본 이미지로 변경")
-            popUpMenu.menu.add(Menu.NONE, 2, 2, "카메라 촬영하기")
-
-            popUpMenu.setOnMenuItemClickListener { menuItem ->
-                val id = menuItem.itemId
-
-                if (id==0) {
-                    Toast.makeText(getActivity(), "옵션1 클릭", Toast.LENGTH_SHORT).show()
-                    pickGallery()
-                } else if (id==1) {
-                    Toast.makeText(getActivity(), "옵션2 클릭", Toast.LENGTH_SHORT).show()
-                    changeToBasic()
-                } else if (id==2) {
-                    Toast.makeText(getActivity(), "옵션3 클릭", Toast.LENGTH_SHORT).show()
-                    captureCamera()
-                }
-                false
+            btnsheet.profile_option1_btn.setOnClickListener {
+                pickGallery()
+                dialog.dismiss()
             }
-            popUpMenu.show()
+            btnsheet.profile_option2_btn.setOnClickListener {
+                changeToBasic()
+                dialog.dismiss()
+            }
+            btnsheet.profile_option3_btn.setOnClickListener {
+                captureCamera()
+                dialog.dismiss()
+            }
+            dialog.show()
         }
 
 
@@ -137,9 +116,9 @@ class LoginProfile : Fragment() {
         next_btn.setOnClickListener {
             next_btn.isSelected = true
 
-            if (TextUtils.isEmpty(addressEditText.getText()) ||
-                TextUtils.isEmpty(emailEditText.getText()) ||
-                TextUtils.isEmpty(birthdayEditText.getText()) ||
+            if (TextUtils.isEmpty(name_text.text) ||
+                TextUtils.isEmpty(address_text.text) ||
+                TextUtils.isEmpty(email_text.text) ||
                 (!male_btn.isSelected && !female_btn.isSelected) ||
                 (!mentor_btn.isSelected && !mentee_btn.isSelected)
             ) {
@@ -188,7 +167,7 @@ class LoginProfile : Fragment() {
 
     /* 팝업창 옵션2 선택했을 때 */
     fun changeToBasic() {
-        profile_image.setImageResource(R.drawable.firstpage_btn10)
+        profile_image.setImageResource(R.drawable.profile_basic)
     }
 
 

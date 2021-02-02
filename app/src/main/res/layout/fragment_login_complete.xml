@@ -7,6 +7,17 @@
     android:background="@drawable/firstpage_background_3"
     tools:context=".firstpage_fragment.LoginComplete">
 
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="236dp"
+        android:src="@drawable/firstpage_complete_letter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    /* '신청하기' 버튼 안 눌렸을 때의 이미지 받아야 함 */
     <Button
         android:id="@+id/start_btn"
         style="?android:attr/borderlessButtonStyle"
