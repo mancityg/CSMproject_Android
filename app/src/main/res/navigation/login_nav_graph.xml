@@ -51,7 +51,7 @@
             app:popEnterAnim="@anim/fragment_close_enter"
             app:popExitAnim="@anim/fragment_close_exit" />
         <action
-            android:id="@+id/action_loginMentor_to_loginProfile3"
+            android:id="@+id/action_loginMentor_to_loginProfile_back"
             app:destination="@id/loginProfile"
             app:enterAnim="@anim/fragment_close_enter"
             app:exitAnim="@anim/fragment_close_exit"
@@ -71,7 +71,7 @@
             app:popEnterAnim="@anim/fragment_close_enter"
             app:popExitAnim="@anim/fragment_close_exit" />
         <action
-            android:id="@+id/action_loginMentee_to_loginProfile"
+            android:id="@+id/action_loginMentee_to_loginProfile_back"
             app:destination="@id/loginProfile"
             app:enterAnim="@anim/fragment_close_enter"
             app:exitAnim="@anim/fragment_close_exit"

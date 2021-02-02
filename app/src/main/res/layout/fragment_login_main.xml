@@ -4,64 +4,93 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/firstpage_background_1"
     tools:context=".firstpage_fragment.LoginMain">
 
-    <ImageButton
-        android:id="@+id/kakao_btn"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="#00ffffff"
-        android:scaleType="centerInside"
-        android:src="@drawable/firstpage_btn12"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.26"
+    <ImageView
+        android:layout_width="410dp"
+        android:layout_height="100dp"
+        android:src="@drawable/main_logo_temp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.745" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.25" />
 
-    <ImageButton
-        android:id="@+id/facebook_btn"
-        android:layout_width="50dp"
+    <LinearLayout
+        android:layout_width="238dp"
         android:layout_height="50dp"
-        android:background="#00ffffff"
-        android:scaleType="centerInside"
-        android:src="@drawable/firstpage_btn13"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.421"
+        android:layout_marginTop="454dp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.745"/>
+        android:orientation="horizontal"
+        android:weightSum="19">
 
-    <ImageButton
-        android:id="@+id/insta_btn"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="#00ffffff"
-        android:scaleType="centerInside"
-        android:src="@drawable/firstpage_btn14"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.578"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.745"/>
+        <ImageButton
+            android:id="@+id/kakao_btn"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="50dp"
+            android:background="#00ffffff"
+            android:scaleType="centerInside"
+            android:src="@drawable/firstpage_btn_kakao" />
 
-    <ImageButton
-        android:id="@+id/google_btn"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="#00ffffff"
-        android:scaleType="centerInside"
-        android:src="@drawable/firstpage_btn15"
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:visibility="invisible"/>
+
+        <ImageButton
+            android:id="@+id/facebook_btn"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="50dp"
+            android:background="#00ffffff"
+            android:scaleType="centerInside"
+            android:src="@drawable/firstpage_btn_facebook" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:visibility="invisible"/>
+
+        <ImageButton
+            android:id="@+id/naver_btn"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="50dp"
+            android:background="#00ffffff"
+            android:scaleType="centerInside"
+            android:src="@drawable/firstpage_btn_naver" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:visibility="invisible"/>
+
+        <ImageButton
+            android:id="@+id/google_btn"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="50dp"
+            android:background="#00ffffff"
+            android:scaleType="centerInside"
+            android:src="@drawable/firstpage_btn_google" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/loginphrase_text"
+        android:layout_width="140dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="512dp"
+        android:src="@drawable/firstpage_main_letter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.736"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.745"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

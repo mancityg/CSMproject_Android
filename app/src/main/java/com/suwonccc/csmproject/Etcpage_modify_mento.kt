@@ -21,7 +21,6 @@ import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
-import com.suwonccc.csmproject.R
 import kotlinx.android.synthetic.main.activity_etcpage_modify_mento.*
 import java.io.File
 import java.io.IOException
@@ -170,7 +169,7 @@ class Etcpage_modify_mento : AppCompatActivity()  {
 
     /* 팝업창 옵션2 선택했을 때 */
     fun changeToBasic() {
-        profile_image.setImageResource(R.drawable.firstpage_btn10)
+        profile_image.setImageResource(R.drawable.profile_basic)
     }
 
     /* 팝업창 옵션3 선택했을 때 */

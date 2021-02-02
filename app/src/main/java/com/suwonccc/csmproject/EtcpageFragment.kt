@@ -1,15 +1,14 @@
 package com.suwonccc.csmproject
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.NavController
-import androidx.navigation.Navigation
 import kotlinx.android.synthetic.main.fragment_etcpage.*
-import kotlinx.android.synthetic.main.fragment_mainpage.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -88,12 +87,12 @@ class EtcpageFragment : Fragment() {
             }
         }
         go_universitylife_btn.setOnClickListener{
-            //val intent = Intent(getActivity(), Etcpage3::class.java)
-            //startActivity(intent)
+            var intent = Intent(Intent.ACTION_VIEW, Uri.parse("http://cccvlm.com/sns/"))
+            startActivity(intent)
         }
         go_bibleessence_btn.setOnClickListener{
-            //val intent = Intent(getActivity(), Etcpage3::class.java)
-            //startActivity(intent)
+            var intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/c/BibleEssence/featured"))
+            startActivity(intent)
         }
     }
 

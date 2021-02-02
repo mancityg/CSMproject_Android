@@ -34,8 +34,7 @@ class LoginMentor : Fragment() {
             next_btn.isSelected = true
 
             if (TextUtils.isEmpty(mentor_school_edittext.getText()) ||
-                TextUtils.isEmpty(mentor_major_edittext.getText()) ||
-                TextUtils.isEmpty(student_num_edittext.getText())
+                TextUtils.isEmpty(mentor_major_edittext.getText())
             ) {
                 Toast.makeText(getActivity(), "작성하지 않은 항목이 있습니다", Toast.LENGTH_SHORT).show()
             } else {
@@ -49,15 +48,9 @@ class LoginMentor : Fragment() {
 //        val adapter = ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, schools)
 //
 //        autotextView.setAdapter(adapter)
-//
-//        next_btn.setOnClickListener {
-//            next_btn.isSelected = true
-//
-//            navController.navigate(R.id.action_loginMentor_to_loginComplete)
-//        }
-//
+
         back_btn.setOnClickListener {
-            navController.navigate(R.id.action_loginMentor_to_loginProfile3)
+            navController.navigate(R.id.action_loginMentor_to_loginProfile_back)
         }
 
 

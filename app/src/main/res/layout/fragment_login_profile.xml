@@ -4,18 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
     tools:context=".firstpage_fragment.LoginProfile">
 
+    /* 기기에서 보이는 화면과 디자인 화면 비율이 서로 다름 */
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/firstpage_background_2_1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/letter1_image"
+            android:layout_width="170dp"
+            android:layout_height="100dp"
+            android:src="@drawable/firstpage_profile_letter1"
+            android:layout_marginTop="90dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <RelativeLayout
             android:layout_width="131dp"
@@ -32,15 +43,7 @@
                 android:background="#00FFFFFF"
                 app:civ_border_width="3dp"
                 app:civ_border_color="@color/CSMYellow"
-                android:src="@drawable/firstpage_btn10" />
-
-<!--            <ImageView-->
-<!--                android:id="@+id/profile_border_image"-->
-<!--                android:layout_width="131dp"-->
-<!--                android:layout_height="131dp"-->
-<!--                android:background="#00FFFFFF"-->
-<!--                android:scaleType="centerInside"-->
-<!--                android:src="@drawable/firstpage_btn22" />-->
+                android:src="@drawable/profile_basic" />
 
             <ImageView
                 android:id="@+id/profile_camera_image"
@@ -49,71 +52,311 @@
                 android:background="#00FFFFFF"
                 android:layout_alignBottom="@id/profile_image"
                 android:layout_alignParentRight="true"
-                android:src="@drawable/firstpage_btn24"
+                android:src="@drawable/profile_camera"
                 android:clickable="true"/>
-
         </RelativeLayout>
 
+        <ImageView
+            android:id="@+id/textbox_image"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="372dp"
+            android:background="@drawable/firstpage_textbox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/address_text"
+            android:id="@+id/name_text"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="372dp"
+            android:layout_marginStart="58dp"
+            android:layout_marginEnd="58dp"
+            android:hint="성함"
+            android:fontFamily="@font/applesdgothicneom"
+            android:textColor="@color/blackTitle"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:background="@color/transparent"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/address_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
             android:layout_marginTop="450dp"
-            android:layout_marginStart="58dp"
-            android:layout_marginEnd="58dp"
-            android:background="#00FFFFFF"
-            android:hint="거주지"
-            android:fontFamily="@font/applesdgothicneom"
-            android:textSize="15sp"
-            android:singleLine="true"
+            android:layout_marginStart="33dp"
+            android:layout_marginEnd="33dp"
+            android:orientation="horizontal"
+            android:background="@drawable/underlined_textview"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <EditText
-            android:id="@+id/email_text"
+            <TextView
+                android:id="@+id/address_textview"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:fontFamily="@font/applesdgothicneom"
+                android:gravity="center_vertical"
+                android:text="거주지"
+                android:textColor="@color/blackTitle"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/address_text"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:fontFamily="@font/applesdgothicneom"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:hint="OO도 OO시"
+                android:singleLine="true"
+                android:textColor="@color/blackTitle"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/email_linearlayout"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="40dp"
             android:layout_marginTop="520dp"
-            android:layout_marginStart="58dp"
-            android:layout_marginEnd="58dp"
-            android:background="#00FFFFFF"
-            android:hint="이메일"
-            android:fontFamily="@font/applesdgothicneom"
-            android:textSize="15sp"
-            android:singleLine="true"
+            android:layout_marginStart="33dp"
+            android:layout_marginEnd="33dp"
+            android:orientation="horizontal"
+            android:background="@drawable/underlined_textview"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <EditText
-            android:id="@+id/birthday_text"
+            <TextView
+                android:id="@+id/email_textview"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:fontFamily="@font/applesdgothicneom"
+                android:gravity="center_vertical"
+                android:text="이메일"
+                android:textColor="@color/blackTitle"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/email_text"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:fontFamily="@font/applesdgothicneom"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:hint="아이디"
+                android:singleLine="true"
+                android:textColor="@color/blackTitle"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/email_at_textview"
+                android:layout_width="12dp"
+                android:layout_height="40dp"
+                android:fontFamily="@font/applesdgothicneom"
+                android:gravity="center"
+                android:text="\@"
+                android:textColor="@color/blackTitle"
+                android:textSize="10sp" />
+
+            <Spinner
+                android:id="@+id/email_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:entries="@array/email"
+                android:theme="@style/SpinnerTheme" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/birthday_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="590dp"
+            android:layout_marginStart="33dp"
+            android:layout_marginEnd="33dp"
+            android:orientation="horizontal"
+            android:background="@drawable/underlined_textview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/birthday_textview"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:text="생년월일"
+                android:textColor="@color/blackTitle"
+                android:textSize="10sp"
+                android:fontFamily="@font/applesdgothicneom"
+                android:gravity="center_vertical" />
+
+            <Spinner
+                android:id="@+id/birthyear_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:entries="@array/birthyear"
+                android:gravity="center"
+                android:theme="@style/SpinnerTheme" />
+
+            <Spinner
+                android:id="@+id/birthmonth_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:entries="@array/birthmonth"
+                android:gravity="center"
+                android:theme="@style/SpinnerTheme" />
+
+            <Spinner
+                android:id="@+id/birthdate_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:entries="@array/birthmonth"
+                android:gravity="center"
+                android:theme="@style/SpinnerTheme" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/greetings_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="660dp"
+            android:layout_marginStart="33dp"
+            android:layout_marginEnd="33dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/greetings_textview"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="인사말"
+                android:textColor="@color/blackTitle"
+                android:textSize="10sp"
+                android:fontFamily="@font/applesdgothicneom"
+                android:gravity="top" />
+
+            <EditText
+                android:id="@+id/greetings_line1_text"
+                android:layout_width="match_parent"
+                android:maxLength="22"
+                android:layout_height="30dp"
+                android:background="@drawable/underlined_textview"
+                android:textColor="@color/blackTitle"
+                android:textSize="15sp"
+                android:fontFamily="@font/applesdgothicneom"
+                android:singleLine="true"/>
+
+            <EditText
+                android:id="@+id/greetings_line2_text"
+                android:layout_width="match_parent"
+                android:maxLength="22"
+                android:layout_height="30dp"
+                android:background="@drawable/underlined_textview"
+                android:textColor="@color/blackTitle"
+                android:textSize="15sp"
+                android:fontFamily="@font/applesdgothicneom"
+                android:singleLine="true"/>
+
+            <EditText
+                android:id="@+id/greetings_line3_text"
+                android:layout_width="match_parent"
+                android:maxLength="22"
+                android:layout_height="30dp"
+                android:background="@drawable/underlined_textview"
+                android:textColor="@color/blackTitle"
+                android:textSize="15sp"
+                android:fontFamily="@font/applesdgothicneom"
+                android:singleLine="true"/>
+
+            <EditText
+                android:id="@+id/greetings_line4_text"
+                android:layout_width="match_parent"
+                android:maxLength="22"
+                android:layout_height="30dp"
+                android:background="@drawable/underlined_textview"
+                android:textColor="@color/blackTitle"
+                android:textSize="15sp"
+                android:fontFamily="@font/applesdgothicneom"
+                android:singleLine="true"/>
+
+            <EditText
+                android:id="@+id/greetings_line5_text"
+                android:layout_width="match_parent"
+                android:maxLength="22"
+                android:layout_height="30dp"
+                android:background="@drawable/underlined_textview"
+                android:textColor="@color/blackTitle"
+                android:textSize="15sp"
+                android:fontFamily="@font/applesdgothicneom"
+                android:singleLine="true"/>
+
+            <EditText
+                android:id="@+id/greetings_line6_text"
+                android:layout_width="match_parent"
+                android:maxLength="22"
+                android:layout_height="30dp"
+                android:background="@drawable/underlined_textview"
+                android:textColor="@color/blackTitle"
+                android:textSize="15sp"
+                android:fontFamily="@font/applesdgothicneom"
+                android:singleLine="true"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/choose_textview"
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:layout_marginTop="587dp"
             android:layout_marginStart="58dp"
+            android:layout_marginTop="925dp"
             android:layout_marginEnd="58dp"
-            android:background="#00FFFFFF"
-            android:hint="생년월일"
+            android:text="선택해주세요!"
+            android:textColor="@color/blackTitle"
+            android:textSize="12sp"
             android:fontFamily="@font/applesdgothicneom"
-            android:textSize="15sp"
-            android:singleLine="true"
+            android:gravity="top"
+            android:background="@color/transparent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/greetings_text"
+        <TextView
+            android:id="@+id/or1_textview"
             android:layout_width="match_parent"
-            android:layout_height="240dp"
-            android:layout_marginTop="656dp"
+            android:layout_height="30dp"
             android:layout_marginStart="58dp"
+            android:layout_marginTop="970dp"
             android:layout_marginEnd="58dp"
-            android:background="#00FFFFFF"
-            android:hint="인사말"
-            android:fontFamily="@font/applesdgothicneom"
-            android:textSize="15sp"
+            android:text="or"
+            android:textColor="@color/blackTitle"
+            android:textSize="13sp"
+            android:fontFamily="@font/applesdgothicneob"
+            android:gravity="center"
+            android:background="@color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/or2_textview"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="1050dp"
+            android:layout_marginEnd="58dp"
+            android:text="or"
+            android:textColor="@color/blackTitle"
+            android:textSize="13sp"
+            android:fontFamily="@font/applesdgothicneob"
+            android:gravity="center"
+            android:background="@color/transparent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -181,18 +424,32 @@
             android:layout_marginTop="1200dp"
             android:layout_marginEnd="25dp"
             android:layout_marginStart="300dp"
-            android:layout_marginBottom="14dp"
             android:background="@drawable/selector_next_btn"
             android:scaleType="fitCenter"
             style="?android:attr/borderlessButtonStyle"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        //스크롤뷰 길이 늘리기용
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1255dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            />
+            android:visibility="invisible"/>
 
-
-
+<!--        //프로필 사진 변경 팝업창-->
+<!--        <ImageView-->
+<!--            android:id="@+id/profile_popup"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="300dp"-->
+<!--            android:layout_marginTop="450dp"-->
+<!--            android:src="@drawable/firstpage_btn11"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"/>-->
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </androidx.core.widget.NestedScrollView>

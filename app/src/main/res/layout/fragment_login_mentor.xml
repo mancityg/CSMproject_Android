@@ -13,7 +13,7 @@
         android:layout_height="30dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="28dp"
-        android:background="@drawable/firstpage_btn21"
+        android:background="@drawable/firstpage_btn_back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -107,8 +107,22 @@
         android:background="@drawable/rounded_edittext"
         android:fontFamily="@font/applesdgothicneol"
         android:singleLine="true"
+        android:enabled="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/student_num_textview" />
+
+    <Spinner
+        android:id="@+id/student_num_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:entries="@array/studentNum"
+        android:paddingStart="10dp"
+        android:theme="@style/SpinnerTheme2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.123"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/student_num_textview" />
 
     <Button
@@ -116,12 +130,12 @@
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="70dp"
         android:layout_height="50dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginBottom="22dp"
+        android:layout_marginTop="550dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/selector_next_btn"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

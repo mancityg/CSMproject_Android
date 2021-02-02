@@ -18,7 +18,7 @@
         android:layout_width="22dp"
         android:layout_height="28dp"
         android:layout_marginTop="28dp"
-        android:src="@drawable/firstpage_btn21"
+        android:src="@drawable/firstpage_btn_back"
         android:paddingStart="10dp"
         android:paddingBottom="5dp"
         app:layout_constraintEnd_toStartOf="@+id/appCompatTextView5"

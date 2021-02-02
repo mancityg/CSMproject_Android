@@ -1,7 +1,6 @@
 package com.suwonccc.csmproject
 
 import android.Manifest
-import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
@@ -16,8 +15,6 @@ import android.os.Environment
 import android.provider.MediaStore
 import android.view.Menu
 import android.view.View
-import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.annotation.RequiresApi
@@ -174,7 +171,7 @@ class Etcpage_modify_menti : AppCompatActivity()  {
 
     /* 팝업창 옵션2 선택했을 때 */
     fun changeToBasic() {
-        profile_image.setImageResource(R.drawable.firstpage_btn10)
+        profile_image.setImageResource(R.drawable.profile_basic)
     }
 
     /* 팝업창 옵션3 선택했을 때 */
