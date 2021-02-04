@@ -8,16 +8,12 @@
         <item name="colorAccent">@color/colorAccent</item>
         <!-- This is for the BottomSheetDialog. -->
         <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        <!-- This is for the DatePicker -->
+        <item name="android:datePickerStyle">@style/MyDatePicker</item>
+
     </style>
 
-    <style name="SpinnerTheme">
-        <item name="android:fontFamily">@font/applesdgothicneom</item>
-        <item name="android:textSize">10sp</item>
-        <item name="android:textColor">@color/blackTitle</item>
-        <item name="android:gravity">center</item>
-    </style>
-
-    <style name="SpinnerTheme2">
+    <style name="SpinnerTheme_Mentor">
         <item name="android:fontFamily">@font/applesdgothicneom</item>
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/blackTitle</item>
@@ -32,5 +28,17 @@
     <style name="AppModalStyle"
         parent="Widget.Design.BottomSheet.Modal">
         <item name="android:background">@drawable/round_rect</item>
+    </style>
+
+    <style name="MyPopUp" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:textColor">@color/blackTitle</item>
+        <item name="android:itemBackground">@drawable/selector_popup</item>
+        <item name="android:fontFamily">@font/applesdgothicneom</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="MyDatePicker" parent="android:Widget.Material.Light.DatePicker">
+        <item name="android:datePickerMode">spinner</item>
+        <item name="android:fontFamily">@font/applesdgothicneom</item>
     </style>
 </resources>

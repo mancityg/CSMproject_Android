@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
 import android.widget.Toast
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
@@ -14,6 +16,7 @@ import kotlinx.android.synthetic.main.fragment_login_mentee.*
 import kotlinx.android.synthetic.main.fragment_login_mentee.back_btn
 import kotlinx.android.synthetic.main.fragment_login_mentee.next_btn
 import kotlinx.android.synthetic.main.fragment_login_mentor.*
+import kotlinx.android.synthetic.main.fragment_login_profile.*
 
 class LoginMentee : Fragment() {
 
@@ -32,7 +35,7 @@ class LoginMentee : Fragment() {
 
         navController = Navigation.findNavController(view)
 
-        //공백 체크
+        /* 입력창 유효성 체크 */
         next_btn.setOnClickListener {
             next_btn.isSelected = true
 
@@ -40,10 +43,18 @@ class LoginMentee : Fragment() {
                 TextUtils.isEmpty(mentee_major_edittext.getText())
             ) {
                 Toast.makeText(getActivity(), "작성하지 않은 항목이 있습니다", Toast.LENGTH_SHORT).show()
+                next_btn.isSelected = false
             } else {
                 Toast.makeText(getActivity(), "모든 항목 완료", Toast.LENGTH_SHORT).show()
                 navController.navigate(R.id.action_loginMentee_to_loginComplete)
             }
+        }
+
+        /* 학교 검색 자동완성 */
+        val textView = view.findViewById(R.id.mentee_school_edittext) as AutoCompleteTextView
+        val universities: Array<out String> = resources.getStringArray(R.array.universities_array)
+        ArrayAdapter<String>(requireContext(), android.R.layout.simple_list_item_1, universities).also { adapter ->
+            textView.setAdapter(adapter)
         }
 
         back_btn.setOnClickListener {
