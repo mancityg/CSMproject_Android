@@ -24,12 +24,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:orientation="horizontal"
-        android:weightSum="19">
+        android:weightSum="23">
 
         <ImageButton
             android:id="@+id/kakao_btn"
             android:layout_width="0dp"
-            android:layout_weight="4"
+            android:layout_weight="5"
             android:layout_height="50dp"
             android:background="#00ffffff"
             android:scaleType="centerInside"
@@ -44,7 +44,7 @@
         <ImageButton
             android:id="@+id/facebook_btn"
             android:layout_width="0dp"
-            android:layout_weight="4"
+            android:layout_weight="5"
             android:layout_height="50dp"
             android:background="#00ffffff"
             android:scaleType="centerInside"
@@ -59,7 +59,7 @@
         <ImageButton
             android:id="@+id/naver_btn"
             android:layout_width="0dp"
-            android:layout_weight="4"
+            android:layout_weight="5"
             android:layout_height="50dp"
             android:background="#00ffffff"
             android:scaleType="centerInside"
@@ -74,7 +74,7 @@
         <ImageButton
             android:id="@+id/google_btn"
             android:layout_width="0dp"
-            android:layout_weight="4"
+            android:layout_weight="5"
             android:layout_height="50dp"
             android:background="#00ffffff"
             android:scaleType="centerInside"

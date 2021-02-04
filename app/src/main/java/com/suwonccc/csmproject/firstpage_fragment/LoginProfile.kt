@@ -2,6 +2,7 @@ package com.suwonccc.csmproject.firstpage_fragment
 
 import android.Manifest
 import android.app.Activity.RESULT_OK
+import android.app.DatePickerDialog
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
@@ -15,6 +16,7 @@ import android.os.Environment
 import android.provider.MediaStore
 import android.text.TextUtils
 import android.view.*
+import android.widget.PopupMenu
 import androidx.fragment.app.Fragment
 import android.widget.Toast
 import androidx.annotation.RequiresApi
@@ -26,7 +28,7 @@ import androidx.navigation.Navigation
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.suwonccc.csmproject.R
 import kotlinx.android.synthetic.main.fragment_login_profile.*
-import kotlinx.android.synthetic.main.fragment_login_profile_change.view.*
+import kotlinx.android.synthetic.main.fragment_login_profile_change_dialog.view.*
 import java.io.File
 import java.io.IOException
 import java.text.SimpleDateFormat
@@ -56,25 +58,72 @@ class LoginProfile : Fragment() {
 
         /* 프로필 사진 변경 버튼 클릭했을 때 */
         profile_camera_image.setOnClickListener {
-            val btnsheet = layoutInflater.inflate(R.layout.fragment_login_profile_change, null)
+            val btnsheet_camera = layoutInflater.inflate(R.layout.fragment_login_profile_change_dialog, null)
             val dialog = BottomSheetDialog(this.requireContext())
-            dialog.setContentView(btnsheet)
+            dialog.setContentView(btnsheet_camera)
 
-            btnsheet.profile_option1_btn.setOnClickListener {
+            btnsheet_camera.profile_option1_btn.setOnClickListener {
                 pickGallery()
                 dialog.dismiss()
             }
-            btnsheet.profile_option2_btn.setOnClickListener {
+            btnsheet_camera.profile_option2_btn.setOnClickListener {
                 changeToBasic()
                 dialog.dismiss()
             }
-            btnsheet.profile_option3_btn.setOnClickListener {
+            btnsheet_camera.profile_option3_btn.setOnClickListener {
                 captureCamera()
                 dialog.dismiss()
             }
             dialog.show()
         }
 
+        /* 이메일 도메인 버튼 클릭했을 때 */
+        popup_req_btn.setOnClickListener {
+            val wrapper = ContextThemeWrapper(context, R.style.MyPopUp)
+            var popUpMenu = PopupMenu(wrapper, popup_req_btn)
+
+            popUpMenu.menu.add(Menu.NONE, 0, 0, "naver.com")
+            popUpMenu.menu.add(Menu.NONE, 1, 1, "gmail.com")
+            popUpMenu.menu.add(Menu.NONE, 2, 2, "hanmail.net")
+
+            popUpMenu.setOnMenuItemClickListener { menuItem ->
+                val id = menuItem.itemId
+
+                if (id==0) {
+                    email_domain_text.setText("naver.com")
+                } else if (id==1) {
+                    email_domain_text.setText("gmail.com")
+                } else if (id==2) {
+                    email_domain_text.setText("hanmail.net")
+                }
+                false
+            }
+            popUpMenu.show()
+        }
+
+
+        /* 생년월일 선택했을 때 */
+        val mcurrentTime = Calendar.getInstance()
+        val year = mcurrentTime.get(Calendar.YEAR)
+        val month = mcurrentTime.get(Calendar.MONTH)
+        val day = mcurrentTime.get(Calendar.DAY_OF_MONTH)
+
+        val datePicker = DatePickerDialog(
+            requireContext(),
+            DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
+                birthday_datepicker.text = String.format("%d년 %d월 %d일", year, month + 1, dayOfMonth)
+                birthday_datepicker.setTextColor(
+                    ContextCompat.getColor(
+                        requireContext(),
+                        R.color.blackTitle
+                    )
+                )
+            }, year, month, day
+        )
+
+        birthday_datepicker.setOnClickListener {
+            datePicker.show()
+        }
 
 
 
@@ -112,17 +161,20 @@ class LoginProfile : Fragment() {
 
 
 
-        /* 입력창 공백 체크 */
+        /* 입력창 유효성 체크 */
         next_btn.setOnClickListener {
             next_btn.isSelected = true
 
             if (TextUtils.isEmpty(name_text.text) ||
                 TextUtils.isEmpty(address_text.text) ||
                 TextUtils.isEmpty(email_text.text) ||
+                TextUtils.isEmpty(email_domain_text.text) ||
+                birthday_datepicker.text == "클릭하여 생년월일 선택" ||
                 (!male_btn.isSelected && !female_btn.isSelected) ||
                 (!mentor_btn.isSelected && !mentee_btn.isSelected)
             ) {
                 Toast.makeText(getActivity(), "선택하지 않은 항목이 있습니다", Toast.LENGTH_SHORT).show()
+                next_btn.isSelected = false
             } else {
                 Toast.makeText(getActivity(), "모든 항목 선택 완료", Toast.LENGTH_SHORT).show()
                 if (mentor_btn.isSelected) {

@@ -6,11 +6,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
 import android.widget.Toast
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.suwonccc.csmproject.R
 import kotlinx.android.synthetic.main.fragment_login_mentor.*
+import kotlinx.android.synthetic.main.fragment_login_mentor.next_btn
+import kotlinx.android.synthetic.main.fragment_login_profile.*
 
 class LoginMentor : Fragment() {
 
@@ -29,7 +33,7 @@ class LoginMentor : Fragment() {
 
         navController = Navigation.findNavController(view)
 
-        //공백 체크
+        /* 입력창 유효성 체크 */
         next_btn.setOnClickListener {
             next_btn.isSelected = true
 
@@ -37,17 +41,19 @@ class LoginMentor : Fragment() {
                 TextUtils.isEmpty(mentor_major_edittext.getText())
             ) {
                 Toast.makeText(getActivity(), "작성하지 않은 항목이 있습니다", Toast.LENGTH_SHORT).show()
+                next_btn.isSelected = false
             } else {
                 Toast.makeText(getActivity(), "모든 항목 완료", Toast.LENGTH_SHORT).show()
                 navController.navigate(R.id.action_loginMentor_to_loginComplete)
             }
         }
 
-//        val autotextView = view.findViewById<AutoCompleteTextView>(R.id.school_text)
-//        val schools = resources.getStringArray(R.array.Schools)
-//        val adapter = ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, schools)
-//
-//        autotextView.setAdapter(adapter)
+        /* 학교 검색 자동완성 */
+        val textView = view.findViewById(R.id.mentor_school_edittext) as AutoCompleteTextView
+        val universities: Array<out String> = resources.getStringArray(R.array.universities_array)
+        ArrayAdapter<String>(requireContext(), android.R.layout.simple_list_item_1, universities).also { adapter ->
+            textView.setAdapter(adapter)
+        }
 
         back_btn.setOnClickListener {
             navController.navigate(R.id.action_loginMentor_to_loginProfile_back)
