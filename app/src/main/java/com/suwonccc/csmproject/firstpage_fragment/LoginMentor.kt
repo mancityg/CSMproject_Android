@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.suwonccc.csmproject.R
@@ -44,7 +45,8 @@ class LoginMentor : Fragment() {
                 next_btn.isSelected = false
             } else {
                 Toast.makeText(getActivity(), "모든 항목 완료", Toast.LENGTH_SHORT).show()
-                navController.navigate(R.id.action_loginMentor_to_loginComplete)
+                val action = LoginMentorDirections.actionLoginMentorToLoginExtraInfo(true)
+                navController.navigate(action)
             }
         }
 

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".firstpage_fragment.LoginMentor">
 
     <Button
@@ -11,7 +12,7 @@
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="17dp"
         android:layout_height="30dp"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="28dp"
         android:background="@drawable/firstpage_btn_back"
         app:layout_constraintStart_toStartOf="parent"
@@ -134,10 +135,11 @@
         android:layout_width="70dp"
         android:layout_height="50dp"
         android:layout_marginTop="550dp"
-        android:layout_marginEnd="16dp"
         android:background="@drawable/selector_next_btn"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 

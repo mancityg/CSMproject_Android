@@ -77,6 +77,7 @@ class LoginProfile : Fragment() {
             dialog.show()
         }
 
+
         /* 이메일 도메인 버튼 클릭했을 때 */
         popup_req_btn.setOnClickListener {
             val wrapper = ContextThemeWrapper(context, R.style.MyPopUp)
@@ -126,39 +127,30 @@ class LoginProfile : Fragment() {
         }
 
 
-
-
         /* 성별 및 멘토, 멘티 버튼 클릭 */
         male_btn.setOnClickListener {
-            Toast.makeText(getActivity(), "남자 클릭", Toast.LENGTH_SHORT).show()
             male_btn.isSelected = true
             female_btn.isSelected = false
             female_btn.isPressed = false
         }
 
         female_btn.setOnClickListener {
-            Toast.makeText(getActivity(), "여자 클릭", Toast.LENGTH_SHORT).show()
             female_btn.isSelected = true
             male_btn.isSelected = false
             male_btn.isPressed = false
         }
 
         mentor_btn.setOnClickListener {
-            Toast.makeText(getActivity(), "멘토 클릭", Toast.LENGTH_SHORT).show()
             mentor_btn.isSelected = true
             mentee_btn.isSelected = false
             mentee_btn.isPressed = false
         }
 
         mentee_btn.setOnClickListener {
-            Toast.makeText(getActivity(), "멘티 클릭", Toast.LENGTH_SHORT).show()
             mentee_btn.isSelected = true
             mentor_btn.isSelected = false
             mentor_btn.isPressed = false
         }
-
-
-
 
 
         /* 입력창 유효성 체크 */
@@ -188,9 +180,6 @@ class LoginProfile : Fragment() {
     } //onViewCreated
 
 
-
-
-
     /* 팝업창 옵션1 선택했을 때 */
     fun pickGallery() {
         /* 갤러리 권한 부여 */
@@ -214,16 +203,10 @@ class LoginProfile : Fragment() {
     }
 
 
-
-
-
     /* 팝업창 옵션2 선택했을 때 */
     fun changeToBasic() {
         profile_image.setImageResource(R.drawable.profile_basic)
     }
-
-
-
 
 
     /* 팝업창 옵션3 선택했을 때 */
@@ -247,9 +230,6 @@ class LoginProfile : Fragment() {
             dispatchTakePictureIntent()
         }
     }
-
-
-
 
 
     /* 권한 요청 함수 */
@@ -292,8 +272,6 @@ class LoginProfile : Fragment() {
     }
 
 
-
-
     /* 촬영된 이미지 가져오기 */
     private fun dispatchTakePictureIntent() {
         // 저장하지 않고 미리보기만 하고 싶을 때
@@ -329,7 +307,7 @@ class LoginProfile : Fragment() {
     private fun createImageFile(): File {
         // Create an image file name
         val timeStamp: String = SimpleDateFormat("yyyyMMdd_HHmmss").format(Date())
-        val storageDir: File = requireActivity().getExternalFilesDir(Environment.DIRECTORY_PICTURES)
+        val storageDir: File? = requireActivity().getExternalFilesDir(Environment.DIRECTORY_PICTURES)
         return File.createTempFile(
             "JPEG_${timeStamp}_", /* prefix */
             ".jpg", /* suffix */
@@ -349,7 +327,7 @@ class LoginProfile : Fragment() {
             requireActivity().sendBroadcast(mediaScanIntent)
 
             // 카메라로 찍은 사진이 -90도 회전되는 오류 수정
-            val imagePath: String = Uri.fromFile(f).getPath()
+            val imagePath: String? = Uri.fromFile(f).getPath()
             var image: Bitmap = BitmapFactory.decodeFile(imagePath)
             val exif = ExifInterface(imagePath)
             val exifOrientation: Int = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL)
@@ -386,9 +364,6 @@ class LoginProfile : Fragment() {
     }
 
 
-
-
-
     /* 대상 뷰의 크기에 맞게 조정한 JPEG를 메모리 배열로 확장하여 동적 힙 크기 축소 */
     /* 메모리 문제가 생기면 추가(일단 보류) */
 //    private fun setPic() {
@@ -417,18 +392,12 @@ class LoginProfile : Fragment() {
 //    }
 
 
-
-
-
     /* 갤러리에서 이미지 가져오기 */
     private fun dispatchPickGalleryIntent() {
         val intent = Intent(Intent.ACTION_PICK)
         intent.type = "image/*"
         startActivityForResult(intent, REQUEST_READ_EXTERMAL_STORAGE)
     }
-
-
-
 
 
     /* 접근 처리 함수 */
