@@ -33,6 +33,7 @@ class LoginExtraInfo : Fragment() {
 
         navController = Navigation.findNavController(view)
 
+
         /* 이전 Fragment에서 데이터 받아오기 */
         val args: LoginExtraInfoArgs by navArgs()
         val isMentor = args.isMentor
