@@ -46,7 +46,8 @@ class LoginMentee : Fragment() {
                 next_btn.isSelected = false
             } else {
                 Toast.makeText(getActivity(), "모든 항목 완료", Toast.LENGTH_SHORT).show()
-                navController.navigate(R.id.action_loginMentee_to_loginComplete)
+                val action = LoginMenteeDirections.actionLoginMenteeToLoginExtraInfo(false)
+                navController.navigate(action)
             }
         }
 
