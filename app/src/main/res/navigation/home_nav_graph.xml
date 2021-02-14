@@ -22,7 +22,7 @@
         tools:layout="@layout/fragment_chattingpage" />
     <fragment
         android:id="@+id/alarmpage"
-        android:name="com.suwonccc.csmproject.AlarmpageFragment"
+        android:name="com.suwonccc.csmproject.alarmpage_fragment.AlarmpageFragment"
         android:label="fragment_alarmpage"
         tools:layout="@layout/fragment_alarmpage" />
     <fragment
