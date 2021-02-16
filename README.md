@@ -6,7 +6,6 @@
 # CSMproject_Android
 ### 크리스쳔 선배 멘토링 어플리케이션
 ### Mentoring Application for Christian students who will enter the university
-![main_logo_temp](./src/main/res/drawable/main_logo_temp.png)
 이 어플리케이션은 크리스쳔 예비 대학생들이 실제 대학생들로부터 대학교 생활 및 공부 관련 정보를 얻을 수 있도록 멘토링 기능을 제공한다.
 실제 대학생들이 멘토로 참여할 수 있고, 예비 대학생들이 멘티로 참여할 수 있다.
 웹페이지 참고: [K. S. M Mentoring](http://ccclife.style/2021ccc/login/index.php)
