@@ -167,7 +167,7 @@
             <TextView
                 android:id="@+id/email_at_textview"
                 android:layout_width="0dp"
-                android:layout_weight="0.5"
+                android:layout_weight="0.8"
                 android:layout_height="40dp"
                 android:fontFamily="@font/applesdgothicneom"
                 android:gravity="center"
@@ -192,7 +192,7 @@
             <ImageButton
                 android:id="@+id/popup_req_btn"
                 android:layout_width="0dp"
-                android:layout_weight="1"
+                android:layout_weight="0.7"
                 android:layout_height="13dp"
                 android:layout_gravity="center"
                 android:background="@color/transparent"

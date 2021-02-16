@@ -3,6 +3,7 @@ package com.suwonccc.csmproject.firstpage_fragment
 import android.Manifest
 import android.app.Activity.RESULT_OK
 import android.app.DatePickerDialog
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
@@ -17,20 +18,22 @@ import android.provider.MediaStore
 import android.text.TextUtils
 import android.view.*
 import android.widget.PopupMenu
-import androidx.fragment.app.Fragment
+import android.widget.PopupWindow
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.compose.ui.text.font.Typeface
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
+import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.suwonccc.csmproject.R
 import kotlinx.android.synthetic.main.fragment_login_profile.*
 import kotlinx.android.synthetic.main.fragment_login_profile_change_dialog.view.*
 import java.io.File
 import java.io.IOException
+import java.lang.reflect.Field
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -59,22 +62,31 @@ class LoginProfile : Fragment() {
         /* 프로필 사진 변경 버튼 클릭했을 때 */
         profile_camera_image.setOnClickListener {
             val btnsheet_camera = layoutInflater.inflate(R.layout.fragment_login_profile_change_dialog, null)
-            val dialog = BottomSheetDialog(this.requireContext())
-            dialog.setContentView(btnsheet_camera)
+            val cameraPopupWindow = PopupWindow(btnsheet_camera, 550, 450)
+            cameraPopupWindow.setOutsideTouchable(true)
+            cameraPopupWindow.setFocusable(true)
+            cameraPopupWindow.showAsDropDown(profile_camera_image)
+
+            val container = cameraPopupWindow.contentView.rootView
+            val context = cameraPopupWindow.contentView.context
+            val wm = context.getSystemService(Context.WINDOW_SERVICE) as WindowManager
+            val p = container.layoutParams as WindowManager.LayoutParams
+            p.flags = p.flags or WindowManager.LayoutParams.FLAG_DIM_BEHIND
+            p.dimAmount = 0.3f
+            wm.updateViewLayout(container, p)
 
             btnsheet_camera.profile_option1_btn.setOnClickListener {
                 pickGallery()
-                dialog.dismiss()
+                cameraPopupWindow.dismiss()
             }
             btnsheet_camera.profile_option2_btn.setOnClickListener {
                 changeToBasic()
-                dialog.dismiss()
+                cameraPopupWindow.dismiss()
             }
             btnsheet_camera.profile_option3_btn.setOnClickListener {
                 captureCamera()
-                dialog.dismiss()
+                cameraPopupWindow.dismiss()
             }
-            dialog.show()
         }
 
 
@@ -424,4 +436,5 @@ class LoginProfile : Fragment() {
 //            }
         }
     }
+
 }
