@@ -30,7 +30,8 @@
             android:launchMode="singleTask"/>
         <activity
             android:name=".Firstpage"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

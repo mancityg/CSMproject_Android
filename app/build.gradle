@@ -57,8 +57,7 @@ dependencies {
     androidTestImplementation "androidx.navigation:navigation-testing:2.3.2"
 
 
-    // todo: 아래 dependency 위처럼 정리하기
-    compileOnly 'com.google.android.wearable:wearable:2.6.0'
+    // Share data using a ViewModel
     def lifecycle_version = "2.2.0"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
