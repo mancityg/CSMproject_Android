@@ -34,7 +34,7 @@
             android:fontFamily="@font/applesdgothicneoeb"
             android:text="회원가입 추가 정보 등록"
             android:textColor="@color/blackTitle"
-            android:textSize="20sp"
+            android:textSize="20dp"
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/extra_info_textview2"
@@ -49,7 +49,7 @@
             android:fontFamily="@font/applesdgothicneom"
             android:text="더 잘 맞는 멘토와 멘티를 매칭해 드리기 위함이에요!"
             android:textColor="@color/blackTitle"
-            android:textSize="13sp"
+            android:textSize="13dp"
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/extra_info_textview3"
@@ -64,7 +64,7 @@
             android:fontFamily="@font/applesdgothicneob"
             android:text="나를 표현하는 별명을 입력해주세요"
             android:textColor="@color/blackTitle"
-            android:textSize="16sp"
+            android:textSize="16dp"
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/nickname_textbox"
@@ -91,7 +91,7 @@
             android:fontFamily="@font/applesdgothicneob"
             android:text="#"
             android:textColor="@color/colorPrimary"
-            android:textSize="14sp"
+            android:textSize="14dp"
             app:layout_constraintStart_toStartOf="@+id/nickname_textbox"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -105,7 +105,7 @@
             android:fontFamily="@font/applesdgothicneob"
             android:hint="프로집콕러"
             android:textColor="@color/blackTitle"
-            android:textSize="14sp"
+            android:textSize="14dp"
             android:singleLine="true"
             android:privateImeOptions="defaultInputmode=korean"
             app:layout_constraintStart_toEndOf="@+id/extra_info_textview4"
@@ -120,7 +120,7 @@
             android:fontFamily="@font/applesdgothicneob"
             android:text="요즘 감정 상태를 선택해주세요"
             android:textColor="@color/blackTitle"
-            android:textSize="16sp"
+            android:textSize="16dp"
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/nickname_textbox"
@@ -147,7 +147,7 @@
                     android:fontFamily="@font/applesdgothicneom"
                     android:text="늘 행복해요"
                     android:textColor="@drawable/selector_extra_info_btn_txt"
-                    android:textSize="11sp" />
+                    android:textSize="11dp" />
 
                 <Button
                     android:id="@+id/emotion_btn_2"
@@ -159,7 +159,7 @@
                     android:fontFamily="@font/applesdgothicneom"
                     android:text="조금 우울해요"
                     android:textColor="@drawable/selector_extra_info_btn_txt"
-                    android:textSize="11sp" />
+                    android:textSize="11dp" />
 
                 <Button
                     android:id="@+id/emotion_btn_3"
@@ -171,7 +171,7 @@
                     android:fontFamily="@font/applesdgothicneom"
                     android:text="감사해요"
                     android:textColor="@drawable/selector_extra_info_btn_txt"
-                    android:textSize="11sp" />
+                    android:textSize="11dp" />
             </TableRow>
 
             <TableRow>
@@ -186,7 +186,7 @@
                     android:fontFamily="@font/applesdgothicneom"
                     android:text="의욕 넘쳐요"
                     android:textColor="@drawable/selector_extra_info_btn_txt"
-                    android:textSize="11sp" />
+                    android:textSize="11dp" />
 
                 <Button
                     android:id="@+id/emotion_btn_5"
@@ -199,7 +199,7 @@
                     android:fontFamily="@font/applesdgothicneom"
                     android:text="그리워요"
                     android:textColor="@drawable/selector_extra_info_btn_txt"
-                    android:textSize="11sp" />
+                    android:textSize="11dp" />
 
                 <Button
                     android:id="@+id/emotion_btn_6"
@@ -212,7 +212,7 @@
                     android:fontFamily="@font/applesdgothicneom"
                     android:text="인생은 살만해요"
                     android:textColor="@drawable/selector_extra_info_btn_txt"
-                    android:textSize="11sp" />
+                    android:textSize="11dp" />
             </TableRow>
 
             <TableRow>
@@ -227,7 +227,7 @@
                     android:fontFamily="@font/applesdgothicneom"
                     android:text="만족스러워요"
                     android:textColor="@drawable/selector_extra_info_btn_txt"
-                    android:textSize="11sp" />
+                    android:textSize="11dp" />
 
                 <Button
                     android:id="@+id/emotion_btn_8"
@@ -240,7 +240,7 @@
                     android:fontFamily="@font/applesdgothicneom"
                     android:text="싫증 나요"
                     android:textColor="@drawable/selector_extra_info_btn_txt"
-                    android:textSize="11sp" />
+                    android:textSize="11dp" />
 
                 <Button
                     android:id="@+id/emotion_btn_9"
@@ -253,7 +253,7 @@
                     android:fontFamily="@font/applesdgothicneom"
                     android:text="기분 고약하네요"
                     android:textColor="@drawable/selector_extra_info_btn_txt"
-                    android:textSize="11sp" />
+                    android:textSize="11dp" />
             </TableRow>
         </TableLayout>
 
@@ -267,7 +267,7 @@
             android:fontFamily="@font/applesdgothicneob"
             android:text="자신을 나타내는 성격을 골라주세요 (최대 2개)"
             android:textColor="@color/blackTitle"
-            android:textSize="16sp"
+            android:textSize="16dp"
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/emotion_tableLayout"
@@ -293,7 +293,7 @@
                     android:fontFamily="@font/applesdgothicneom"
                     android:text="긍정적인"
                     android:textColor="@drawable/selector_extra_info_btn_txt"
-                    android:textSize="11sp" />
+                    android:textSize="11dp" />
 
                 <Button
                     android:id="@+id/personality_btn_2"
@@ -305,7 +305,7 @@
                     android:fontFamily="@font/applesdgothicneom"
                     android:text="부정적인"
                     android:textColor="@drawable/selector_extra_info_btn_txt"
-                    android:textSize="11sp" />
+                    android:textSize="11dp" />
 
                 <Button
                     android:id="@+id/personality_btn_3"
@@ -317,7 +317,7 @@
                     android:fontFamily="@font/applesdgothicneom"
                     android:text="감사하는"
                     android:textColor="@drawable/selector_extra_info_btn_txt"
-                    android:textSize="11sp" />
+                    android:textSize="11dp" />
             </TableRow>
 
             <TableRow>
@@ -331,7 +331,7 @@
                     android:fontFamily="@font/applesdgothicneom"
                     android:text="계획적인"
                     android:textColor="@drawable/selector_extra_info_btn_txt"
-                    android:textSize="11sp" />
+                    android:textSize="11dp" />
 
                 <Button
                     android:id="@+id/personality_btn_5"
@@ -344,7 +344,7 @@
                     android:fontFamily="@font/applesdgothicneom"
                     android:text="아기자기한"
                     android:textColor="@drawable/selector_extra_info_btn_txt"
-                    android:textSize="11sp" />
+                    android:textSize="11dp" />
 
                 <Button
                     android:id="@+id/personality_btn_6"
@@ -357,7 +357,7 @@
                     android:fontFamily="@font/applesdgothicneom"
                     android:text="자유로운"
                     android:textColor="@drawable/selector_extra_info_btn_txt"
-                    android:textSize="11sp" />
+                    android:textSize="11dp" />
             </TableRow>
 
             <TableRow>
@@ -371,7 +371,7 @@
                     android:fontFamily="@font/applesdgothicneom"
                     android:text="호기심이 많은"
                     android:textColor="@drawable/selector_extra_info_btn_txt"
-                    android:textSize="11sp" />
+                    android:textSize="11dp" />
 
                 <Button
                     android:id="@+id/personality_btn_8"
@@ -384,7 +384,7 @@
                     android:fontFamily="@font/applesdgothicneom"
                     android:text="객관적인"
                     android:textColor="@drawable/selector_extra_info_btn_txt"
-                    android:textSize="11sp" />
+                    android:textSize="11dp" />
 
                 <Button
                     android:id="@+id/personality_btn_9"
@@ -397,7 +397,7 @@
                     android:fontFamily="@font/applesdgothicneom"
                     android:text="낯 가리는"
                     android:textColor="@drawable/selector_extra_info_btn_txt"
-                    android:textSize="11sp" />
+                    android:textSize="11dp" />
             </TableRow>
         </TableLayout>
 

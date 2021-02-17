@@ -15,13 +15,15 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Environment
 import android.provider.MediaStore
+import android.text.Editable
 import android.text.TextUtils
+import android.text.TextWatcher
 import android.view.*
+import android.widget.EditText
 import android.widget.PopupMenu
 import android.widget.PopupWindow
 import android.widget.Toast
 import androidx.annotation.RequiresApi
-import androidx.compose.ui.text.font.Typeface
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
@@ -33,7 +35,6 @@ import kotlinx.android.synthetic.main.fragment_login_profile.*
 import kotlinx.android.synthetic.main.fragment_login_profile_change_dialog.view.*
 import java.io.File
 import java.io.IOException
-import java.lang.reflect.Field
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -56,6 +57,13 @@ class LoginProfile : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val greetings_line1 = view?.findViewById(R.id.greetings_line1_text) as EditText
+        val greetings_line2 = view?.findViewById(R.id.greetings_line2_text) as EditText
+        val greetings_line3 = view?.findViewById(R.id.greetings_line3_text) as EditText
+        val greetings_line4 = view?.findViewById(R.id.greetings_line4_text) as EditText
+        val greetings_line5 = view?.findViewById(R.id.greetings_line5_text) as EditText
+        val greetings_line6 = view?.findViewById(R.id.greetings_line6_text) as EditText
 
         navController = Navigation.findNavController(view)
 
@@ -137,6 +145,119 @@ class LoginProfile : Fragment() {
         birthday_datepicker.setOnClickListener {
             datePicker.show()
         }
+
+
+        /* 인사말 입력 이벤트 제어 */
+        greetings_line1.addTextChangedListener(object : TextWatcher{
+            override fun afterTextChanged(p0: Editable?) {
+                if (p0.toString().length > 23) {
+                    greetings_line2.requestFocus()
+                }
+            }
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+        })
+
+        greetings_line2.addTextChangedListener(object : TextWatcher{
+            override fun afterTextChanged(p0: Editable?) {
+                if (p0.toString().length > 23) {
+                    greetings_line3.requestFocus()
+                }
+            }
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+        })
+
+        greetings_line3.addTextChangedListener(object : TextWatcher{
+            override fun afterTextChanged(p0: Editable?) {
+                if (p0.toString().length > 23) {
+                    greetings_line4.requestFocus()
+                }
+            }
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+        })
+
+        greetings_line4.addTextChangedListener(object : TextWatcher{
+            override fun afterTextChanged(p0: Editable?) {
+                if (p0.toString().length > 23) {
+                    greetings_line5.requestFocus()
+                }
+            }
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+        })
+
+        greetings_line5.addTextChangedListener(object : TextWatcher{
+            override fun afterTextChanged(p0: Editable?) {
+                if (p0.toString().length > 23) {
+                    greetings_line6.requestFocus()
+                }
+            }
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+        })
+
+//        greetings_line1.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
+//            if (keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_UP) {
+//                greetings_line2.requestFocus()
+//                return@OnKeyListener true
+//            }
+//            false
+//        })
+//
+//        greetings_line2.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
+//            if (keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_UP) {
+//                greetings_line3.requestFocus()
+//                Toast.makeText(getActivity(), "check", Toast.LENGTH_SHORT).show()
+//                return@OnKeyListener true
+//            }
+//            false
+//        })
+//
+//        greetings_line3.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
+//            if (keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_UP) {
+//                greetings_line4.requestFocus()
+//                return@OnKeyListener true
+//            }
+//            false
+//        })
+//
+//        greetings_line4.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
+//            if (keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_UP) {
+//                greetings_line5.requestFocus()
+//                return@OnKeyListener true
+//            }
+//            false
+//        })
+//
+//        greetings_line5.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
+//            if (keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_UP) {
+//                greetings_line6.requestFocus()
+//                return@OnKeyListener true
+//            }
+//            false
+//        })
 
 
         /* 성별 및 멘토, 멘티 버튼 클릭 */
@@ -436,5 +557,4 @@ class LoginProfile : Fragment() {
 //            }
         }
     }
-
 }

@@ -21,6 +21,15 @@ import kotlinx.android.synthetic.main.fragment_login_profile.*
 class LoginMentor : Fragment() {
 
     lateinit var navController: NavController
+    private val currentYear: Int = java.util.Calendar.getInstance().get(java.util.Calendar.YEAR)
+    private val currentStudentNumString: String = currentYear.toString().slice(
+        kotlin.ranges.IntRange(
+            2,
+            3
+        )
+    )
+    private val currentStudentNum: Int = currentStudentNumString.toInt()
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,10 +50,15 @@ class LoginMentor : Fragment() {
             next_btn.isSelected = true
 
             if (TextUtils.isEmpty(mentor_school_edittext.getText()) ||
-                TextUtils.isEmpty(mentor_major_edittext.getText())
+                TextUtils.isEmpty(mentor_major_edittext.getText()) ||
+                TextUtils.isEmpty(student_num_edittext.getText())
             ) {
                 Toast.makeText(getActivity(), "작성하지 않은 항목이 있습니다", Toast.LENGTH_SHORT).show()
                 next_btn.isSelected = false
+            } else if (!TextUtils.isDigitsOnly(student_num_edittext.getText())) {
+                Toast.makeText(getActivity(), "숫자를 입력해주세요", Toast.LENGTH_SHORT).show()
+            } else if (Integer.parseInt(student_num_edittext.getText().toString()) < (currentStudentNum-6) || Integer.parseInt(student_num_edittext.getText().toString()) > currentStudentNum) {
+                Toast.makeText(getActivity(), "학번은 ${currentStudentNum-6}학번부터 ${currentStudentNum}학번까지 허용됩니다", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(getActivity(), "모든 항목 완료", Toast.LENGTH_SHORT).show()
                 val action = LoginMentorDirections.actionLoginMentorToLoginExtraInfo(true)
@@ -62,8 +76,6 @@ class LoginMentor : Fragment() {
         back_btn.setOnClickListener {
             navController.navigate(R.id.action_loginMentor_to_loginProfile_back)
         }
-
-
 
     }
 
