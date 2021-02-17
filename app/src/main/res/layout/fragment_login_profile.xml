@@ -4,14 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:id="@+id/profile_scrollView"
     tools:context=".firstpage_fragment.LoginProfile">
 
     /* 기기에서 보이는 화면과 디자인 화면 비율이 서로 다름 */
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profile_constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@drawable/firstpage_background_2">
 
         <TextView
             android:id="@+id/textView"
@@ -22,7 +24,7 @@
             android:fontFamily="@font/applesdgothicneoh"
             android:text="나의 프로필"
             android:textColor="@color/colorPrimary"
-            android:textSize="26sp"
+            android:textSize="26dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -36,7 +38,7 @@
             android:fontFamily="@font/applesdgothicneoeb"
             android:text="기본 프로필을 등록해주세요."
             android:textColor="@color/blackTitle"
-            android:textSize="15sp"
+            android:textSize="15dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView"
@@ -82,9 +84,10 @@
             android:gravity="center"
             android:hint="이름을 입력해주세요"
             android:privateImeOptions="defaultInputmode=korean"
-            android:singleLine="true"
+            android:maxLines="1"
+            android:inputType="text"
             android:textColor="@color/blackTitle"
-            android:textSize="15sp"
+            android:textSize="15dp"
             app:layout_constraintVertical_chainStyle="packed"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -110,7 +113,7 @@
                 android:gravity="center_vertical"
                 android:text="거주지"
                 android:textColor="@color/blackTitle"
-                android:textSize="15sp" />
+                android:textSize="15dp" />
 
             <EditText
                 android:id="@+id/address_text"
@@ -121,9 +124,10 @@
                 android:gravity="center"
                 android:hint="OO도 OO시"
                 android:privateImeOptions="defaultInputmode=korean"
-                android:singleLine="true"
+                android:maxLines="1"
+                android:inputType="text"
                 android:textColor="@color/blackTitle"
-                android:textSize="15sp" />
+                android:textSize="15dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -148,7 +152,7 @@
                 android:gravity="center_vertical"
                 android:text="이메일"
                 android:textColor="@color/blackTitle"
-                android:textSize="15sp" />
+                android:textSize="15dp" />
 
             <EditText
                 android:id="@+id/email_text"
@@ -160,9 +164,10 @@
                 android:gravity="center"
                 android:hint="아이디"
                 android:privateImeOptions="defaultInputmode=english"
-                android:singleLine="true"
+                android:maxLines="1"
+                android:inputType="text"
                 android:textColor="@color/blackTitle"
-                android:textSize="15sp" />
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/email_at_textview"
@@ -173,7 +178,7 @@
                 android:gravity="center"
                 android:text="\@"
                 android:textColor="@color/blackTitle"
-                android:textSize="15sp" />
+                android:textSize="15dp" />
 
             <EditText
                 android:id="@+id/email_domain_text"
@@ -185,9 +190,9 @@
                 android:gravity="center"
                 android:hint="직접입력"
                 android:inputType="textEmailAddress"
-                android:singleLine="true"
+                android:maxLines="1"
                 android:textColor="@color/blackTitle"
-                android:textSize="15sp" />
+                android:textSize="15dp" />
 
             <ImageButton
                 android:id="@+id/popup_req_btn"
@@ -222,7 +227,7 @@
                 android:gravity="center_vertical"
                 android:text="생년월일"
                 android:textColor="@color/blackTitle"
-                android:textSize="15sp" />
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/birthday_datepicker"
@@ -233,14 +238,14 @@
                 android:gravity="center"
                 android:text="클릭하여 생년월일 선택"
                 android:textColor="?android:attr/textColorHint"
-                android:textSize="15sp" />
+                android:textSize="15dp" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/greetings_linearlayout"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="50dp"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -252,75 +257,74 @@
                 android:layout_height="25dp"
                 android:text="인사말"
                 android:textColor="@color/blackTitle"
-                android:textSize="15sp"
+                android:textSize="15dp"
                 android:fontFamily="@font/applesdgothicneom"
                 android:gravity="top" />
 
             <EditText
                 android:id="@+id/greetings_line1_text"
                 android:layout_width="match_parent"
-                android:maxLength="22"
+                android:maxLength="24"
                 android:layout_height="30dp"
                 android:background="@drawable/underlined_textview"
                 android:textColor="@color/blackTitle"
-                android:textSize="15sp"
+                android:textSize="15dp"
                 android:fontFamily="@font/applesdgothicneom"
-                android:singleLine="true"/>
+                android:maxLines="1"
+                android:inputType="text"
+                android:imeOptions="normal" />
 
             <EditText
                 android:id="@+id/greetings_line2_text"
                 android:layout_width="match_parent"
-                android:maxLength="22"
+                android:maxLength="24"
                 android:layout_height="30dp"
                 android:background="@drawable/underlined_textview"
                 android:textColor="@color/blackTitle"
-                android:textSize="15sp"
-                android:fontFamily="@font/applesdgothicneom"
-                android:singleLine="true"/>
+                android:textSize="15dp"
+                android:fontFamily="@font/applesdgothicneom" />
 
             <EditText
                 android:id="@+id/greetings_line3_text"
                 android:layout_width="match_parent"
-                android:maxLength="22"
+                android:maxLength="24"
                 android:layout_height="30dp"
                 android:background="@drawable/underlined_textview"
                 android:textColor="@color/blackTitle"
-                android:textSize="15sp"
-                android:fontFamily="@font/applesdgothicneom"
-                android:singleLine="true"/>
+                android:textSize="15dp"
+                android:fontFamily="@font/applesdgothicneom" />
 
             <EditText
                 android:id="@+id/greetings_line4_text"
                 android:layout_width="match_parent"
-                android:maxLength="22"
+                android:maxLength="24"
                 android:layout_height="30dp"
                 android:background="@drawable/underlined_textview"
                 android:textColor="@color/blackTitle"
-                android:textSize="15sp"
-                android:fontFamily="@font/applesdgothicneom"
-                android:singleLine="true"/>
+                android:textSize="15dp"
+                android:fontFamily="@font/applesdgothicneom" />
 
             <EditText
                 android:id="@+id/greetings_line5_text"
                 android:layout_width="match_parent"
-                android:maxLength="22"
+                android:maxLength="24"
                 android:layout_height="30dp"
                 android:background="@drawable/underlined_textview"
                 android:textColor="@color/blackTitle"
-                android:textSize="15sp"
-                android:fontFamily="@font/applesdgothicneom"
-                android:singleLine="true"/>
+                android:textSize="15dp"
+                android:fontFamily="@font/applesdgothicneom" />
 
             <EditText
                 android:id="@+id/greetings_line6_text"
                 android:layout_width="match_parent"
-                android:maxLength="22"
+                android:maxLength="24"
                 android:layout_height="30dp"
                 android:background="@drawable/underlined_textview"
                 android:textColor="@color/blackTitle"
-                android:textSize="15sp"
+                android:textSize="15dp"
                 android:fontFamily="@font/applesdgothicneom"
-                android:singleLine="true"/>
+                android:maxLines="1"
+                android:inputType="text"/>
         </LinearLayout>
 
         <TextView
@@ -333,7 +337,7 @@
             android:gravity="top"
             android:text="선택해주세요!"
             android:textColor="@color/blackTitle"
-            android:textSize="15sp"
+            android:textSize="15dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/greetings_linearlayout" />
@@ -342,13 +346,13 @@
             android:id="@+id/or1_textview"
             android:layout_width="wrap_content"
             android:layout_height="55dp"
-            android:layout_marginTop="7dp"
+            android:layout_marginTop="10dp"
             android:background="@color/transparent"
             android:fontFamily="@font/applesdgothicneob"
             android:gravity="center"
             android:text="or"
             android:textColor="@color/blackTitle"
-            android:textSize="15sp"
+            android:textSize="15dp"
             app:layout_constraintVertical_chainStyle="packed"
             app:layout_constraintEnd_toStartOf="@+id/female_btn"
             app:layout_constraintStart_toEndOf="@+id/male_btn"
@@ -364,7 +368,7 @@
             android:gravity="center"
             android:text="or"
             android:textColor="@color/blackTitle"
-            android:textSize="15sp"
+            android:textSize="15dp"
             app:layout_constraintVertical_chainStyle="packed"
             app:layout_constraintEnd_toStartOf="@+id/mentee_btn"
             app:layout_constraintStart_toEndOf="@+id/mentor_btn"
@@ -373,10 +377,10 @@
         <Button
             android:id="@+id/male_btn"
             style="?android:attr/borderlessButtonStyle"
-            android:layout_width="120dp"
+            android:layout_width="125dp"
             android:layout_height="55dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="7dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/selector_male_btn"
             android:scaleType="fitCenter"
             app:layout_constraintVertical_chainStyle="packed"
@@ -386,10 +390,10 @@
         <Button
             android:id="@+id/female_btn"
             style="?android:attr/borderlessButtonStyle"
-            android:layout_width="120dp"
+            android:layout_width="125dp"
             android:layout_height="55dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginTop="7dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/selector_female_btn"
             android:scaleType="fitCenter"
             app:layout_constraintVertical_chainStyle="packed"
@@ -399,9 +403,9 @@
         <Button
             android:id="@+id/mentor_btn"
             style="?android:attr/borderlessButtonStyle"
-            android:layout_width="120dp"
+            android:layout_width="125dp"
             android:layout_height="55dp"
-            android:layout_marginStart="5dp"
+            android:layout_marginStart="0dp"
             android:layout_marginTop="30dp"
             android:background="@drawable/selector_mentor_btn"
             android:scaleType="fitCenter"
@@ -412,10 +416,10 @@
         <Button
             android:id="@+id/mentee_btn"
             style="?android:attr/borderlessButtonStyle"
-            android:layout_width="120dp"
+            android:layout_width="125dp"
             android:layout_height="55dp"
             android:layout_marginTop="30dp"
-            android:layout_marginEnd="5dp"
+            android:layout_marginEnd="0dp"
             android:background="@drawable/selector_mentee_btn"
             android:scaleType="fitCenter"
             app:layout_constraintEnd_toEndOf="@+id/choose_textview"
@@ -427,18 +431,18 @@
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="70dp"
             android:layout_height="50dp"
-            android:layout_marginStart="230dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginStart="250dp"
             android:background="@drawable/selector_next_btn"
             android:scaleType="fitCenter"
             app:layout_constraintStart_toStartOf="@+id/mentor_btn"
-            app:layout_constraintTop_toBottomOf="@+id/mentee_btn"
+            app:layout_constraintBottom_toTopOf="@id/temp_textview"
             app:layout_constraintVertical_chainStyle="packed" />
 
         //스크롤뷰 길이 늘리기용
         <TextView
+            android:id="@+id/temp_textview"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:layout_marginTop="1255dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
