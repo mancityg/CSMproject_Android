@@ -16,7 +16,7 @@ class AlarmpageFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         RV_alarm.apply {
             layoutManager = LinearLayoutManager(this@AlarmpageFragment.context)
-            adapter = AlarmRecyclerViewAdapter(AlarmInfoDAO().findAll())
+            adapter = AlarmRecyclerViewAdapter(AlarmInfoDAO().findAll()) // FIXME: 2021-02-18 dao객체를 외부에서 전달 받아야 한다.
         }
     }
 }
