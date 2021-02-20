@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="400dp"
+    android:background="@drawable/popup_background"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_photo"
+        android:layout_width="210dp"
+        android:layout_height="210dp"
+        android:src="@drawable/prof_sample"
+        app:civ_border_color="@color/CSMYellow"
+        app:civ_border_overlay="false"
+        app:civ_border_width="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.19"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/applesdgothicneob"
+        android:text="이상호"
+        android:textColor="@color/blackTitle"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@id/item_basic"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_photo"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/item_basic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/applesdgothicneob"
+        android:text=" ( 24 /"
+        android:textColor="@color/blackTitle"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@id/item_gender"
+        app:layout_constraintTop_toTopOf="@id/item_name"
+        app:layout_constraintStart_toEndOf="@id/item_name"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/item_gender"
+        android:layout_width="32sp"
+        android:layout_height="32sp"
+        android:src="@drawable/main_male_icon"
+        app:layout_constraintStart_toEndOf="@id/item_basic"
+        app:layout_constraintTop_toTopOf="@id/item_name"
+        app:layout_constraintEnd_toStartOf="@id/extra_text1"
+        android:tint="@color/blackTitle"
+        android:padding="4dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/extra_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/applesdgothicneob"
+        android:text=")"
+        android:textColor="@color/blackTitle"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="@id/item_name"
+        app:layout_constraintStart_toEndOf="@id/item_gender"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="21dp"
+        android:fontFamily="@font/applesdgothicneob"
+        android:text="학교    "
+        android:textColor="@color/blackTitle"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/applesdgothicneob"
+        android:text="전공    "
+        android:textColor="@color/blackTitle"
+        android:textSize="17sp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView6" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/campus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/applesdgothicneom"
+        android:text="성균관대학교"
+        android:textColor="@color/blackTitle"
+        android:textSize="17sp"
+        app:layout_constraintStart_toEndOf="@id/appCompatTextView6"
+        app:layout_constraintTop_toTopOf="@id/appCompatTextView6"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/dept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/applesdgothicneom"
+        android:text="소프트웨어학과"
+        android:textColor="@color/blackTitle"
+        android:textSize="17sp"
+        app:layout_constraintStart_toEndOf="@id/appCompatTextView7"
+        app:layout_constraintTop_toTopOf="@id/appCompatTextView7"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

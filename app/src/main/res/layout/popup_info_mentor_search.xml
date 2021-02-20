@@ -123,11 +123,11 @@
         app:layout_constraintTop_toTopOf="@id/appCompatTextView7"
         />
 
-    <androidx.appcompat.widget.AppCompatImageView
+    <Button
         android:id="@+id/popup_back_btn"
         android:layout_width="136dp"
         android:layout_height="55dp"
-        android:src="@drawable/search_popup_back_btn"
+        android:background="@drawable/selector_search_popup_back_btn"
         android:layout_marginTop="46dp"
         android:layout_marginBottom="40dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -136,11 +136,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/appCompatTextView7"/>
 
-    <androidx.appcompat.widget.AppCompatImageView
+    <Button
         android:id="@+id/popup_req_btn"
         android:layout_width="136dp"
         android:layout_height="55dp"
-        android:src="@drawable/search_popup_req_btn"
+        android:background="@drawable/selector_search_popup_req_btn"
         android:layout_marginTop="46dp"
         android:layout_marginBottom="40dp"
         app:layout_constraintEnd_toEndOf="parent"

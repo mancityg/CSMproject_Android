@@ -21,11 +21,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatImageView
+    <Button
         android:id="@+id/popup_agree_back_btn"
         android:layout_width="136dp"
         android:layout_height="55dp"
-        android:src="@drawable/search_popup_back_btn"
+        android:background="@drawable/selector_search_popup_back_btn"
         android:layout_marginTop="450dp"
         android:layout_marginBottom="40dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,11 +34,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <androidx.appcompat.widget.AppCompatImageView
+    <Button
         android:id="@+id/popup_agree_req_btn"
         android:layout_width="136dp"
         android:layout_height="55dp"
-        android:src="@drawable/search_popup_req_btn"
+        android:background="@drawable/selector_search_popup_req_btn"
         android:layout_marginTop="450dp"
         android:layout_marginBottom="40dp"
         app:layout_constraintBottom_toBottomOf="parent"

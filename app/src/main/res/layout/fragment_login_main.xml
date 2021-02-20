@@ -17,65 +17,66 @@
         app:layout_constraintVertical_bias="0.25" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="238dp"
         android:layout_height="50dp"
         android:layout_marginTop="454dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:orientation="horizontal"
-        android:weightSum="23">
+        android:weightSum="23"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
             android:id="@+id/kakao_btn"
             android:layout_width="0dp"
-            android:layout_weight="5"
             android:layout_height="50dp"
+            android:layout_weight="5"
             android:background="#00ffffff"
             android:scaleType="centerInside"
             android:src="@drawable/firstpage_btn_kakao" />
 
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="50dp"
-            android:visibility="invisible"/>
+            android:layout_weight="1"
+            android:visibility="invisible" />
 
         <ImageButton
             android:id="@+id/facebook_btn"
             android:layout_width="0dp"
-            android:layout_weight="5"
             android:layout_height="50dp"
+            android:layout_weight="5"
             android:background="#00ffffff"
             android:scaleType="centerInside"
             android:src="@drawable/firstpage_btn_facebook" />
 
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="50dp"
-            android:visibility="invisible"/>
+            android:layout_weight="1"
+            android:visibility="invisible" />
 
         <ImageButton
             android:id="@+id/naver_btn"
             android:layout_width="0dp"
-            android:layout_weight="5"
             android:layout_height="50dp"
+            android:layout_weight="5"
             android:background="#00ffffff"
             android:scaleType="centerInside"
             android:src="@drawable/firstpage_btn_naver" />
 
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="50dp"
-            android:visibility="invisible"/>
+            android:layout_weight="1"
+            android:visibility="invisible" />
 
         <ImageButton
             android:id="@+id/google_btn"
             android:layout_width="0dp"
-            android:layout_weight="5"
             android:layout_height="50dp"
+            android:layout_weight="5"
             android:background="#00ffffff"
             android:scaleType="centerInside"
             android:src="@drawable/firstpage_btn_google" />
@@ -85,12 +86,12 @@
         android:id="@+id/loginphrase_text"
         android:layout_width="140dp"
         android:layout_height="15dp"
-        android:layout_marginTop="512dp"
+        android:layout_marginTop="8dp"
         android:src="@drawable/firstpage_main_letter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

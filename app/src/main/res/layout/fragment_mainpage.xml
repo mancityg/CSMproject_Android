@@ -25,11 +25,23 @@
         android:text="멘토를 검색하러 가볼까요?"
         android:textColor="@color/blackTitle"
         android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/find_mentor_btn"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/find_mentor_btn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="256dp"
+        android:layout_height="48dp"
+        android:background="@drawable/selector_main_find_mentor_btn"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.435" />
+        app:layout_constraintVertical_bias="0.52" />
 
     <com.google.android.material.circularreveal.CircularRevealFrameLayout
         android:id="@+id/faces"
@@ -44,6 +56,7 @@
         app:layout_constraintHorizontal_chainStyle="packed"
         >
         <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/face3"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:foregroundGravity="center"
@@ -53,6 +66,7 @@
             android:layout_marginStart="70dp"
             />
         <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/face2"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:foregroundGravity="center"
@@ -62,6 +76,7 @@
             android:layout_marginStart="35dp"
             />
         <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/face1"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:foregroundGravity="center"
@@ -79,11 +94,11 @@
         android:text="     ● ● ●     "
         android:textColor="@color/CSMGreen"
         android:textSize="8.5sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/faces"
         app:layout_constraintEnd_toStartOf="@id/N_of_mentor_1"
         app:layout_constraintStart_toEndOf="@id/faces"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.747" />
+        app:layout_constraintTop_toTopOf="@id/faces"
+        />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/N_of_mentor_1"
@@ -93,12 +108,27 @@
         android:text="+1840"
         android:textColor="@color/CSMGreen"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/faces"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.718"
         app:layout_constraintStart_toEndOf="@id/dotdotdot"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.749" />
+        app:layout_constraintTop_toTopOf="@id/faces"
+        android:layout_marginBottom="1dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/applesdgothicneom"
+        android:text="총  "
+        android:textColor="@color/blackTitle"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@id/N_of_mentor_2"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/faces"
+        android:layout_marginTop="10dp"/>
+
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/N_of_mentor_2"
@@ -115,22 +145,6 @@
         app:layout_constraintVertical_bias="0" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/appCompatTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/applesdgothicneom"
-        android:text="총  "
-        android:textColor="@color/blackTitle"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/N_of_mentor_2"
-
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.81" />
-
-    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/appCompatTextView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -142,18 +156,6 @@
         app:layout_constraintStart_toEndOf="@+id/N_of_mentor_2"
         app:layout_constraintTop_toTopOf="@id/appCompatTextView"
         app:layout_constraintVertical_bias="0" />
-
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/find_mentor_btn"
-        android:layout_width="256dp"
-        android:layout_height="48dp"
-        android:background="@drawable/main_find_mentor_btn"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.52" />
 
     <SlidingDrawer
         android:id="@+id/slidingDrawer"

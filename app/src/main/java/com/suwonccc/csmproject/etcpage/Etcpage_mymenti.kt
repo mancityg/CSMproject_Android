@@ -1,10 +1,9 @@
-package com.suwonccc.csmproject
+package com.suwonccc.csmproject.etcpage
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
-import android.widget.LinearLayout
 import com.suwonccc.csmproject.R
 import kotlinx.android.synthetic.main.activity_etcpage_mymenti.*
 

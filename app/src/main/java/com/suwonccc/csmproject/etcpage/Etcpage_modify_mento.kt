@@ -1,6 +1,7 @@
-package com.suwonccc.csmproject
+package com.suwonccc.csmproject.etcpage
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
@@ -21,6 +22,7 @@ import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
+import com.suwonccc.csmproject.R
 import kotlinx.android.synthetic.main.activity_etcpage_modify_mento.*
 import java.io.File
 import java.io.IOException
@@ -81,7 +83,7 @@ class Etcpage_modify_mento : AppCompatActivity()  {
         //profile camera 구현하기
         profile_camera_image.setOnClickListener {
             Toast.makeText(this@Etcpage_modify_mento, "프로필 사진 변경 버튼 클릭", Toast.LENGTH_SHORT).show()
-
+            var popupwindow = PopupWindow()
             /* 팝업 메뉴 생성 */
             var popUpMenu = PopupMenu(this@Etcpage_modify_mento, profile_camera_image)
 
@@ -195,6 +197,7 @@ class Etcpage_modify_mento : AppCompatActivity()  {
     }
 
     /* 권한 요청 함수 */
+    @SuppressLint("MissingSuperCall")
     override fun onRequestPermissionsResult(requestCode: Int,
                                             permissions: Array<String>, grantResults: IntArray) {
         when (requestCode) {

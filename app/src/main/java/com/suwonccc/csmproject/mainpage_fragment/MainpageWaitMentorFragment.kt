@@ -35,7 +35,7 @@ class MainpageWaitMentorFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_mainpage_wait_mentee, container, false)
+        return inflater.inflate(R.layout.fragment_mainpage_wait_mentor, container, false)
     }
 
     companion object {

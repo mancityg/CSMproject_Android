@@ -12,26 +12,17 @@ import com.suwonccc.csmproject.recyclerview.Mentee
 import com.suwonccc.csmproject.recyclerview.setHeight
 import kotlinx.android.synthetic.main.fragment_mainpage_welcome_mentor.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+
 
 class MainpageWelcomeMentorFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
     var menteeList = arrayListOf<Mentee>(
-        Mentee("한지명", "main_face_default", 23, true, "소프트웨어학과", "23살", "남자", "#하이하이"),
+        Mentee("한지명", "main_face_default", 23, true, "성균관대학교", "호기심이 많은", "아기자기한", "늘 행복해요"),
         Mentee("채세이", "main_face_default", 24, false, "소프트웨어학과", "24살", "여자", "#하이하이"),
         Mentee("한지은", "main_face_default", 24, false, "소프트웨어학과", "24살", "여자", "#하이하이"),
         Mentee("고은서", "main_face_default", 23, false, "소프트웨어학과", "23살", "여자", "#하이하이"),
         Mentee("이상호", "main_face_default", 24, true, "소프트웨어학과", "24살", "남자", "#하이하이")
     )
-
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -66,6 +57,15 @@ class MainpageWelcomeMentorFragment : Fragment() {
         val lm = LinearLayoutManager(this.requireActivity())
         mentee_RecvView.layoutManager = lm
         mentee_RecvView.setHasFixedSize(true)
+
+        slidingDrawer.setOnDrawerOpenListener {
+            val resourceId = this.resources.getIdentifier("main_drawer_handle_long_down", "drawable", this.context?.packageName)
+            drawer_handle.setImageResource(resourceId)
+        }
+        slidingDrawer.setOnDrawerCloseListener {
+            val resourceId = this.resources.getIdentifier("main_drawer_handle_long", "drawable", this.context?.packageName)
+            drawer_handle.setImageResource(resourceId)
+        }
     }
 
 
@@ -75,8 +75,6 @@ class MainpageWelcomeMentorFragment : Fragment() {
         fun newInstance(param1: String, param2: String) =
             MainpageWelcomeMentorFragment().apply {
                 arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
                 }
             }
     }

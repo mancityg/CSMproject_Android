@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:background="?android:attr/windowBackground"
+        android:background="@drawable/alarmpage_card_shadow"
         app:itemBackground="@color/windowBackground"
         app:itemIconSize="29dp"
         app:itemIconTint="@drawable/menu_selector_color"

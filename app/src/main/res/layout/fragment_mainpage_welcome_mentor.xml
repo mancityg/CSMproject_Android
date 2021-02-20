@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/windowBackground"
     tools:context=".mainpage_fragment.MainpageWelcomeMentorFragment">
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -15,11 +16,10 @@
         android:textSize="19sp"
         android:textColor="@color/blackTitle"
         app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/nameMent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.275" />
+        app:layout_constraintBottom_toTopOf="@id/circleImageView"
+        app:layout_constraintEnd_toStartOf="@id/nameMent"
+        android:layout_marginBottom="15dp"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/nameMent"
@@ -29,11 +29,9 @@
         android:fontFamily="@font/applesdgothicneob"
         android:textSize="19sp"
         android:textColor="@color/blackTitle"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/name"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.275" />
+        app:layout_constraintTop_toTopOf="@id/name"/>
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/circleImageView"
@@ -48,35 +46,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.476" />
-
+        app:layout_constraintVertical_bias="0.41" />
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/csment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/applesdgothicneob"
         android:text="크선멘에 오신 걸"
         android:textColor="@color/blackTitle"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.691" />
+        app:layout_constraintTop_toBottomOf="@id/circleImageView"
+        android:layout_marginTop="28dp"/>
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/appCompatTextView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/applesdgothicneoeb"
         android:text="환영합니다!"
         android:textColor="@color/blackTitle"
         android:textSize="39sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.769" />
+        app:layout_constraintTop_toBottomOf="@id/csment"
+        android:layout_marginTop="3dp"/>
 
 
 
@@ -84,7 +79,7 @@
         <SlidingDrawer
         android:id="@+id/slidingDrawer"
         android:layout_width="match_parent"
-        android:layout_height="235dp"
+        android:layout_height="245dp"
         android:allowSingleTap="true"
         android:animateOnClick="true"
         android:bottomOffset="0dp"
@@ -108,7 +103,7 @@
             >
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
+                android:layout_height="45dp"
                 android:background="@color/CSMGreen"
                 >
                 <androidx.appcompat.widget.AppCompatTextView

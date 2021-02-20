@@ -5,13 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".MainSearchMentorActivity">
+    tools:context=".mainpage_fragment.MainSearchMentorActivity">
 
-<!--    <androidx.appcompat.widget.AppCompatImageView-->
-<!--        android:id="@+id/appCompatImageView"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:src="@drawable/part4bg" />-->
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/back_btn"
@@ -50,17 +45,19 @@
         android:paddingStart="3dp"
         android:paddingEnd="40dp"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/appCompatImageView2"
+        android:singleLine="true"
+        app:layout_constraintEnd_toStartOf="@+id/search_btn"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintHorizontal_bias="0.535"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/appCompatImageView2"
+    <Button
+        android:id="@+id/search_btn"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="75dp"
         android:layout_height="41dp"
-        android:src="@drawable/main_search_btn"
+        android:background="@drawable/selector_main_search_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/editText"
         app:layout_constraintTop_toTopOf="@id/editText"

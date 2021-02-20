@@ -1,10 +1,8 @@
-package com.suwonccc.csmproject
+package com.suwonccc.csmproject.etcpage
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.LinearLayout
-import android.widget.TextView
 import com.suwonccc.csmproject.R
 import kotlinx.android.synthetic.main.activity_etcpage_mymentilist.*
 

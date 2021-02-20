@@ -57,13 +57,7 @@ class LoginProfile : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         val greetings_line1 = view?.findViewById(R.id.greetings_line1_text) as EditText
-        val greetings_line2 = view?.findViewById(R.id.greetings_line2_text) as EditText
-        val greetings_line3 = view?.findViewById(R.id.greetings_line3_text) as EditText
-        val greetings_line4 = view?.findViewById(R.id.greetings_line4_text) as EditText
-        val greetings_line5 = view?.findViewById(R.id.greetings_line5_text) as EditText
-        val greetings_line6 = view?.findViewById(R.id.greetings_line6_text) as EditText
 
         navController = Navigation.findNavController(view)
 
@@ -151,7 +145,7 @@ class LoginProfile : Fragment() {
         greetings_line1.addTextChangedListener(object : TextWatcher{
             override fun afterTextChanged(p0: Editable?) {
                 if (p0.toString().length > 23) {
-                    greetings_line2.requestFocus()
+                    greetings_line1.requestFocus()
                 }
             }
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
@@ -161,104 +155,6 @@ class LoginProfile : Fragment() {
 
             }
         })
-
-        greetings_line2.addTextChangedListener(object : TextWatcher{
-            override fun afterTextChanged(p0: Editable?) {
-                if (p0.toString().length > 23) {
-                    greetings_line3.requestFocus()
-                }
-            }
-            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-
-            }
-            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-
-            }
-        })
-
-        greetings_line3.addTextChangedListener(object : TextWatcher{
-            override fun afterTextChanged(p0: Editable?) {
-                if (p0.toString().length > 23) {
-                    greetings_line4.requestFocus()
-                }
-            }
-            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-
-            }
-            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-
-            }
-        })
-
-        greetings_line4.addTextChangedListener(object : TextWatcher{
-            override fun afterTextChanged(p0: Editable?) {
-                if (p0.toString().length > 23) {
-                    greetings_line5.requestFocus()
-                }
-            }
-            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-
-            }
-            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-
-            }
-        })
-
-        greetings_line5.addTextChangedListener(object : TextWatcher{
-            override fun afterTextChanged(p0: Editable?) {
-                if (p0.toString().length > 23) {
-                    greetings_line6.requestFocus()
-                }
-            }
-            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-
-            }
-            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-
-            }
-        })
-
-//        greetings_line1.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
-//            if (keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_UP) {
-//                greetings_line2.requestFocus()
-//                return@OnKeyListener true
-//            }
-//            false
-//        })
-//
-//        greetings_line2.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
-//            if (keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_UP) {
-//                greetings_line3.requestFocus()
-//                Toast.makeText(getActivity(), "check", Toast.LENGTH_SHORT).show()
-//                return@OnKeyListener true
-//            }
-//            false
-//        })
-//
-//        greetings_line3.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
-//            if (keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_UP) {
-//                greetings_line4.requestFocus()
-//                return@OnKeyListener true
-//            }
-//            false
-//        })
-//
-//        greetings_line4.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
-//            if (keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_UP) {
-//                greetings_line5.requestFocus()
-//                return@OnKeyListener true
-//            }
-//            false
-//        })
-//
-//        greetings_line5.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
-//            if (keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_UP) {
-//                greetings_line6.requestFocus()
-//                return@OnKeyListener true
-//            }
-//            false
-//        })
-
 
         /* 성별 및 멘토, 멘티 버튼 클릭 */
         male_btn.setOnClickListener {

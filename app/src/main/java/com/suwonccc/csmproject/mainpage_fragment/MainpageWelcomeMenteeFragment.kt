@@ -11,6 +11,10 @@ import com.suwonccc.csmproject.recyclerview.MenteelistAdapter
 import com.suwonccc.csmproject.recyclerview.Mentee
 import com.suwonccc.csmproject.recyclerview.setHeight
 import kotlinx.android.synthetic.main.fragment_mainpage_welcome_mentee.*
+import kotlinx.android.synthetic.main.fragment_mainpage_welcome_mentee.drawer_handle
+import kotlinx.android.synthetic.main.fragment_mainpage_welcome_mentee.emptyView
+import kotlinx.android.synthetic.main.fragment_mainpage_welcome_mentee.slidingDrawer
+import kotlinx.android.synthetic.main.fragment_mainpage_welcome_mentor.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -67,6 +71,16 @@ class MainpageWelcomeMenteeFragment : Fragment() {
         val lm = LinearLayoutManager(this.requireActivity())
         mentor_RecvView.layoutManager = lm
         mentor_RecvView.setHasFixedSize(true)
+
+        slidingDrawer.setOnDrawerOpenListener {
+            val resourceId = this.resources.getIdentifier("main_drawer_handle_long_down", "drawable", this.context?.packageName)
+            drawer_handle.setImageResource(resourceId)
+        }
+        slidingDrawer.setOnDrawerCloseListener {
+            val resourceId = this.resources.getIdentifier("main_drawer_handle_long", "drawable", this.context?.packageName)
+            drawer_handle.setImageResource(resourceId)
+        }
+
     }
 
 

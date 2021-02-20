@@ -15,7 +15,7 @@
             android:id="@+id/RV_alarm"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#f4f4f4" />
+            android:background="@color/windowBackground" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

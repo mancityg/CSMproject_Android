@@ -1,4 +1,4 @@
-package com.suwonccc.csmproject
+package com.suwonccc.csmproject.etcpage
 
 import android.content.Intent
 import android.net.Uri
@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.NavController
+import com.suwonccc.csmproject.R
 import kotlinx.android.synthetic.main.fragment_etcpage.*
 
 // TODO: Rename parameter arguments, choose names that match

@@ -4,106 +4,105 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/profile_scrollView"
+    android:background="@color/white"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
     tools:context=".firstpage_fragment.LoginProfile">
 
     /* 기기에서 보이는 화면과 디자인 화면 비율이 서로 다름 */
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/profile_constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/firstpage_background_2">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
-            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
-            android:background="@color/transparent"
             android:fontFamily="@font/applesdgothicneoh"
             android:text="나의 프로필"
             android:textColor="@color/colorPrimary"
-            android:textSize="26dp"
+            android:textSize="26sp"
+            android:background="@color/transparent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="148dp"
             android:background="@color/transparent"
             android:fontFamily="@font/applesdgothicneoeb"
             android:text="기본 프로필을 등록해주세요."
             android:textColor="@color/blackTitle"
-            android:textSize="15dp"
+            android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            app:layout_constraintVertical_chainStyle="packed" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <RelativeLayout
-            android:id="@+id/relativeLayout"
             android:layout_width="131dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            app:layout_constraintVertical_chainStyle="packed"
+            android:layout_marginTop="209dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView9">
+            app:layout_constraintTop_toTopOf="parent">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profile_image"
                 android:layout_width="131dp"
                 android:layout_height="131dp"
                 android:background="#00FFFFFF"
-                android:src="@drawable/profile_basic"
+                app:civ_border_width="3dp"
                 app:civ_border_color="@color/CSMYellow"
-                app:civ_border_width="3dp" />
+                android:src="@drawable/profile_basic" />
 
             <ImageView
                 android:id="@+id/profile_camera_image"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
+                android:background="#00FFFFFF"
                 android:layout_alignBottom="@id/profile_image"
                 android:layout_alignParentRight="true"
-                android:background="#00FFFFFF"
-                android:clickable="true"
-                android:src="@drawable/profile_camera" />
+                android:src="@drawable/profile_camera"
+                android:clickable="true"/>
         </RelativeLayout>
 
         <EditText
             android:id="@+id/name_text"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/firstpage_textbox_rounded2"
-            android:fontFamily="@font/applesdgothicneom"
-            android:gravity="center"
+            android:layout_marginTop="372dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginEnd="48dp"
             android:hint="이름을 입력해주세요"
-            android:privateImeOptions="defaultInputmode=korean"
-            android:maxLines="1"
-            android:inputType="text"
+            android:fontFamily="@font/applesdgothicneom"
             android:textColor="@color/blackTitle"
-            android:textSize="15dp"
-            app:layout_constraintVertical_chainStyle="packed"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:background="@drawable/firstpage_textbox_rounded2"
+            android:singleLine="true"
+            android:privateImeOptions="defaultInputmode=korean"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
             android:id="@+id/address_linearlayout"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/underlined_textview"
+            android:layout_marginTop="450dp"
+            android:layout_marginStart="33dp"
+            android:layout_marginEnd="33dp"
             android:orientation="horizontal"
-            app:layout_constraintVertical_chainStyle="packed"
+            android:background="@drawable/underlined_textview"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/name_text">
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/address_textview"
@@ -113,143 +112,139 @@
                 android:gravity="center_vertical"
                 android:text="거주지"
                 android:textColor="@color/blackTitle"
-                android:textSize="15dp" />
+                android:textSize="10sp" />
 
             <EditText
                 android:id="@+id/address_text"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:background="@color/transparent"
                 android:fontFamily="@font/applesdgothicneom"
+                android:background="@color/transparent"
                 android:gravity="center"
                 android:hint="OO도 OO시"
+                android:singleLine="true"
                 android:privateImeOptions="defaultInputmode=korean"
-                android:maxLines="1"
-                android:inputType="text"
                 android:textColor="@color/blackTitle"
-                android:textSize="15dp" />
+                android:textSize="10sp" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/email_linearlayout"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/underlined_textview"
+            android:layout_marginTop="520dp"
+            android:layout_marginStart="33dp"
+            android:layout_marginEnd="33dp"
             android:orientation="horizontal"
-            android:weightSum="15"
-            app:layout_constraintVertical_chainStyle="packed"
+            android:background="@drawable/underlined_textview"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/address_linearlayout">
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/email_textview"
-                android:layout_width="0dp"
-                android:layout_weight="2"
+                android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:fontFamily="@font/applesdgothicneom"
                 android:gravity="center_vertical"
                 android:text="이메일"
                 android:textColor="@color/blackTitle"
-                android:textSize="15dp" />
+                android:textSize="10sp" />
 
             <EditText
                 android:id="@+id/email_text"
-                android:layout_width="0dp"
-                android:layout_weight="5.5"
+                android:layout_width="100dp"
                 android:layout_height="40dp"
-                android:background="@color/transparent"
                 android:fontFamily="@font/applesdgothicneom"
+                android:background="@color/transparent"
                 android:gravity="center"
                 android:hint="아이디"
+                android:singleLine="true"
                 android:privateImeOptions="defaultInputmode=english"
-                android:maxLines="1"
-                android:inputType="text"
                 android:textColor="@color/blackTitle"
-                android:textSize="15dp" />
+                android:textSize="10sp" />
 
             <TextView
                 android:id="@+id/email_at_textview"
-                android:layout_width="0dp"
-                android:layout_weight="0.8"
+                android:layout_width="12dp"
                 android:layout_height="40dp"
                 android:fontFamily="@font/applesdgothicneom"
                 android:gravity="center"
                 android:text="\@"
                 android:textColor="@color/blackTitle"
-                android:textSize="15dp" />
+                android:textSize="10sp" />
 
             <EditText
                 android:id="@+id/email_domain_text"
-                android:layout_width="0dp"
-                android:layout_weight="6"
+                android:layout_width="120dp"
                 android:layout_height="40dp"
                 android:background="@color/transparent"
                 android:fontFamily="@font/applesdgothicneom"
                 android:gravity="center"
                 android:hint="직접입력"
                 android:inputType="textEmailAddress"
-                android:maxLines="1"
+                android:singleLine="true"
                 android:textColor="@color/blackTitle"
-                android:textSize="15dp" />
+                android:textSize="10sp" />
 
             <ImageButton
                 android:id="@+id/popup_req_btn"
-                android:layout_width="0dp"
-                android:layout_weight="0.7"
+                android:layout_width="match_parent"
                 android:layout_height="13dp"
-                android:layout_gravity="center"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/firstpage_btn_down_arrow"
                 android:background="@color/transparent"
-                android:scaleType="centerInside"
-                android:src="@drawable/firstpage_btn_down_arrow" />
+                android:scaleType="centerInside" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/birthday_linearlayout"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/underlined_textview"
+            android:layout_marginTop="590dp"
+            android:layout_marginStart="33dp"
+            android:layout_marginEnd="33dp"
             android:orientation="horizontal"
             android:weightSum="9"
-            app:layout_constraintVertical_chainStyle="packed"
+            android:background="@drawable/underlined_textview"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/email_linearlayout">
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/birthday_textview"
                 android:layout_width="0dp"
-                android:layout_height="40dp"
                 android:layout_weight="2"
-                android:fontFamily="@font/applesdgothicneom"
-                android:gravity="center_vertical"
+                android:layout_height="40dp"
                 android:text="생년월일"
                 android:textColor="@color/blackTitle"
-                android:textSize="15dp" />
+                android:textSize="10sp"
+                android:fontFamily="@font/applesdgothicneom"
+                android:gravity="center_vertical" />
 
             <TextView
                 android:id="@+id/birthday_datepicker"
                 android:layout_width="0dp"
-                android:layout_height="40dp"
                 android:layout_weight="7"
-                android:fontFamily="@font/applesdgothicneom"
-                android:gravity="center"
+                android:layout_height="40dp"
                 android:text="클릭하여 생년월일 선택"
                 android:textColor="?android:attr/textColorHint"
-                android:textSize="15dp" />
+                android:textSize="10sp"
+                android:fontFamily="@font/applesdgothicneom"
+                android:gravity="center" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/greetings_linearlayout"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="195dp"
+            android:layout_marginTop="660dp"
+            android:layout_marginStart="33dp"
+            android:layout_marginEnd="33dp"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/birthday_linearlayout">
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/greetings_textview"
@@ -257,196 +252,169 @@
                 android:layout_height="25dp"
                 android:text="인사말"
                 android:textColor="@color/blackTitle"
-                android:textSize="15dp"
+                android:textSize="10sp"
                 android:fontFamily="@font/applesdgothicneom"
                 android:gravity="top" />
 
             <EditText
                 android:id="@+id/greetings_line1_text"
+                android:inputType="textMultiLine"
+                android:lines="6"
+                android:maxLines="6"
                 android:layout_width="match_parent"
-                android:maxLength="24"
-                android:layout_height="30dp"
-                android:background="@drawable/underlined_textview"
+                android:lineSpacingExtra="11.5dp"
+                android:nestedScrollingEnabled="false"
+                android:maxLength="160"
+                android:layout_height="170dp"
                 android:textColor="@color/blackTitle"
+                android:gravity="top"
                 android:textSize="15dp"
-                android:fontFamily="@font/applesdgothicneom"
-                android:maxLines="1"
-                android:inputType="text"
-                android:imeOptions="normal" />
+                android:background="@drawable/underlined_textview_multi"
+                android:fontFamily="@font/applesdgothicneom"/>
 
-            <EditText
-                android:id="@+id/greetings_line2_text"
-                android:layout_width="match_parent"
-                android:maxLength="24"
-                android:layout_height="30dp"
-                android:background="@drawable/underlined_textview"
-                android:textColor="@color/blackTitle"
-                android:textSize="15dp"
-                android:fontFamily="@font/applesdgothicneom" />
-
-            <EditText
-                android:id="@+id/greetings_line3_text"
-                android:layout_width="match_parent"
-                android:maxLength="24"
-                android:layout_height="30dp"
-                android:background="@drawable/underlined_textview"
-                android:textColor="@color/blackTitle"
-                android:textSize="15dp"
-                android:fontFamily="@font/applesdgothicneom" />
-
-            <EditText
-                android:id="@+id/greetings_line4_text"
-                android:layout_width="match_parent"
-                android:maxLength="24"
-                android:layout_height="30dp"
-                android:background="@drawable/underlined_textview"
-                android:textColor="@color/blackTitle"
-                android:textSize="15dp"
-                android:fontFamily="@font/applesdgothicneom" />
-
-            <EditText
-                android:id="@+id/greetings_line5_text"
-                android:layout_width="match_parent"
-                android:maxLength="24"
-                android:layout_height="30dp"
-                android:background="@drawable/underlined_textview"
-                android:textColor="@color/blackTitle"
-                android:textSize="15dp"
-                android:fontFamily="@font/applesdgothicneom" />
-
-            <EditText
-                android:id="@+id/greetings_line6_text"
-                android:layout_width="match_parent"
-                android:maxLength="24"
-                android:layout_height="30dp"
-                android:background="@drawable/underlined_textview"
-                android:textColor="@color/blackTitle"
-                android:textSize="15dp"
-                android:fontFamily="@font/applesdgothicneom"
-                android:maxLines="1"
-                android:inputType="text"/>
         </LinearLayout>
 
         <TextView
             android:id="@+id/choose_textview"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:layout_marginTop="50dp"
-            android:background="@color/transparent"
-            android:fontFamily="@font/applesdgothicneom"
-            android:gravity="top"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="925dp"
+            android:layout_marginEnd="58dp"
             android:text="선택해주세요!"
             android:textColor="@color/blackTitle"
-            android:textSize="15dp"
+            android:textSize="12sp"
+            android:fontFamily="@font/applesdgothicneom"
+            android:gravity="top"
+
+            android:background="@color/transparent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/greetings_linearlayout" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/or1_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="55dp"
-            android:layout_marginTop="10dp"
-            android:background="@color/transparent"
-            android:fontFamily="@font/applesdgothicneob"
-            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="970dp"
+            android:layout_marginEnd="58dp"
             android:text="or"
             android:textColor="@color/blackTitle"
-            android:textSize="15dp"
-            app:layout_constraintVertical_chainStyle="packed"
-            app:layout_constraintEnd_toStartOf="@+id/female_btn"
-            app:layout_constraintStart_toEndOf="@+id/male_btn"
-            app:layout_constraintTop_toBottomOf="@+id/choose_textview" />
+            android:textSize="13sp"
+            android:fontFamily="@font/applesdgothicneob"
+            android:gravity="center"
+            android:background="@color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/or2_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="55dp"
-            android:layout_marginTop="30dp"
-            android:background="@color/transparent"
-            android:fontFamily="@font/applesdgothicneob"
-            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="1050dp"
+            android:layout_marginEnd="58dp"
             android:text="or"
             android:textColor="@color/blackTitle"
-            android:textSize="15dp"
-            app:layout_constraintVertical_chainStyle="packed"
-            app:layout_constraintEnd_toStartOf="@+id/mentee_btn"
-            app:layout_constraintStart_toEndOf="@+id/mentor_btn"
-            app:layout_constraintTop_toBottomOf="@+id/or1_textview" />
+            android:textSize="13sp"
+            android:fontFamily="@font/applesdgothicneob"
+            android:gravity="center"
+            android:background="@color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/male_btn"
             style="?android:attr/borderlessButtonStyle"
-            android:layout_width="125dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="10dp"
+            android:layout_width="120dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="58dp"
+            android:layout_marginEnd="230dp"
+            android:layout_marginTop="960dp"
             android:background="@drawable/selector_male_btn"
             android:scaleType="fitCenter"
-            app:layout_constraintVertical_chainStyle="packed"
-            app:layout_constraintStart_toStartOf="@+id/choose_textview"
-            app:layout_constraintTop_toBottomOf="@+id/choose_textview" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/female_btn"
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_width="125dp"
-            android:layout_height="55dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginTop="10dp"
+            android:layout_width="120dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="230dp"
+            android:layout_marginEnd="58dp"
+            android:layout_marginTop="960dp"
             android:background="@drawable/selector_female_btn"
             android:scaleType="fitCenter"
-            app:layout_constraintVertical_chainStyle="packed"
-            app:layout_constraintEnd_toEndOf="@+id/choose_textview"
-            app:layout_constraintTop_toBottomOf="@+id/choose_textview" />
+            style="?android:attr/borderlessButtonStyle"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/mentor_btn"
             style="?android:attr/borderlessButtonStyle"
-            android:layout_width="125dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="30dp"
+            android:layout_width="120dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="1045dp"
+            android:layout_marginEnd="230dp"
             android:background="@drawable/selector_mentor_btn"
             android:scaleType="fitCenter"
-            app:layout_constraintStart_toStartOf="@+id/choose_textview"
-            app:layout_constraintTop_toBottomOf="@+id/male_btn"
-            app:layout_constraintVertical_chainStyle="packed" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
         <Button
             android:id="@+id/mentee_btn"
             style="?android:attr/borderlessButtonStyle"
-            android:layout_width="125dp"
-            android:layout_height="55dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="0dp"
+            android:layout_width="120dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="230dp"
+            android:layout_marginEnd="58dp"
+            android:layout_marginTop="1045dp"
             android:background="@drawable/selector_mentee_btn"
             android:scaleType="fitCenter"
-            app:layout_constraintEnd_toEndOf="@+id/choose_textview"
-            app:layout_constraintTop_toBottomOf="@+id/female_btn"
-            app:layout_constraintVertical_chainStyle="packed" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/next_btn"
-            style="?android:attr/borderlessButtonStyle"
             android:layout_width="70dp"
             android:layout_height="50dp"
-            android:layout_marginStart="250dp"
+            android:layout_marginTop="1200dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginStart="300dp"
             android:background="@drawable/selector_next_btn"
             android:scaleType="fitCenter"
-            app:layout_constraintStart_toStartOf="@+id/mentor_btn"
-            app:layout_constraintBottom_toTopOf="@id/temp_textview"
-            app:layout_constraintVertical_chainStyle="packed" />
+            style="?android:attr/borderlessButtonStyle"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
 
         //스크롤뷰 길이 늘리기용
         <TextView
-            android:id="@+id/temp_textview"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="1255dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:visibility="invisible"/>
+
+<!--        //프로필 사진 변경 팝업창-->
+<!--        <ImageView-->
+<!--            android:id="@+id/profile_popup"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="300dp"-->
+<!--            android:layout_marginTop="450dp"-->
+<!--            android:src="@drawable/firstpage_btn11"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"/>-->
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

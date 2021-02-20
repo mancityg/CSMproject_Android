@@ -1,4 +1,4 @@
-package com.suwonccc.csmproject
+package com.suwonccc.csmproject.etcpage
 
 import android.content.Intent
 import android.graphics.Color
@@ -8,7 +8,6 @@ import android.os.Bundle
 import android.view.View
 import android.widget.CheckBox
 import android.widget.ImageView
-import android.widget.LinearLayout
 import androidx.appcompat.app.AlertDialog
 import com.suwonccc.csmproject.R
 import kotlinx.android.synthetic.main.popup_etcpage_disconnect.*
@@ -83,12 +82,10 @@ class Etcpage_disconnect : AppCompatActivity()  {
             infoDialog.disconnect_yes_btn.setOnClickListener {
                 infoDialog.dismiss()
                 this.finish()
-                return_to_meninfo()
             }
             infoDialog.disconnect_no_btn.setOnClickListener {
                 infoDialog.dismiss()
                 this.finish()
-                return_to_meninfo()
             }
 
             /*
