@@ -1,6 +1,7 @@
-package com.suwonccc.csmproject
+package com.suwonccc.csmproject.etcpage
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
@@ -22,6 +23,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
+import com.suwonccc.csmproject.R
 import kotlinx.android.synthetic.main.activity_etcpage_modify_menti.*
 import java.io.File
 import java.io.IOException
@@ -197,6 +199,7 @@ class Etcpage_modify_menti : AppCompatActivity()  {
     }
 
     /* 권한 요청 함수 */
+    @SuppressLint("MissingSuperCall")
     override fun onRequestPermissionsResult(requestCode: Int,
                                             permissions: Array<String>, grantResults: IntArray) {
         when (requestCode) {

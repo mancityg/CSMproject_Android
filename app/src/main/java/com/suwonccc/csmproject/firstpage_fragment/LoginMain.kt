@@ -43,10 +43,7 @@ class LoginMain : Fragment() {
         facebook_btn.setOnClickListener {
             //페이스북 로그인 구현
 
-            /*
-            *개발 용이하게 하기 위해
-            *우선 페이스북 로그인 버튼 누르면 메인 화면으로 이동하게 해놓음
-             */
+
             activity?.let{
                 val intent = Intent (it, MainActivity::class.java)
 

@@ -1,10 +1,9 @@
-package com.suwonccc.csmproject
+package com.suwonccc.csmproject.etcpage
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
-import android.widget.LinearLayout
 import com.suwonccc.csmproject.R
 import kotlinx.android.synthetic.main.activity_etcpage_mymento.*
 
@@ -24,7 +23,6 @@ class Etcpage_mymento : AppCompatActivity()  {
         val disconnect_btn = findViewById(R.id.disconnect_mento_btn) as ImageView
         disconnect_btn.setOnClickListener{
             //Toast.makeText(this@Etcpage, "You clicked on TextView 'Click Me'.", Toast.LENGTH_SHORT).show()
-            this.finish()
             val intent = Intent(this, Etcpage_disconnect::class.java)
             startActivity(intent)
         }

@@ -11,9 +11,11 @@
 
     <ScrollView
         android:id="@+id/ScrollView1"
-        android:layout_width="match_parent"
+        android:layout_width="410dp"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="31dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:scrollbarSize="0dp"
         tools:layout_editor_absoluteY="16dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -102,8 +104,8 @@
                 android:id="@+id/textView1"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_marginTop="300dp"
                 android:layout_marginLeft="5dp"
+                android:layout_marginTop="300dp"
                 android:background="@null"
                 android:fontFamily="@font/font"
                 android:gravity="center_vertical"
@@ -113,7 +115,7 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/edit_text1"
@@ -127,7 +129,7 @@
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -143,7 +145,7 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/edit_text2"
@@ -151,13 +153,13 @@
                 android:layout_height="49dp"
                 android:layout_marginTop="435dp"
                 android:background="@drawable/round_rect"
-                android:inputType="number"
                 android:gravity="center_vertical"
+                android:inputType="number"
                 android:paddingLeft="15dp"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -165,15 +167,15 @@
                 android:layout_height="40dp"
                 android:layout_marginTop="490dp"
                 android:background="@null"
-                android:gravity="center_vertical"
-                android:text="관심있는 학교"
-                android:paddingLeft="44dp"
                 android:fontFamily="@font/font"
+                android:gravity="center_vertical"
+                android:paddingLeft="44dp"
+                android:text="관심있는 학교"
                 android:textColor="@color/blackTitle"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/edit_text3"
@@ -181,13 +183,13 @@
                 android:layout_height="49dp"
                 android:layout_marginTop="530dp"
                 android:background="@drawable/round_rect"
-                android:inputType="text"
                 android:gravity="center_vertical"
+                android:inputType="text"
                 android:paddingLeft="15dp"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -195,15 +197,15 @@
                 android:layout_height="40dp"
                 android:layout_marginTop="585dp"
                 android:background="@null"
-                android:gravity="center_vertical"
-                android:text="관심있는 전공 및 학과"
-                android:paddingLeft="44dp"
                 android:fontFamily="@font/font"
+                android:gravity="center_vertical"
+                android:paddingLeft="44dp"
+                android:text="관심있는 전공 및 학과"
                 android:textColor="@color/blackTitle"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/edit_text4"
@@ -211,13 +213,13 @@
                 android:layout_height="49dp"
                 android:layout_marginTop="625dp"
                 android:background="@drawable/round_rect"
-                android:inputType="text"
                 android:gravity="center_vertical"
+                android:inputType="text"
                 android:paddingLeft="15dp"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textView5"
@@ -225,15 +227,15 @@
                 android:layout_height="40dp"
                 android:layout_marginTop="680dp"
                 android:background="@null"
-                android:gravity="center_vertical"
-                android:text="거주지"
-                android:paddingLeft="44dp"
                 android:fontFamily="@font/font"
+                android:gravity="center_vertical"
+                android:paddingLeft="44dp"
+                android:text="거주지"
                 android:textColor="@color/blackTitle"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/edit_text5"
@@ -241,13 +243,13 @@
                 android:layout_height="49dp"
                 android:layout_marginTop="720dp"
                 android:background="@drawable/round_rect"
-                android:inputType="text"
                 android:gravity="center_vertical"
+                android:inputType="text"
                 android:paddingLeft="15dp"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -255,15 +257,15 @@
                 android:layout_height="40dp"
                 android:layout_marginTop="775dp"
                 android:background="@null"
-                android:gravity="center_vertical"
-                android:text="이메일"
-                android:paddingLeft="44dp"
                 android:fontFamily="@font/font"
+                android:gravity="center_vertical"
+                android:paddingLeft="44dp"
+                android:text="이메일"
                 android:textColor="@color/blackTitle"
                 android:textSize="17sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/edit_text6"
@@ -271,13 +273,13 @@
                 android:layout_height="49dp"
                 android:layout_marginTop="815dp"
                 android:background="@drawable/round_rect"
-                android:inputType="text"
                 android:gravity="center_vertical"
+                android:inputType="text"
                 android:paddingLeft="15dp"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textView7"
@@ -285,15 +287,15 @@
                 android:layout_height="40dp"
                 android:layout_marginTop="870dp"
                 android:background="@null"
-                android:gravity="center_vertical"
-                android:text="생년월일"
-                android:paddingLeft="44dp"
                 android:fontFamily="@font/font"
+                android:gravity="center_vertical"
+                android:paddingLeft="44dp"
+                android:text="생년월일"
                 android:textColor="@color/blackTitle"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/edit_text7"
@@ -301,13 +303,13 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="910dp"
                 android:background="@drawable/round_rect"
-                android:inputType="text"
                 android:gravity="center_vertical"
+                android:inputType="text"
                 android:paddingLeft="15dp"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textView8"
@@ -315,15 +317,15 @@
                 android:layout_height="40dp"
                 android:layout_marginTop="965dp"
                 android:background="@null"
-                android:gravity="center_vertical"
-                android:text="인사말"
-                android:paddingLeft="44dp"
                 android:fontFamily="@font/font"
+                android:gravity="center_vertical"
+                android:paddingLeft="44dp"
+                android:text="인사말"
                 android:textColor="@color/blackTitle"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/edit_text8"
@@ -339,36 +341,34 @@
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <FrameLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginTop="1300dp"
                 android:layout_marginStart="200dp"
+                android:layout_marginTop="1300dp"
                 android:layout_marginBottom="50dp"
                 android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent">
+                app:layout_constraintTop_toTopOf="parent">
 
 
-            <ImageView
-                android:id="@+id/save_btn"
-                android:layout_width="90dp"
-                android:layout_height="60dp"
-                android:paddingLeft="10dp"
-                app:srcCompat="@drawable/etcpage_save_btn"
-                 />
+                <ImageView
+                    android:id="@+id/save_btn"
+                    android:layout_width="90dp"
+                    android:layout_height="60dp"
+                    android:paddingLeft="10dp"
+                    app:srcCompat="@drawable/etcpage_save_btn" />
 
-            <ImageView
-                android:id="@+id/modify_btn"
-                android:layout_width="90dp"
-                android:layout_height="60dp"
-                android:paddingLeft="10dp"
-                app:srcCompat="@drawable/etcpage_modify_btn"
-                />
+                <ImageView
+                    android:id="@+id/modify_btn"
+                    android:layout_width="90dp"
+                    android:layout_height="60dp"
+                    android:paddingLeft="10dp"
+                    app:srcCompat="@drawable/etcpage_modify_btn" />
 
             </FrameLayout>
 

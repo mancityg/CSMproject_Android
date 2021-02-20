@@ -16,7 +16,7 @@
         android:title="●"
         />
     <item
-        android:id="@+id/userstorypage"
+        android:id="@+id/mainpageWelcomeMentorFragment"
         android:icon="@drawable/nav_userstory"
         android:title="●"
         />

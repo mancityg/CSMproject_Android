@@ -11,9 +11,6 @@
         android:name="com.suwonccc.csmproject.mainpage_fragment.MainpageFragment"
         android:label="fragment_mainpage"
         tools:layout="@layout/fragment_mainpage" >
-        <action
-            android:id="@+id/action_mainpage_to_mainpageWelcomeMentorFragment"
-            app:destination="@id/mainpageWelcomeMentorFragment" />
     </fragment>
     <fragment
         android:id="@+id/chattingpage"
@@ -32,7 +29,7 @@
         tools:layout="@layout/fragment_userstorypage" />
     <fragment
         android:id="@+id/etcpage"
-        android:name="com.suwonccc.csmproject.EtcpageFragment"
+        android:name="com.suwonccc.csmproject.etcpage.EtcpageFragment"
         android:label="fragment_etcpage"
         tools:layout="@layout/fragment_etcpage" />
     <fragment

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <item
+        android:gravity="top"
+        android:left="-8dp"
+        android:right="-8dp"
+        android:top="-8dp"
+        >
+        <shape>
+            <size  android:height="30dp"/>
+            <stroke android:color="@color/blackTitle" android:width="2dp"/>
+        </shape>
+    </item>
+    <item
+        android:gravity="bottom"
+        android:top="-8dp"
+        android:left="-8dp"
+        android:right="-8dp"
+        >
+        <shape>
+            <size  android:height="30dp"/>
+            <stroke android:color="@color/blackTitle" android:width="2dp"/>
+        </shape>
+
+    </item>
+    <item
+        android:gravity="bottom"
+        android:left="-8dp"
+        android:right="-8dp"
+        >
+        <shape>
+            <size  android:height="60dp"/>
+            <stroke android:color="@color/blackTitle" android:width="2dp"/>
+        </shape>
+    </item>
+    <item
+        android:gravity="bottom"
+        android:left="-8dp"
+        android:right="-8dp"
+        >
+        <shape>
+            <size  android:height="90dp"/>
+            <stroke android:color="@color/blackTitle" android:width="2dp"/>
+        </shape>
+    </item>
+    <item
+        android:gravity="bottom"
+        android:top="-800dp"
+        android:left="-8dp"
+        android:right="-8dp"
+        >
+        <shape>
+            <size  android:height="120dp"/>
+            <stroke android:color="@color/blackTitle" android:width="2dp"/>
+        </shape>
+    </item>
+
+</layer-list>
