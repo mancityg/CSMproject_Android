@@ -5,17 +5,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
     android:background="@color/white">
-
+    <!-- android:background="#FFFFFF"-->
     <ScrollView
         android:id="@+id/ScrollView1"
-        android:layout_width="410dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:scrollbarSize="0dp"
+        tools:layout_editor_absoluteX="31dp"
         tools:layout_editor_absoluteY="16dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -25,7 +21,8 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:id="@+id/linearLayout"
+                android:layout_width="410dp"
                 android:layout_height="match_parent"
                 android:layout_marginTop="19dp"
                 android:gravity="center_vertical"
@@ -45,7 +42,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:background="@null"
-                    android:fontFamily="@font/font"
+                    android:fontFamily="@font/applesdgothicneoeb"
                     android:gravity="center_vertical"
                     android:paddingLeft="3dp"
                     android:text="내 정보 수정"
@@ -57,24 +54,23 @@
                 android:id="@+id/imageView7"
                 android:layout_width="74dp"
                 android:layout_height="160dp"
-                android:layout_marginLeft="43dp"
-                android:layout_marginTop="110dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="40dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.1"
-                app:srcCompat="@drawable/etcpage_menti" />
+                app:layout_constraintStart_toStartOf="@id/linearLayout"
+                app:layout_constraintTop_toBottomOf="@id/linearLayout"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:srcCompat="@drawable/etcpage_mentee" />
 
             <FrameLayout
                 android:id="@+id/FrameLayout01"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="190dp"
-                android:layout_marginTop="90dp"
-                app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toEndOf="@id/imageView7"
+                app:layout_constraintTop_toBottomOf="@id/linearLayout">
 
                 <ImageView
                     android:id="@+id/imageView4"
@@ -102,12 +98,11 @@
 
             <TextView
                 android:id="@+id/textView1"
-                android:layout_width="match_parent"
+                android:layout_width="410dp"
                 android:layout_height="40dp"
-                android:layout_marginLeft="5dp"
                 android:layout_marginTop="300dp"
                 android:background="@null"
-                android:fontFamily="@font/font"
+                android:fontFamily="@font/applesdgothicneoeb"
                 android:gravity="center_vertical"
                 android:paddingLeft="44dp"
                 android:text="이름"
@@ -121,23 +116,24 @@
                 android:id="@+id/edit_text1"
                 android:layout_width="320dp"
                 android:layout_height="49dp"
-                android:layout_marginTop="340dp"
                 android:background="@drawable/round_rect"
                 android:gravity="center_vertical"
+                android:maxLines="1"
                 android:inputType="text"
                 android:paddingLeft="15dp"
                 android:textSize="20sp"
+                android:fontFamily="@font/applesdgothicneom"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/textView1" />
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="match_parent"
+                android:layout_width="410dp"
                 android:layout_height="40dp"
-                android:layout_marginTop="395dp"
+                android:layout_marginTop="20dp"
                 android:background="@null"
-                android:fontFamily="@font/font"
+                android:fontFamily="@font/applesdgothicneoeb"
                 android:gravity="center_vertical"
                 android:paddingLeft="44dp"
                 android:text="나이"
@@ -145,29 +141,30 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/edit_text1" />
 
             <EditText
                 android:id="@+id/edit_text2"
                 android:layout_width="320dp"
                 android:layout_height="49dp"
-                android:layout_marginTop="435dp"
                 android:background="@drawable/round_rect"
                 android:gravity="center_vertical"
+                android:maxLines="1"
                 android:inputType="number"
                 android:paddingLeft="15dp"
                 android:textSize="20sp"
+                android:fontFamily="@font/applesdgothicneom"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/textView2" />
 
             <TextView
                 android:id="@+id/textView3"
-                android:layout_width="match_parent"
+                android:layout_width="410dp"
                 android:layout_height="40dp"
-                android:layout_marginTop="490dp"
+                android:layout_marginTop="20dp"
                 android:background="@null"
-                android:fontFamily="@font/font"
+                android:fontFamily="@font/applesdgothicneoeb"
                 android:gravity="center_vertical"
                 android:paddingLeft="44dp"
                 android:text="관심있는 학교"
@@ -175,29 +172,30 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/edit_text2" />
 
             <EditText
                 android:id="@+id/edit_text3"
                 android:layout_width="320dp"
                 android:layout_height="49dp"
-                android:layout_marginTop="530dp"
                 android:background="@drawable/round_rect"
                 android:gravity="center_vertical"
+                android:maxLines="1"
                 android:inputType="text"
                 android:paddingLeft="15dp"
                 android:textSize="20sp"
+                android:fontFamily="@font/applesdgothicneom"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/textView3" />
 
             <TextView
                 android:id="@+id/textView4"
-                android:layout_width="match_parent"
+                android:layout_width="410dp"
                 android:layout_height="40dp"
-                android:layout_marginTop="585dp"
+                android:layout_marginTop="20dp"
                 android:background="@null"
-                android:fontFamily="@font/font"
+                android:fontFamily="@font/applesdgothicneoeb"
                 android:gravity="center_vertical"
                 android:paddingLeft="44dp"
                 android:text="관심있는 전공 및 학과"
@@ -205,29 +203,30 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/edit_text3" />
 
             <EditText
                 android:id="@+id/edit_text4"
                 android:layout_width="320dp"
                 android:layout_height="49dp"
-                android:layout_marginTop="625dp"
                 android:background="@drawable/round_rect"
                 android:gravity="center_vertical"
+                android:maxLines="1"
                 android:inputType="text"
                 android:paddingLeft="15dp"
                 android:textSize="20sp"
+                android:fontFamily="@font/applesdgothicneom"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/textView4" />
 
             <TextView
                 android:id="@+id/textView5"
-                android:layout_width="match_parent"
+                android:layout_width="410dp"
                 android:layout_height="40dp"
-                android:layout_marginTop="680dp"
+                android:layout_marginTop="20dp"
                 android:background="@null"
-                android:fontFamily="@font/font"
+                android:fontFamily="@font/applesdgothicneoeb"
                 android:gravity="center_vertical"
                 android:paddingLeft="44dp"
                 android:text="거주지"
@@ -235,29 +234,30 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/edit_text4" />
 
             <EditText
                 android:id="@+id/edit_text5"
                 android:layout_width="320dp"
                 android:layout_height="49dp"
-                android:layout_marginTop="720dp"
                 android:background="@drawable/round_rect"
                 android:gravity="center_vertical"
+                android:maxLines="1"
                 android:inputType="text"
                 android:paddingLeft="15dp"
                 android:textSize="20sp"
+                android:fontFamily="@font/applesdgothicneom"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/textView5" />
 
             <TextView
                 android:id="@+id/textView6"
-                android:layout_width="match_parent"
+                android:layout_width="410dp"
                 android:layout_height="40dp"
-                android:layout_marginTop="775dp"
+                android:layout_marginTop="20dp"
                 android:background="@null"
-                android:fontFamily="@font/font"
+                android:fontFamily="@font/applesdgothicneoeb"
                 android:gravity="center_vertical"
                 android:paddingLeft="44dp"
                 android:text="이메일"
@@ -265,29 +265,30 @@
                 android:textSize="17sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/edit_text5" />
 
             <EditText
                 android:id="@+id/edit_text6"
                 android:layout_width="320dp"
                 android:layout_height="49dp"
-                android:layout_marginTop="815dp"
                 android:background="@drawable/round_rect"
                 android:gravity="center_vertical"
-                android:inputType="text"
+                android:maxLines="1"
+                android:inputType="textEmailAddress"
                 android:paddingLeft="15dp"
                 android:textSize="20sp"
+                android:fontFamily="@font/applesdgothicneom"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/textView6" />
 
             <TextView
                 android:id="@+id/textView7"
-                android:layout_width="match_parent"
+                android:layout_width="410dp"
                 android:layout_height="40dp"
-                android:layout_marginTop="870dp"
+                android:layout_marginTop="20dp"
                 android:background="@null"
-                android:fontFamily="@font/font"
+                android:fontFamily="@font/applesdgothicneoeb"
                 android:gravity="center_vertical"
                 android:paddingLeft="44dp"
                 android:text="생년월일"
@@ -295,29 +296,30 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/edit_text6" />
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_text7"
                 android:layout_width="320dp"
                 android:layout_height="50dp"
-                android:layout_marginTop="910dp"
                 android:background="@drawable/round_rect"
                 android:gravity="center_vertical"
+                android:maxLines="1"
                 android:inputType="text"
                 android:paddingLeft="15dp"
                 android:textSize="20sp"
+                android:fontFamily="@font/applesdgothicneom"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/textView7" />
 
             <TextView
                 android:id="@+id/textView8"
-                android:layout_width="match_parent"
+                android:layout_width="410dp"
                 android:layout_height="40dp"
-                android:layout_marginTop="965dp"
+                android:layout_marginTop="20dp"
                 android:background="@null"
-                android:fontFamily="@font/font"
+                android:fontFamily="@font/applesdgothicneoeb"
                 android:gravity="center_vertical"
                 android:paddingLeft="44dp"
                 android:text="인사말"
@@ -325,13 +327,12 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/edit_text7" />
 
             <EditText
                 android:id="@+id/edit_text8"
                 android:layout_width="320dp"
                 android:layout_height="200dp"
-                android:layout_marginTop="1005dp"
                 android:background="@drawable/round_rect"
                 android:gravity="top|left"
                 android:inputType="textMultiLine"
@@ -339,38 +340,44 @@
                 android:paddingTop="13dp"
                 android:scrollbars="vertical"
                 android:textSize="20sp"
+                android:fontFamily="@font/applesdgothicneom"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/textView8" />
 
             <FrameLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="200dp"
-                android:layout_marginTop="1300dp"
-                android:layout_marginBottom="50dp"
+                android:layout_marginStart="230dp"
                 android:orientation="horizontal"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/temp_textview"
+                app:layout_constraintStart_toStartOf="@id/edit_text8">
+
+                <Button
+                    android:id="@+id/save_btn"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/selector_save_btn"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/modify_btn"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/selector_modify_btn" />
+            </FrameLayout>
+
+            //스크롤뷰 길이 늘리기용
+
+            <TextView
+                android:id="@+id/temp_textview"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="1400dp"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-
-                <ImageView
-                    android:id="@+id/save_btn"
-                    android:layout_width="90dp"
-                    android:layout_height="60dp"
-                    android:paddingLeft="10dp"
-                    app:srcCompat="@drawable/etcpage_save_btn" />
-
-                <ImageView
-                    android:id="@+id/modify_btn"
-                    android:layout_width="90dp"
-                    android:layout_height="60dp"
-                    android:paddingLeft="10dp"
-                    app:srcCompat="@drawable/etcpage_modify_btn" />
-
-            </FrameLayout>
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

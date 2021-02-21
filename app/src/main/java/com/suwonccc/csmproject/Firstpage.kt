@@ -25,6 +25,7 @@ class Firstpage : AppCompatActivity() {
 
     }
 
+    /* 바탕화면 클릭 시 키보드 사라지게 */
     override fun dispatchTouchEvent(ev: MotionEvent): Boolean {
         val view: View? = currentFocus
         if (view != null && (ev.action == MotionEvent.ACTION_UP || ev.action == MotionEvent.ACTION_MOVE) && view is EditText && !view.javaClass

@@ -31,7 +31,7 @@
                 android:layout_width="360dp"
                 android:layout_height="50dp"
                 android:background="@null"
-                android:fontFamily="@font/font"
+                android:fontFamily="@font/applesdgothicneoeb"
                 android:gravity="center_vertical"
                 android:paddingLeft="1dp"
                 android:text="멘티 정보"
