@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.NavController
+import com.suwonccc.csmproject.Firstpage
 import com.suwonccc.csmproject.R
 import kotlinx.android.synthetic.main.fragment_etcpage.*
 
@@ -37,63 +38,73 @@ class EtcpageFragment : Fragment() {
     }
     */
 
-    override fun onCreateView(inflater: LayoutInflater,
-                              container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
 
         return inflater.inflate(R.layout.fragment_etcpage, container, false)
     }
 
-    lateinit var navController : NavController
+    lateinit var navController: NavController
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         go_modify_btn.setOnClickListener {
             //Toast.makeText(this@Etcpage, "You clicked on TextView 'Click Me'.", Toast.LENGTH_SHORT).show()
-            if(type == "mento") {
-                activity?.let{
-                    val intent = Intent(it, Etcpage_modify_mento::class.java)
+            if (type == "mento") {
+                activity?.let {
+                    val intent = Intent(it, Etcpage_modify_mentor::class.java)
                     it.startActivity(intent)
                 }
-            }
-            else if(type == "menti"){
+            } else if (type == "menti") {
                 activity?.let {
-                    val intent = Intent(it, Etcpage_modify_menti::class.java)
+                    val intent = Intent(it, Etcpage_modify_mentee::class.java)
                     it.startActivity(intent)
                 }
             }
         }
 
-        go_meninfo_btn.setOnClickListener{
-            if(type == "mento") {
-                if(is_men == true) {
-                    val intent = Intent(getActivity(), Etcpage_mymentilist::class.java)
-                    startActivity(intent)
-                }
-                else{
-                    val intent = Intent(getActivity(), Etcpage_nomenti::class.java)
-                    startActivity(intent)
-                }
-            }
-            else if(type == "menti") {
+        go_meninfo_btn.setOnClickListener {
+            if (type == "mento") {
                 if (is_men == true) {
-                    val intent = Intent(getActivity(), Etcpage_mymento::class.java)
+                    val intent = Intent(getActivity(), Etcpage_mymentee_list::class.java)
+                    startActivity(intent)
+                } else {
+                    val intent = Intent(getActivity(), Etcpage_nomentee::class.java)
                     startActivity(intent)
                 }
-                else {
-                    val intent = Intent(getActivity(), Etcpage_nomento::class.java)
+            } else if (type == "menti") {
+                if (is_men == true) {
+                    val intent = Intent(getActivity(), Etcpage_mymentor::class.java)
+                    startActivity(intent)
+                } else {
+                    val intent = Intent(getActivity(), Etcpage_nomentor::class.java)
                     startActivity(intent)
                 }
             }
         }
-        go_universitylife_btn.setOnClickListener{
+        go_universitylife_btn.setOnClickListener {
             var intent = Intent(Intent.ACTION_VIEW, Uri.parse("http://cccvlm.com/sns/"))
             startActivity(intent)
         }
-        go_bibleessence_btn.setOnClickListener{
-            var intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/c/BibleEssence/featured"))
+        go_bibleessence_btn.setOnClickListener {
+            var intent = Intent(
+                Intent.ACTION_VIEW,
+                Uri.parse("https://www.youtube.com/c/BibleEssence/featured")
+            )
             startActivity(intent)
+        }
+
+        logout_btn.setOnClickListener {
+            activity?.let{
+                val intent = Intent (it, Firstpage::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                it.startActivity(intent)
+            }
+            // todo: '종료하시겠습니까?' 팝업창 필요
         }
     }
 

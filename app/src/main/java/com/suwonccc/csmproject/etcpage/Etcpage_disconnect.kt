@@ -6,8 +6,8 @@ import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.CheckBox
-import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
 import com.suwonccc.csmproject.R
 import kotlinx.android.synthetic.main.popup_etcpage_disconnect.*
@@ -67,7 +67,7 @@ class Etcpage_disconnect : AppCompatActivity()  {
         }
 
         //popup창 띄우기
-        val disconnect_btn= findViewById(R.id.disconnect_btn) as ImageView
+        val disconnect_btn= findViewById(R.id.disconnect_btn) as Button
         disconnect_btn.setOnClickListener{
 
             val builder = AlertDialog.Builder(this)
@@ -101,19 +101,19 @@ class Etcpage_disconnect : AppCompatActivity()  {
         val is_men = true
         if(is_men) {
             if (type == "menti") {
-                val intent = Intent(this, Etcpage_mymento::class.java)
+                val intent = Intent(this, Etcpage_mymentor::class.java)
                 startActivity(intent)
             } else if (type == "mento") {
-                val intent = Intent(this, Etcpage_mymentilist::class.java)
+                val intent = Intent(this, Etcpage_mymentee_list::class.java)
                 startActivity(intent)
             }
         }
         else {
             if (type == "menti") {
-                val intent = Intent(this, Etcpage_nomento::class.java)
+                val intent = Intent(this, Etcpage_nomentor::class.java)
                 startActivity(intent)
             } else if (type == "mento") {
-                val intent = Intent(this, Etcpage_nomenti::class.java)
+                val intent = Intent(this, Etcpage_nomentee::class.java)
                 startActivity(intent)
             }
         }

@@ -28,10 +28,10 @@
                 android:layout_width="360dp"
                 android:layout_height="50dp"
                 android:background="@null"
-                android:fontFamily="@font/font"
+                android:fontFamily="@font/applesdgothicneoeb"
                 android:gravity="center_vertical"
                 android:paddingLeft="1dp"
-                android:text="멘토 정보"
+                android:text="멘티 정보"
                 android:textColor="@color/blackTitle"
                 android:textSize="19sp"  />
         </LinearLayout>
@@ -42,10 +42,10 @@
             android:layout_height="100dp"
             android:layout_marginTop="120dp"
             android:background="@null"
-            android:fontFamily="@font/font"
+            android:fontFamily="@font/applesdgothicneoeb"
             android:gravity="center_vertical"
             android:paddingLeft="43dp"
-            android:text="연결된 멘토가\n없습니다."
+            android:text="연결된 멘티가\n없습니다."
             android:textColor="#80000000"
             android:textSize="27sp" />
 
@@ -63,5 +63,4 @@
 
         </LinearLayout>
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

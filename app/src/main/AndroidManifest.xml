@@ -49,21 +49,21 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".etcpage.Etcpage_modify_menti"
+        <activity android:name=".etcpage.Etcpage_modify_mentee"
             android:screenOrientation="portrait"/>
-        <activity android:name=".etcpage.Etcpage_modify_mento"
+        <activity android:name=".etcpage.Etcpage_modify_mentor"
             android:screenOrientation="portrait"/>
-        <activity android:name=".etcpage.Etcpage_mymentilist"
+        <activity android:name=".etcpage.Etcpage_mymentee_list"
             android:screenOrientation="portrait" />
-        <activity android:name=".etcpage.Etcpage_mymenti"
+        <activity android:name=".etcpage.Etcpage_mymentee"
             android:screenOrientation="portrait" />
-        <activity android:name=".etcpage.Etcpage_mymento"
+        <activity android:name=".etcpage.Etcpage_mymentor"
             android:screenOrientation="portrait"/>
         <activity android:name=".etcpage.Etcpage_disconnect"
             android:screenOrientation="portrait" />
-        <activity android:name=".etcpage.Etcpage_nomenti"
+        <activity android:name=".etcpage.Etcpage_nomentee"
             android:screenOrientation="portrait" />
-        <activity android:name=".etcpage.Etcpage_nomento"
+        <activity android:name=".etcpage.Etcpage_nomentor"
             android:screenOrientation="portrait" />
         <activity android:name=".mainpage_fragment.MainSearchMentorActivity"
             android:screenOrientation="portrait" />

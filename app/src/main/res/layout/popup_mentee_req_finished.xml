@@ -23,7 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:gravity="center"
-                android:fontFamily="@font/font"
+                android:fontFamily="@font/applesdgothicneoeb"
                 android:text="멘티 신청이 완료되었습니다."
                 android:textColor="#FFFFFF"
                 android:textSize="17sp"

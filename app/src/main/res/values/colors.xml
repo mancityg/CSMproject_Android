@@ -13,4 +13,6 @@
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="transparent">#00000000</color>
+    <color name="disconnectBackground">#F7F7F7</color>
+    <color name="disconnectTextBox">#F5F5F5</color>
 </resources>
