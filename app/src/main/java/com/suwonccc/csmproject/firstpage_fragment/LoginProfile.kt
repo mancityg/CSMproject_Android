@@ -1,8 +1,11 @@
+@file:Suppress("DEPRECATION")
+
 package com.suwonccc.csmproject.firstpage_fragment
 
 import android.Manifest
 import android.app.Activity.RESULT_OK
 import android.app.DatePickerDialog
+import android.content.ContentValues.TAG
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -18,6 +21,7 @@ import android.provider.MediaStore
 import android.text.Editable
 import android.text.TextUtils
 import android.text.TextWatcher
+import android.util.Log
 import android.view.*
 import android.widget.EditText
 import android.widget.PopupMenu
@@ -30,7 +34,10 @@ import androidx.core.content.FileProvider
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import com.bumptech.glide.Glide
 import com.suwonccc.csmproject.R
+import com.theartofdev.edmodo.cropper.CropImage
+import com.theartofdev.edmodo.cropper.CropImageView
 import kotlinx.android.synthetic.main.fragment_login_profile.*
 import kotlinx.android.synthetic.main.fragment_login_profile_change_dialog.view.*
 import java.io.File
@@ -63,7 +70,8 @@ class LoginProfile : Fragment() {
 
         /* 프로필 사진 변경 버튼 클릭했을 때 */
         profile_camera_image.setOnClickListener {
-            val btnsheet_camera = layoutInflater.inflate(R.layout.fragment_login_profile_change_dialog, null)
+            val btnsheet_camera =
+                layoutInflater.inflate(R.layout.fragment_login_profile_change_dialog, null)
             val cameraPopupWindow = PopupWindow(btnsheet_camera, 550, 450)
             cameraPopupWindow.setOutsideTouchable(true)
             cameraPopupWindow.setFocusable(true)
@@ -104,11 +112,11 @@ class LoginProfile : Fragment() {
             popUpMenu.setOnMenuItemClickListener { menuItem ->
                 val id = menuItem.itemId
 
-                if (id==0) {
+                if (id == 0) {
                     email_domain_text.setText("naver.com")
-                } else if (id==1) {
+                } else if (id == 1) {
                     email_domain_text.setText("gmail.com")
-                } else if (id==2) {
+                } else if (id == 2) {
                     email_domain_text.setText("hanmail.net")
                 }
                 false
@@ -142,15 +150,17 @@ class LoginProfile : Fragment() {
 
 
         /* 인사말 입력 이벤트 제어 */
-        greetings_line1.addTextChangedListener(object : TextWatcher{
+        greetings_line1.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(p0: Editable?) {
                 if (p0.toString().length > 23) {
                     greetings_line1.requestFocus()
                 }
             }
+
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
 
             }
+
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
 
             }
@@ -212,17 +222,34 @@ class LoginProfile : Fragment() {
     /* 팝업창 옵션1 선택했을 때 */
     fun pickGallery() {
         /* 갤러리 권한 부여 */
-        var permission=ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.READ_EXTERNAL_STORAGE)
+        var permission = ContextCompat.checkSelfPermission(
+            requireContext(),
+            Manifest.permission.READ_EXTERNAL_STORAGE
+        )
         if (permission == PackageManager.PERMISSION_DENIED) {
             // 권한이 없을 경우
-            if (ActivityCompat.shouldShowRequestPermissionRationale(requireActivity(), Manifest.permission.READ_EXTERNAL_STORAGE)) {
+            if (ActivityCompat.shouldShowRequestPermissionRationale(
+                    requireActivity(),
+                    Manifest.permission.READ_EXTERNAL_STORAGE
+                )
+            ) {
                 // 사용자가 이전에 권한을 실수로 취소시킨 경우
-                Toast.makeText(requireActivity(), "프로필 사진을 설정하기 위해서는 갤러리 권한이 요구됩니다.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    requireActivity(),
+                    "프로필 사진을 설정하기 위해서는 갤러리 권한이 요구됩니다.",
+                    Toast.LENGTH_SHORT
+                ).show()
                 // 권한 재요청
-                requestPermissions(arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE), REQUEST_READ_EXTERMAL_STORAGE)
+                requestPermissions(
+                    arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE),
+                    REQUEST_READ_EXTERMAL_STORAGE
+                )
             } else {
                 // 권한 최초 요청
-                requestPermissions(arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE), REQUEST_READ_EXTERMAL_STORAGE)
+                requestPermissions(
+                    arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE),
+                    REQUEST_READ_EXTERMAL_STORAGE
+                )
             }
         } else {
             // 권한이 있을 경우
@@ -241,12 +268,21 @@ class LoginProfile : Fragment() {
     /* 팝업창 옵션3 선택했을 때 */
     fun captureCamera() {
         /* 카메라 권한 부여 */
-        var permission=ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.CAMERA)
+        var permission =
+            ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.CAMERA)
         if (permission == PackageManager.PERMISSION_DENIED) {
             // 권한이 없을 경우
-            if (ActivityCompat.shouldShowRequestPermissionRationale(requireActivity(), Manifest.permission.CAMERA)) {
+            if (ActivityCompat.shouldShowRequestPermissionRationale(
+                    requireActivity(),
+                    Manifest.permission.CAMERA
+                )
+            ) {
                 // 사용자가 이전에 권한을 실수로 취소시킨 경우
-                Toast.makeText(requireActivity(), "프로필 사진을 설정하기 위해서는 카메라 권한이 요구됩니다.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    requireActivity(),
+                    "프로필 사진을 설정하기 위해서는 카메라 권한이 요구됩니다.",
+                    Toast.LENGTH_SHORT
+                ).show()
                 // 권한 재요청
                 requestPermissions(arrayOf(Manifest.permission.CAMERA), REQUEST_CAMERA)
             } else {
@@ -262,22 +298,19 @@ class LoginProfile : Fragment() {
 
 
     /* 권한 요청 함수 */
-    override fun onRequestPermissionsResult(requestCode: Int,
-                                            permissions: Array<String>, grantResults: IntArray) {
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<String>, grantResults: IntArray
+    ) {
         when (requestCode) {
             REQUEST_CAMERA -> {
-                // If request is cancelled, the result arrays are empty.
                 if ((grantResults.isNotEmpty() &&
-                            grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
+                            grantResults[0] == PackageManager.PERMISSION_GRANTED)
+                ) {
                     // 사용자가 카메라 권한 동의
                     dispatchTakePictureIntent()
                 } else {
                     // 사용자가 카메라 권한 거절
-                    // Explain to the user that the feature is unavailable because
-                    // the features requires a permission that the user has denied.
-                    // At the same time, respect the user's decision. Don't link to
-                    // system settings in an effort to convince the user to change
-                    // their decision.
                 }
                 return
             }
@@ -285,7 +318,8 @@ class LoginProfile : Fragment() {
             REQUEST_READ_EXTERMAL_STORAGE -> {
                 Toast.makeText(requireActivity(), "grantResults", Toast.LENGTH_SHORT).show()
                 if ((grantResults.isNotEmpty() &&
-                            grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
+                            grantResults[0] == PackageManager.PERMISSION_GRANTED)
+                ) {
                     // 사용자가 갤러리 권한 동의
                     dispatchPickGalleryIntent()
                 } else {
@@ -294,7 +328,6 @@ class LoginProfile : Fragment() {
             }
 
             else -> {
-                // Ignore all other requests.
                 Toast.makeText(requireActivity(), "권한 예외 처리", Toast.LENGTH_SHORT).show()
             }
         }
@@ -303,12 +336,6 @@ class LoginProfile : Fragment() {
 
     /* 촬영된 이미지 가져오기 */
     private fun dispatchTakePictureIntent() {
-        // 저장하지 않고 미리보기만 하고 싶을 때
-//        Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { takePictureIntent ->
-//            takePictureIntent.resolveActivity(requireActivity().packageManager)?.also {
-//                startActivityForResult(takePictureIntent, REQUEST_CAMERA)
-//            }
-//        }
         Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { takePictureIntent ->
             // Ensure that there's a camera activity to handle the intent
             takePictureIntent.resolveActivity(requireActivity().packageManager)?.also {
@@ -334,15 +361,14 @@ class LoginProfile : Fragment() {
     }
 
     private fun createImageFile(): File {
-        // Create an image file name
         val timeStamp: String = SimpleDateFormat("yyyyMMdd_HHmmss").format(Date())
-        val storageDir: File? = requireActivity().getExternalFilesDir(Environment.DIRECTORY_PICTURES)
+        val storageDir: File? =
+            requireActivity().getExternalFilesDir(Environment.DIRECTORY_PICTURES)
         return File.createTempFile(
-            "JPEG_${timeStamp}_", /* prefix */
-            ".jpg", /* suffix */
-            storageDir /* directory */
+            "JPEG_${timeStamp}_",
+            ".jpg",
+            storageDir
         ).apply {
-            // Save a file: path for use with ACTION_VIEW intents
             currentPhotoPath = absolutePath
         }
     }
@@ -359,13 +385,17 @@ class LoginProfile : Fragment() {
             val imagePath: String? = Uri.fromFile(f).getPath()
             var image: Bitmap = BitmapFactory.decodeFile(imagePath)
             val exif = ExifInterface(imagePath)
-            val exifOrientation: Int = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL)
+            val exifOrientation: Int = exif.getAttributeInt(
+                ExifInterface.TAG_ORIENTATION,
+                ExifInterface.ORIENTATION_NORMAL
+            )
             val exifDegree: Int = exifOrientationToDegrees(exifOrientation)
             val matrix = Matrix()
             if (exifOrientation != 0) {
                 matrix.preRotate(exifDegree.toFloat())
             }
-            var rotatedImage = Bitmap.createBitmap(image, 0, 0, image.width, image.height, matrix, true)
+            var rotatedImage =
+                Bitmap.createBitmap(image, 0, 0, image.width, image.height, matrix, true)
 
             // 카메라로 찍은 사진이 프로필 사진으로 업로드
             profile_image.setImageBitmap(rotatedImage)
@@ -393,34 +423,6 @@ class LoginProfile : Fragment() {
     }
 
 
-    /* 대상 뷰의 크기에 맞게 조정한 JPEG를 메모리 배열로 확장하여 동적 힙 크기 축소 */
-    /* 메모리 문제가 생기면 추가(일단 보류) */
-//    private fun setPic() {
-//        // Get the dimensions of the View
-//        val targetW: Int = profile_image.width
-//        val targetH: Int = profile_image.height
-//
-//        val bmOptions = BitmapFactory.Options().apply {
-//            // Get the dimensions of the bitmap
-//            inJustDecodeBounds = true
-//
-//            val photoW: Int = outWidth
-//            val photoH: Int = outHeight
-//
-//            // Determine how much to scale down the image
-//            val scaleFactor: Int = Math.min(photoW / targetW, photoH / targetH)
-//
-//            // Decode the image file into a Bitmap sized to fill the View
-//            inJustDecodeBounds = false
-//            inSampleSize = scaleFactor
-//            inPurgeable = true
-//        }
-//        BitmapFactory.decodeFile(currentPhotoPath, bmOptions)?.also { bitmap ->
-//            profile_image.setImageBitmap(bitmap)
-//        }
-//    }
-
-
     /* 갤러리에서 이미지 가져오기 */
     private fun dispatchPickGalleryIntent() {
         val intent = Intent(Intent.ACTION_PICK)
@@ -437,20 +439,33 @@ class LoginProfile : Fragment() {
             galleryAddPic()
         } else if (requestCode == REQUEST_READ_EXTERMAL_STORAGE && resultCode == RESULT_OK) {
             // 갤러리 접근 처리
-            imageUri = data?.data
-            profile_image.setImageURI(imageUri)
+            data?.data?.let { uri ->
+                launchImageCrop(uri)
+            }
         } else if (resultCode != RESULT_OK) {
             // 카메라로 촬영한 후 저장하지 않고 뒤로 가기를 한 경우 & 갤러리로 이동한 후 선택하지 않고 뒤로 가기를 한 경우
             Toast.makeText(requireActivity(), "취소 되었습니다.", Toast.LENGTH_SHORT).show()
-            /* 임시 파일 삭제 해야함(일단 보류) */
-//            if (tempFile != null) {
-//                if (tempFile.exists()) {
-//                    if (tempFile.delete()) {
-//                        Log.e(TAG, tempFile.getAbsolutePath() + " 삭제 성공");
-//                        tempFile = null;
-//                    }
-//                }
-//            }
+        } else if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
+            val result = CropImage.getActivityResult(data)
+            if (resultCode == RESULT_OK) {
+                setImage(result.uri)
+            } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
+                Log.e(TAG, "오류 발생: ${result.error}")
+            }
         }
+    }
+
+    private fun setImage(uri: Uri?) {
+        Glide.with(requireActivity())
+            .load(uri)
+            .into(profile_image)
+    }
+
+    private fun launchImageCrop(uri: Uri) {
+        CropImage.activity(uri)
+            .setGuidelines(CropImageView.Guidelines.ON)
+            .setAspectRatio(1920, 1920)
+            .setCropShape(CropImageView.CropShape.OVAL)
+            .start(requireContext(), this)
     }
 }

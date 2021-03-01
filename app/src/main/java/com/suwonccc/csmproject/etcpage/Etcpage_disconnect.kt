@@ -82,6 +82,7 @@ class Etcpage_disconnect : AppCompatActivity()  {
             infoDialog.disconnect_yes_btn.setOnClickListener {
                 infoDialog.dismiss()
                 this.finish()
+                // todo: 
             }
             infoDialog.disconnect_no_btn.setOnClickListener {
                 infoDialog.dismiss()

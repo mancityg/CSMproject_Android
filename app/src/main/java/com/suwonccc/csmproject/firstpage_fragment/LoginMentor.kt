@@ -59,8 +59,10 @@ class LoginMentor : Fragment() {
                 next_btn.isSelected = false
             } else if (!TextUtils.isDigitsOnly(student_num_edittext.getText())) {
                 Toast.makeText(getActivity(), "숫자를 입력해주세요", Toast.LENGTH_SHORT).show()
+                next_btn.isSelected = false
             } else if (Integer.parseInt(student_num_edittext.getText().toString()) < (currentStudentNum-6) || Integer.parseInt(student_num_edittext.getText().toString()) > currentStudentNum) {
                 Toast.makeText(getActivity(), "학번은 ${currentStudentNum-6}학번부터 ${currentStudentNum}학번까지 허용됩니다", Toast.LENGTH_SHORT).show()
+                next_btn.isSelected = false
             } else {
                 Toast.makeText(getActivity(), "모든 항목 완료", Toast.LENGTH_SHORT).show()
                 val action = LoginMentorDirections.actionLoginMentorToLoginExtraInfo(true)
